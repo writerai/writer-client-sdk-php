@@ -7,9 +7,9 @@ management:
 generation:
   telemetryEnabled: false
   sdkClassName: writer
-  sdkFlattening: true
+  sdkFlattening: false
   singleTagPerOp: false
 php:
-  version: 1.0.0
+  version: 1.0.1
   namespace: WriterAi\SDK
   packageName: writerai/writer-sdk
