@@ -7,7 +7,7 @@ management:
 generation:
   telemetryEnabled: false
   sdkClassName: writer
-  sdkFlattening: false
+  sdkFlattening: true
   singleTagPerOp: false
 php:
   version: 1.0.0
