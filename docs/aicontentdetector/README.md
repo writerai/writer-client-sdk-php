@@ -1,4 +1,19 @@
-<!-- Start SDK Example Usage -->
+# aiContentDetector
+
+## Overview
+
+Methods related to AI Content Detector
+
+### Available Operations
+
+* [detect](#detect) - Content detector api
+
+## detect
+
+Content detector api
+
+### Example Usage
+
 ```php
 <?php
 
@@ -16,7 +31,7 @@ $sdk = Writer::builder()
 try {
     $request = new DetectContentRequest();
     $request->contentDetectorRequest = new ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'corrupti';
+    $request->contentDetectorRequest->input = 'provident';
 
     $response = $sdk->aiContentDetector->detect($request);
 
@@ -27,4 +42,3 @@ try {
     // handle exception
 }
 ```
-<!-- End SDK Example Usage -->
