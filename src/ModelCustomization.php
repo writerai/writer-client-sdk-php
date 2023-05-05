@@ -47,7 +47,8 @@ class ModelCustomization
      * @param \WriterAi\SDK\Models\Operations\CreateModelCustomizationRequest $request
      * @return \WriterAi\SDK\Models\Operations\CreateModelCustomizationResponse
      */
-	public function create(
+	
+    public function create(
         \WriterAi\SDK\Models\Operations\CreateModelCustomizationRequest $request,
     ): \WriterAi\SDK\Models\Operations\CreateModelCustomizationResponse
     {
@@ -96,7 +97,8 @@ class ModelCustomization
      * @param \WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest $request
      * @return \WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponse
      */
-	public function delete(
+	
+    public function delete(
         \WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponse
     {
@@ -140,7 +142,8 @@ class ModelCustomization
      * @param \WriterAi\SDK\Models\Operations\GetModelCustomizationRequest $request
      * @return \WriterAi\SDK\Models\Operations\GetModelCustomizationResponse
      */
-	public function get(
+	
+    public function get(
         \WriterAi\SDK\Models\Operations\GetModelCustomizationRequest $request,
     ): \WriterAi\SDK\Models\Operations\GetModelCustomizationResponse
     {
@@ -184,7 +187,8 @@ class ModelCustomization
      * @param \WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest $request
      * @return \WriterAi\SDK\Models\Operations\ListModelCustomizationsResponse
      */
-	public function list(
+	
+    public function list(
         \WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListModelCustomizationsResponse
     {

@@ -47,7 +47,8 @@ class Terminology
      * @param \WriterAi\SDK\Models\Operations\AddTermsRequest $request
      * @return \WriterAi\SDK\Models\Operations\AddTermsResponse
      */
-	public function add(
+	
+    public function add(
         \WriterAi\SDK\Models\Operations\AddTermsRequest $request,
     ): \WriterAi\SDK\Models\Operations\AddTermsResponse
     {
@@ -96,7 +97,8 @@ class Terminology
      * @param \WriterAi\SDK\Models\Operations\DeleteTermsRequest $request
      * @return \WriterAi\SDK\Models\Operations\DeleteTermsResponse
      */
-	public function delete(
+	
+    public function delete(
         \WriterAi\SDK\Models\Operations\DeleteTermsRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteTermsResponse
     {
@@ -142,7 +144,8 @@ class Terminology
      * @param \WriterAi\SDK\Models\Operations\FindTermsRequest $request
      * @return \WriterAi\SDK\Models\Operations\FindTermsResponse
      */
-	public function find(
+	
+    public function find(
         \WriterAi\SDK\Models\Operations\FindTermsRequest $request,
     ): \WriterAi\SDK\Models\Operations\FindTermsResponse
     {
@@ -187,7 +190,8 @@ class Terminology
      * @param \WriterAi\SDK\Models\Operations\UpdateTermsRequest $request
      * @return \WriterAi\SDK\Models\Operations\UpdateTermsResponse
      */
-	public function update(
+	
+    public function update(
         \WriterAi\SDK\Models\Operations\UpdateTermsRequest $request,
     ): \WriterAi\SDK\Models\Operations\UpdateTermsResponse
     {

@@ -46,7 +46,8 @@ class Billing
      * 
      * @return \WriterAi\SDK\Models\Operations\GetSubscriptionDetailsResponse
      */
-	public function getSubscriptionDetails(
+	
+    public function getSubscriptionDetails(
     ): \WriterAi\SDK\Models\Operations\GetSubscriptionDetailsResponse
     {
         $baseUrl = $this->_serverUrl;

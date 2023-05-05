@@ -47,7 +47,8 @@ class CoWrite
      * @param \WriterAi\SDK\Models\Operations\GenerateContentRequest $request
      * @return \WriterAi\SDK\Models\Operations\GenerateContentResponse
      */
-	public function generateContent(
+	
+    public function generateContent(
         \WriterAi\SDK\Models\Operations\GenerateContentRequest $request,
     ): \WriterAi\SDK\Models\Operations\GenerateContentResponse
     {
@@ -96,7 +97,8 @@ class CoWrite
      * @param \WriterAi\SDK\Models\Operations\ListTemplatesRequest $request
      * @return \WriterAi\SDK\Models\Operations\ListTemplatesResponse
      */
-	public function listTemplates(
+	
+    public function listTemplates(
         \WriterAi\SDK\Models\Operations\ListTemplatesRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListTemplatesResponse
     {

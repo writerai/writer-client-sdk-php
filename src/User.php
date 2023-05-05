@@ -47,7 +47,8 @@ class User
      * @param \WriterAi\SDK\Models\Operations\ListUsersRequest $request
      * @return \WriterAi\SDK\Models\Operations\ListUsersResponse
      */
-	public function list(
+	
+    public function list(
         \WriterAi\SDK\Models\Operations\ListUsersRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListUsersResponse
     {
