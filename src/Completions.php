@@ -47,8 +47,7 @@ class Completions
      * @param \WriterAi\SDK\Models\Operations\CreateCompletionRequest $request
      * @return \WriterAi\SDK\Models\Operations\CreateCompletionResponse
      */
-	
-    public function create(
+	public function create(
         \WriterAi\SDK\Models\Operations\CreateCompletionRequest $request,
     ): \WriterAi\SDK\Models\Operations\CreateCompletionResponse
     {
@@ -97,8 +96,7 @@ class Completions
      * @param \WriterAi\SDK\Models\Operations\CreateModelCustomizationCompletionRequest $request
      * @return \WriterAi\SDK\Models\Operations\CreateModelCustomizationCompletionResponse
      */
-	
-    public function createModelCustomizationCompletion(
+	public function createModelCustomizationCompletion(
         \WriterAi\SDK\Models\Operations\CreateModelCustomizationCompletionRequest $request,
     ): \WriterAi\SDK\Models\Operations\CreateModelCustomizationCompletionResponse
     {

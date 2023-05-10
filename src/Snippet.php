@@ -47,8 +47,7 @@ class Snippet
      * @param \WriterAi\SDK\Models\Operations\DeleteSnippetsRequest $request
      * @return \WriterAi\SDK\Models\Operations\DeleteSnippetsResponse
      */
-	
-    public function delete(
+	public function delete(
         \WriterAi\SDK\Models\Operations\DeleteSnippetsRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteSnippetsResponse
     {
@@ -94,8 +93,7 @@ class Snippet
      * @param \WriterAi\SDK\Models\Operations\FindSnippetsRequest $request
      * @return \WriterAi\SDK\Models\Operations\FindSnippetsResponse
      */
-	
-    public function find(
+	public function find(
         \WriterAi\SDK\Models\Operations\FindSnippetsRequest $request,
     ): \WriterAi\SDK\Models\Operations\FindSnippetsResponse
     {
@@ -140,8 +138,7 @@ class Snippet
      * @param \WriterAi\SDK\Models\Operations\UpdateSnippetsRequest $request
      * @return \WriterAi\SDK\Models\Operations\UpdateSnippetsResponse
      */
-	
-    public function update(
+	public function update(
         \WriterAi\SDK\Models\Operations\UpdateSnippetsRequest $request,
     ): \WriterAi\SDK\Models\Operations\UpdateSnippetsResponse
     {

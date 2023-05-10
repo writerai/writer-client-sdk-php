@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace WriterAi\SDK\Models\Operations;
 
 
+/**
+ */
 enum FindTermsTypeEnum: string
 {
     case APPROVED = 'approved';

@@ -47,8 +47,7 @@ class Models
      * @param \WriterAi\SDK\Models\Operations\ListModelsRequest $request
      * @return \WriterAi\SDK\Models\Operations\ListModelsResponse
      */
-	
-    public function list(
+	public function list(
         \WriterAi\SDK\Models\Operations\ListModelsRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListModelsResponse
     {

@@ -47,8 +47,7 @@ class Styleguide
      * @param \WriterAi\SDK\Models\Operations\PageDetailsRequest $request
      * @return \WriterAi\SDK\Models\Operations\PageDetailsResponse
      */
-	
-    public function get(
+	public function get(
         \WriterAi\SDK\Models\Operations\PageDetailsRequest $request,
     ): \WriterAi\SDK\Models\Operations\PageDetailsResponse
     {
@@ -92,8 +91,7 @@ class Styleguide
      * @param \WriterAi\SDK\Models\Operations\ListPagesRequest $request
      * @return \WriterAi\SDK\Models\Operations\ListPagesResponse
      */
-	
-    public function listPages(
+	public function listPages(
         \WriterAi\SDK\Models\Operations\ListPagesRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListPagesResponse
     {

@@ -47,8 +47,7 @@ class Files
      * @param \WriterAi\SDK\Models\Operations\DeleteFileRequest $request
      * @return \WriterAi\SDK\Models\Operations\DeleteFileResponse
      */
-	
-    public function delete(
+	public function delete(
         \WriterAi\SDK\Models\Operations\DeleteFileRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteFileResponse
     {
@@ -92,8 +91,7 @@ class Files
      * @param \WriterAi\SDK\Models\Operations\GetFileRequest $request
      * @return \WriterAi\SDK\Models\Operations\GetFileResponse
      */
-	
-    public function get(
+	public function get(
         \WriterAi\SDK\Models\Operations\GetFileRequest $request,
     ): \WriterAi\SDK\Models\Operations\GetFileResponse
     {
@@ -137,8 +135,7 @@ class Files
      * @param \WriterAi\SDK\Models\Operations\ListFilesRequest $request
      * @return \WriterAi\SDK\Models\Operations\ListFilesResponse
      */
-	
-    public function list(
+	public function list(
         \WriterAi\SDK\Models\Operations\ListFilesRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListFilesResponse
     {
@@ -182,8 +179,7 @@ class Files
      * @param \WriterAi\SDK\Models\Operations\UploadFileRequest $request
      * @return \WriterAi\SDK\Models\Operations\UploadFileResponse
      */
-	
-    public function upload(
+	public function upload(
         \WriterAi\SDK\Models\Operations\UploadFileRequest $request,
     ): \WriterAi\SDK\Models\Operations\UploadFileResponse
     {

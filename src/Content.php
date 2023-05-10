@@ -47,8 +47,7 @@ class Content
      * @param \WriterAi\SDK\Models\Operations\ContentCheckRequest $request
      * @return \WriterAi\SDK\Models\Operations\ContentCheckResponse
      */
-	
-    public function check(
+	public function check(
         \WriterAi\SDK\Models\Operations\ContentCheckRequest $request,
     ): \WriterAi\SDK\Models\Operations\ContentCheckResponse
     {
@@ -97,8 +96,7 @@ class Content
      * @param \WriterAi\SDK\Models\Operations\ContentCorrectRequest $request
      * @return \WriterAi\SDK\Models\Operations\ContentCorrectResponse
      */
-	
-    public function correct(
+	public function correct(
         \WriterAi\SDK\Models\Operations\ContentCorrectRequest $request,
     ): \WriterAi\SDK\Models\Operations\ContentCorrectResponse
     {

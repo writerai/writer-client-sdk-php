@@ -47,8 +47,7 @@ class AIContentDetector
      * @param \WriterAi\SDK\Models\Operations\DetectContentRequest $request
      * @return \WriterAi\SDK\Models\Operations\DetectContentResponse
      */
-	
-    public function detect(
+	public function detect(
         \WriterAi\SDK\Models\Operations\DetectContentRequest $request,
     ): \WriterAi\SDK\Models\Operations\DetectContentResponse
     {
