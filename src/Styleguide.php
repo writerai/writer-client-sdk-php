@@ -55,6 +55,7 @@ class Styleguide
         $url = Utils\Utils::generateUrl($baseUrl, '/styleguide/page/{pageId}', \WriterAi\SDK\Models\Operations\PageDetailsRequest::class, $request, $this->_globals);
         
         $options = ['http_errors' => false];
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -100,6 +101,7 @@ class Styleguide
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\WriterAi\SDK\Models\Operations\ListPagesRequest::class, $request, $this->_globals));
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         

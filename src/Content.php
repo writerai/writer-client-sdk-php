@@ -60,6 +60,7 @@ class Content
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
         
@@ -110,6 +111,10 @@ class Content
         }
         $options = array_merge_recursive($options, $body);
         $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        if (!array_key_exists('headers', $options)) {
+            $options['headers'] = [];
+        }
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
         

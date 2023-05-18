@@ -55,6 +55,7 @@ class Files
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/file/{fileId}', \WriterAi\SDK\Models\Operations\DeleteFileRequest::class, $request, $this->_globals);
         
         $options = ['http_errors' => false];
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
         
@@ -99,6 +100,7 @@ class Files
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/file/{fileId}', \WriterAi\SDK\Models\Operations\GetFileRequest::class, $request, $this->_globals);
         
         $options = ['http_errors' => false];
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -143,6 +145,7 @@ class Files
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/file', \WriterAi\SDK\Models\Operations\ListFilesRequest::class, $request, $this->_globals);
         
         $options = ['http_errors' => false];
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -192,6 +195,7 @@ class Files
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
         

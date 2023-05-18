@@ -53,6 +53,7 @@ class Billing
         $url = Utils\Utils::generateUrl($baseUrl, '/billing/subscription');
         
         $options = ['http_errors' => false];
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         

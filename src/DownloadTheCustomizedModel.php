@@ -55,6 +55,7 @@ class DownloadTheCustomizedModel
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}/fetch', \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest::class, $request, $this->_globals);
         
         $options = ['http_errors' => false];
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
