@@ -23,8 +23,8 @@ require_once 'vendor/autoload.php';
 use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListUsersRequest;
-use \WriterAi\SDK\Models\Operations\ListUsersSortFieldEnum;
-use \WriterAi\SDK\Models\Operations\ListUsersSortOrderEnum;
+use \WriterAi\SDK\Models\Operations\ListUsersSortField;
+use \WriterAi\SDK\Models\Operations\ListUsersSortOrder;
 
 $sdk = Writer::builder()
     ->build();
@@ -34,8 +34,8 @@ try {
     $request->limit = 995300;
     $request->offset = 653108;
     $request->search = 'occaecati';
-    $request->sortField = ListUsersSortFieldEnum::NAME;
-    $request->sortOrder = ListUsersSortOrderEnum::ASC;
+    $request->sortField = ListUsersSortField::NAME;
+    $request->sortOrder = ListUsersSortOrder::ASC;
 
     $response = $sdk->user->list($request);
 

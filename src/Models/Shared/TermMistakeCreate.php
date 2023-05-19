@@ -20,9 +20,9 @@ class TermMistakeCreate
     public string $mistake;
     
 	#[\JMS\Serializer\Annotation\SerializedName('pos')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermMistakeCreatePosEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermMistakeCreatePos>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?TermMistakeCreatePosEnum $pos = null;
+    public ?TermMistakeCreatePos $pos = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('reference')]
     #[\JMS\Serializer\Annotation\Type('string')]

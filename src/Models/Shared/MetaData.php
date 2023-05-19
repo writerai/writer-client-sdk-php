@@ -55,9 +55,9 @@ class MetaData
     public int $termsCount;
     
 	#[\JMS\Serializer\Annotation\SerializedName('tier')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\MetaDataTierEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\MetaDataTier>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?MetaDataTierEnum $tier = null;
+    public ?MetaDataTier $tier = null;
     
 	public function __construct()
 	{

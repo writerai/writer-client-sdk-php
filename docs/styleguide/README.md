@@ -57,7 +57,7 @@ require_once 'vendor/autoload.php';
 use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListPagesRequest;
-use \WriterAi\SDK\Models\Operations\ListPagesStatusEnum;
+use \WriterAi\SDK\Models\Operations\ListPagesStatus;
 
 $sdk = Writer::builder()
     ->build();
@@ -66,7 +66,7 @@ try {
     $request = new ListPagesRequest();
     $request->limit = 902349;
     $request->offset = 697631;
-    $request->status = ListPagesStatusEnum::LIVE;
+    $request->status = ListPagesStatus::LIVE;
 
     $response = $sdk->styleguide->listPages($request);
 

@@ -25,9 +25,9 @@ class TermMistake
     public string $mistake;
     
 	#[\JMS\Serializer\Annotation\SerializedName('pos')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermMistakePosEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermMistakePos>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?TermMistakePosEnum $pos = null;
+    public ?TermMistakePos $pos = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('termBankId')]
     #[\JMS\Serializer\Annotation\Type('int')]

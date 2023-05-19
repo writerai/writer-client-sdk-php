@@ -27,17 +27,17 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\AddTermsRequest;
 use \WriterAi\SDK\Models\Shared\CreateTermsRequest;
-use \WriterAi\SDK\Models\Shared\CreateTermsRequestFailHandlingEnum;
+use \WriterAi\SDK\Models\Shared\CreateTermsRequestFailHandling;
 use \WriterAi\SDK\Models\Shared\TermCreate;
 use \WriterAi\SDK\Models\Shared\ApprovedTermExtensionCreate;
 use \WriterAi\SDK\Models\Shared\TermExampleCreate;
-use \WriterAi\SDK\Models\Shared\TermExampleCreateTypeEnum;
+use \WriterAi\SDK\Models\Shared\TermExampleCreateType;
 use \WriterAi\SDK\Models\Shared\LinkedTermCreate;
 use \WriterAi\SDK\Models\Shared\TermMistakeCreate;
-use \WriterAi\SDK\Models\Shared\TermMistakeCreatePosEnum;
-use \WriterAi\SDK\Models\Shared\TermCreatePosEnum;
+use \WriterAi\SDK\Models\Shared\TermMistakeCreatePos;
+use \WriterAi\SDK\Models\Shared\TermCreatePos;
 use \WriterAi\SDK\Models\Shared\TermTagCreate;
-use \WriterAi\SDK\Models\Shared\TermCreateTypeEnum;
+use \WriterAi\SDK\Models\Shared\TermCreateType;
 
 $sdk = Writer::builder()
     ->build();
@@ -45,7 +45,7 @@ $sdk = Writer::builder()
 try {
     $request = new AddTermsRequest();
     $request->createTermsRequest = new CreateTermsRequest();
-    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandlingEnum::ACCUMULATE;
+    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::ACCUMULATE;
     $request->createTermsRequest->models = [
         new TermCreate(),
         new TermCreate(),
@@ -118,10 +118,10 @@ require_once 'vendor/autoload.php';
 use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\FindTermsRequest;
-use \WriterAi\SDK\Models\Operations\FindTermsPartOfSpeechEnum;
-use \WriterAi\SDK\Models\Operations\FindTermsSortFieldEnum;
-use \WriterAi\SDK\Models\Operations\FindTermsSortOrderEnum;
-use \WriterAi\SDK\Models\Operations\FindTermsTypeEnum;
+use \WriterAi\SDK\Models\Operations\FindTermsPartOfSpeech;
+use \WriterAi\SDK\Models\Operations\FindTermsSortField;
+use \WriterAi\SDK\Models\Operations\FindTermsSortOrder;
+use \WriterAi\SDK\Models\Operations\FindTermsType;
 
 $sdk = Writer::builder()
     ->build();
@@ -130,9 +130,9 @@ try {
     $request = new FindTermsRequest();
     $request->limit = 750686;
     $request->offset = 315428;
-    $request->partOfSpeech = FindTermsPartOfSpeechEnum::ADVERB;
-    $request->sortField = FindTermsSortFieldEnum::CREATION_TIME;
-    $request->sortOrder = FindTermsSortOrderEnum::ASC;
+    $request->partOfSpeech = FindTermsPartOfSpeech::ADVERB;
+    $request->sortField = FindTermsSortField::CREATION_TIME;
+    $request->sortOrder = FindTermsSortOrder::ASC;
     $request->tags = [
         'accusantium',
         'iure',
@@ -140,7 +140,7 @@ try {
     ];
     $request->teamId = 988374;
     $request->term = 'sapiente';
-    $request->type = FindTermsTypeEnum::APPROVED;
+    $request->type = FindTermsType::APPROVED;
 
     $response = $sdk->terminology->find($request);
 
@@ -168,17 +168,17 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\UpdateTermsRequest;
 use \WriterAi\SDK\Models\Shared\UpdateTermsRequest;
-use \WriterAi\SDK\Models\Shared\UpdateTermsRequestFailHandlingEnum;
+use \WriterAi\SDK\Models\Shared\UpdateTermsRequestFailHandling;
 use \WriterAi\SDK\Models\Shared\TermUpdate;
 use \WriterAi\SDK\Models\Shared\ApprovedTermExtensionCreate;
 use \WriterAi\SDK\Models\Shared\TermExampleCreate;
-use \WriterAi\SDK\Models\Shared\TermExampleCreateTypeEnum;
+use \WriterAi\SDK\Models\Shared\TermExampleCreateType;
 use \WriterAi\SDK\Models\Shared\LinkedTermCreate;
 use \WriterAi\SDK\Models\Shared\TermMistakeCreate;
-use \WriterAi\SDK\Models\Shared\TermMistakeCreatePosEnum;
-use \WriterAi\SDK\Models\Shared\TermUpdatePosEnum;
+use \WriterAi\SDK\Models\Shared\TermMistakeCreatePos;
+use \WriterAi\SDK\Models\Shared\TermUpdatePos;
 use \WriterAi\SDK\Models\Shared\TermTagCreate;
-use \WriterAi\SDK\Models\Shared\TermUpdateTypeEnum;
+use \WriterAi\SDK\Models\Shared\TermUpdateType;
 
 $sdk = Writer::builder()
     ->build();
@@ -186,7 +186,7 @@ $sdk = Writer::builder()
 try {
     $request = new UpdateTermsRequest();
     $request->updateTermsRequest = new UpdateTermsRequest();
-    $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandlingEnum::SKIP;
+    $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandling::SKIP;
     $request->updateTermsRequest->models = [
         new TermUpdate(),
     ];

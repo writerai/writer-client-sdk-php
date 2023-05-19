@@ -62,8 +62,8 @@ require_once 'vendor/autoload.php';
 use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\FindSnippetsRequest;
-use \WriterAi\SDK\Models\Operations\FindSnippetsSortFieldEnum;
-use \WriterAi\SDK\Models\Operations\FindSnippetsSortOrderEnum;
+use \WriterAi\SDK\Models\Operations\FindSnippetsSortField;
+use \WriterAi\SDK\Models\Operations\FindSnippetsSortOrder;
 
 $sdk = Writer::builder()
     ->build();
@@ -76,8 +76,8 @@ try {
     $request->shortcuts = [
         'iste',
     ];
-    $request->sortField = FindSnippetsSortFieldEnum::SHORTCUT;
-    $request->sortOrder = FindSnippetsSortOrderEnum::DESC;
+    $request->sortField = FindSnippetsSortField::SHORTCUT;
+    $request->sortOrder = FindSnippetsSortOrder::DESC;
     $request->tags = [
         'hic',
         'saepe',
