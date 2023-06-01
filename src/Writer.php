@@ -111,8 +111,8 @@ class Writer
 	private ?Models\Shared\Security $_security;
 	private string $_serverUrl;
 	private string $_language = 'php';
-	private string $_sdkVersion = '1.5.0';
-	private string $_genVersion = '2.31.0';
+	private string $_sdkVersion = '1.6.0';
+	private string $_genVersion = '2.34.2';
 	/** @var array<string, array<string, array<string, mixed>>> */
 	private ?array $_globals;
 
