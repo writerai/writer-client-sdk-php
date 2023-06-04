@@ -34,8 +34,8 @@ class PageWithSectionResponse
     public ?SectionInfo $section = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\PageWithSectionResponseStatusEnum>')]
-    public PageWithSectionResponseStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\PageWithSectionResponseStatus>')]
+    public PageWithSectionResponseStatus $status;
     
 	#[\JMS\Serializer\Annotation\SerializedName('title')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -61,7 +61,7 @@ class PageWithSectionResponse
 		$this->id = 0;
 		$this->order = 0;
 		$this->section = null;
-		$this->status = \WriterAi\SDK\Models\Shared\PageWithSectionResponseStatusEnum::LIVE;
+		$this->status = \WriterAi\SDK\Models\Shared\PageWithSectionResponseStatus::LIVE;
 		$this->title = "";
 		$this->updatedAt = new \DateTime();
 		$this->updatedBy = null;

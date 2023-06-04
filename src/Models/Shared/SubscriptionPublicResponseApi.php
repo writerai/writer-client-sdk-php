@@ -20,16 +20,16 @@ class SubscriptionPublicResponseApi
     public MetaData $meta;
     
 	#[\JMS\Serializer\Annotation\SerializedName('productName')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiProductNameEnum>')]
-    public SubscriptionPublicResponseApiProductNameEnum $productName;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiProductName>')]
+    public SubscriptionPublicResponseApiProductName $productName;
     
 	#[\JMS\Serializer\Annotation\SerializedName('seats')]
     #[\JMS\Serializer\Annotation\Type('int')]
     public int $seats;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiStatusEnum>')]
-    public SubscriptionPublicResponseApiStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiStatus>')]
+    public SubscriptionPublicResponseApiStatus $status;
     
 	#[\JMS\Serializer\Annotation\SerializedName('subscriptionId')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -43,9 +43,9 @@ class SubscriptionPublicResponseApi
 	{
 		$this->createdAt = new \DateTime();
 		$this->meta = new \WriterAi\SDK\Models\Shared\MetaData();
-		$this->productName = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiProductNameEnum::FREE;
+		$this->productName = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiProductName::FREE;
 		$this->seats = 0;
-		$this->status = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiStatusEnum::TRIALING;
+		$this->status = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiStatus::TRIALING;
 		$this->subscriptionId = "";
 		$this->usage = new \WriterAi\SDK\Models\Shared\Usage();
 	}

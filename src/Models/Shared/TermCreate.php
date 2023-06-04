@@ -61,9 +61,9 @@ class TermCreate
     public ?array $mistakes = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('pos')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermCreatePosEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermCreatePos>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?TermCreatePosEnum $pos = null;
+    public ?TermCreatePos $pos = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('reference')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -85,8 +85,8 @@ class TermCreate
     public string $term;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermCreateTypeEnum>')]
-    public TermCreateTypeEnum $type;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermCreateType>')]
+    public TermCreateType $type;
     
 	public function __construct()
 	{
@@ -101,6 +101,6 @@ class TermCreate
 		$this->reference = null;
 		$this->tags = null;
 		$this->term = "";
-		$this->type = \WriterAi\SDK\Models\Shared\TermCreateTypeEnum::APPROVED;
+		$this->type = \WriterAi\SDK\Models\Shared\TermCreateType::APPROVED;
 	}
 }

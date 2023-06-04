@@ -50,7 +50,10 @@ class QueryParameters
                         $parts[] = $this->parseDeepObjectParams($metadata, $value);
                         break;
                     case "form":
-                        $parts[] = $this->parseFormParams($metadata, $value);
+                        $parts[] = $this->parseDelimitedParams($metadata, $value, ",");
+                        break;
+                    case "pipeDelimited":
+                        $parts[] = $this->parseDelimitedParams($metadata, $value, "|");
                         break;
                     default:
                         throw new \Exception("Unsupported style: " . $metadata->style);
@@ -153,9 +156,10 @@ class QueryParameters
     /**
      * @param ParamsMetadata $metadata
      * @param mixed $value
+     * @param string $delimiter
      * @return string
      */
-    private function parseFormParams(ParamsMetadata $metadata, mixed $value): string
+    private function parseDelimitedParams(ParamsMetadata $metadata, mixed $value, string $delimiter): string
     {
         $queryParams = [];
 
@@ -180,12 +184,12 @@ class QueryParameters
                     if ($metadata->explode) {
                         $queryParams[$fieldMetaData->name] = valToString($val, $dateTimeFormat);
                     } else {
-                        $items[] = $fieldMetaData->name . "," . valToString($val, $dateTimeFormat);
+                        $items[] = $fieldMetaData->name . $delimiter . valToString($val, $dateTimeFormat);
                     }
                 }
 
                 if (count($items) > 0) {
-                    $queryParams[$metadata->name] = implode(",", $items);
+                    $queryParams[$metadata->name] = implode($delimiter, $items);
                 }
                 break;
             case "array":
@@ -202,7 +206,7 @@ class QueryParameters
                     }
 
                     if (count($items) > 0) {
-                        $values[] = implode(",", $items);
+                        $values[] = implode($delimiter, $items);
                     }
 
                     $queryParams[$metadata->name] = $values;
@@ -217,12 +221,12 @@ class QueryParameters
                         if ($metadata->explode) {
                             $queryParams[$key] = valToString($val, $dateTimeFormat);
                         } else {
-                            $items[] = $key . "," . valToString($val, $dateTimeFormat);
+                            $items[] = $key . $delimiter . valToString($val, $dateTimeFormat);
                         }
                     }
 
                     if (count($items) > 0) {
-                        $queryParams[$metadata->name] = implode(",", $items);
+                        $queryParams[$metadata->name] = implode($delimiter, $items);
                     }
                 }
                 break;
