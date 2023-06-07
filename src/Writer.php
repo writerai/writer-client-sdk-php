@@ -8,6 +8,12 @@ declare(strict_types=1);
 
 namespace WriterAi\SDK;
 
+/**
+ * Writer
+ * 
+ * @package WriterAi\SDK
+ * @access public
+ */
 class Writer
 {
 	public const SERVERS = [

@@ -2,15 +2,15 @@ configVersion: 1.0.0
 management:
   docChecksum: 55a1df383e1db4d900f22f65b739c1d5
   docVersion: "1.6"
-  speakeasyVersion: 1.43.0
-  generationVersion: 2.35.3
+  speakeasyVersion: 1.44.2
+  generationVersion: 2.35.9
 generation:
   sdkClassName: writer
   sdkFlattening: false
   singleTagPerOp: false
   telemetryEnabled: false
 php:
-  version: 1.1.0
+  version: 1.1.1
   maxMethodParams: 0
   namespace: WriterAi\SDK
   packageName: writerai/writer-sdk
