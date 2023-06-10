@@ -61,7 +61,7 @@ class PageWithSectionResponse
 		$this->id = 0;
 		$this->order = 0;
 		$this->section = null;
-		$this->status = \WriterAi\SDK\Models\Shared\PageWithSectionResponseStatus::LIVE;
+		$this->status = \WriterAi\SDK\Models\Shared\PageWithSectionResponseStatus::Live;
 		$this->title = "";
 		$this->updatedAt = new \DateTime();
 		$this->updatedBy = null;

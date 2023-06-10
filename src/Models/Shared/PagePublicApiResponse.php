@@ -55,7 +55,7 @@ class PagePublicApiResponse
 		$this->id = 0;
 		$this->order = 0;
 		$this->section = null;
-		$this->status = \WriterAi\SDK\Models\Shared\PagePublicApiResponseStatus::LIVE;
+		$this->status = \WriterAi\SDK\Models\Shared\PagePublicApiResponseStatus::Live;
 		$this->title = "";
 		$this->updatedAt = new \DateTime();
 		$this->updatedBy = null;

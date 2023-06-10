@@ -13,8 +13,8 @@ namespace WriterAi\SDK\Models\Operations;
  */
 enum FindTermsSortField: string
 {
-    case TERM = 'term';
-    case CREATION_TIME = 'creationTime';
-    case MODIFICATION_TIME = 'modificationTime';
-    case TYPE = 'type';
+    case Term = 'term';
+    case CreationTime = 'creationTime';
+    case ModificationTime = 'modificationTime';
+    case Type = 'type';
 }

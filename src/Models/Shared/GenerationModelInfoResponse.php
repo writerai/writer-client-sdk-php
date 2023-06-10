@@ -27,6 +27,6 @@ class GenerationModelInfoResponse
 	{
 		$this->id = "";
 		$this->name = "";
-		$this->type = \WriterAi\SDK\Models\Shared\GenerationModelInfoResponseType::GPT;
+		$this->type = \WriterAi\SDK\Models\Shared\GenerationModelInfoResponseType::Gpt;
 	}
 }

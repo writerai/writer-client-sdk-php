@@ -21,7 +21,7 @@ class ContentDetectorResponse
     
 	public function __construct()
 	{
-		$this->label = \WriterAi\SDK\Models\Shared\ContentDetectorResponseLabel::FAKE;
+		$this->label = \WriterAi\SDK\Models\Shared\ContentDetectorResponseLabel::Fake;
 		$this->score = 0;
 	}
 }

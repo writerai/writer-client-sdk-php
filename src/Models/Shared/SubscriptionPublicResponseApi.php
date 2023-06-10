@@ -43,9 +43,9 @@ class SubscriptionPublicResponseApi
 	{
 		$this->createdAt = new \DateTime();
 		$this->meta = new \WriterAi\SDK\Models\Shared\MetaData();
-		$this->productName = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiProductName::FREE;
+		$this->productName = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiProductName::Free;
 		$this->seats = 0;
-		$this->status = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiStatus::TRIALING;
+		$this->status = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiStatus::Trialing;
 		$this->subscriptionId = "";
 		$this->usage = new \WriterAi\SDK\Models\Shared\Usage();
 	}

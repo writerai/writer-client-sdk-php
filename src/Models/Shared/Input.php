@@ -72,7 +72,7 @@ class Input
 		$this->options = null;
 		$this->required = false;
 		$this->subtitle = null;
-		$this->type = \WriterAi\SDK\Models\Shared\InputType::TEXTBOX;
+		$this->type = \WriterAi\SDK\Models\Shared\InputType::Textbox;
 		$this->unitCopy = null;
 	}
 }

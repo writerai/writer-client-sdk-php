@@ -13,7 +13,7 @@ namespace WriterAi\SDK\Models\Operations;
  */
 enum FindTermsType: string
 {
-    case APPROVED = 'approved';
-    case BANNED = 'banned';
-    case PENDING = 'pending';
+    case Approved = 'approved';
+    case Banned = 'banned';
+    case Pending = 'pending';
 }

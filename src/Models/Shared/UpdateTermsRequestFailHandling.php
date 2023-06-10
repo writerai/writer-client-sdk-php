@@ -11,8 +11,8 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum UpdateTermsRequestFailHandling: string
 {
-    case ACCUMULATE = 'accumulate';
-    case VALIDATE = 'validate';
-    case SKIP = 'skip';
-    case VALIDATE_ONLY = 'validateOnly';
+    case Accumulate = 'accumulate';
+    case Validate = 'validate';
+    case Skip = 'skip';
+    case ValidateOnly = 'validateOnly';
 }

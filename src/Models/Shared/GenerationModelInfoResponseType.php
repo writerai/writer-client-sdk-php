@@ -11,6 +11,6 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum GenerationModelInfoResponseType: string
 {
-    case GPT = 'GPT';
-    case INSTRUCT = 'Instruct';
+    case Gpt = 'GPT';
+    case Instruct = 'Instruct';
 }

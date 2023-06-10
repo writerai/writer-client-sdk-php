@@ -13,7 +13,7 @@ namespace WriterAi\SDK\Models\Operations;
  */
 enum FindSnippetsSortField: string
 {
-    case SHORTCUT = 'shortcut';
-    case CREATION_TIME = 'creationTime';
-    case MODIFICATION_TIME = 'modificationTime';
+    case Shortcut = 'shortcut';
+    case CreationTime = 'creationTime';
+    case ModificationTime = 'modificationTime';
 }

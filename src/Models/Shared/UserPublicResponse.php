@@ -63,7 +63,7 @@ class UserPublicResponse
     
 	public function __construct()
 	{
-		$this->accountStatus = \WriterAi\SDK\Models\Shared\UserPublicResponseAccountStatus::INVITED;
+		$this->accountStatus = \WriterAi\SDK\Models\Shared\UserPublicResponseAccountStatus::Invited;
 		$this->avatar = null;
 		$this->createdAt = new \DateTime();
 		$this->email = null;

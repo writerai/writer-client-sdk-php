@@ -48,7 +48,7 @@ class ContentIssue
 		$this->description = null;
 		$this->from = 0;
 		$this->meta = null;
-		$this->service = \WriterAi\SDK\Models\Shared\ContentIssueService::COMMON_MISTAKES;
+		$this->service = \WriterAi\SDK\Models\Shared\ContentIssueService::CommonMistakes;
 		$this->suggestions = null;
 		$this->until = 0;
 	}

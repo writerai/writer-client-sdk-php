@@ -11,6 +11,6 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum ContentDetectorResponseLabel: string
 {
-    case FAKE = 'fake';
-    case REAL = 'real';
+    case Fake = 'fake';
+    case Real = 'real';
 }

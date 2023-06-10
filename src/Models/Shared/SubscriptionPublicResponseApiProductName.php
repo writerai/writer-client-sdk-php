@@ -11,9 +11,9 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum SubscriptionPublicResponseApiProductName: string
 {
-    case FREE = 'free';
-    case PRO = 'pro';
-    case TEAM = 'team';
-    case ENTERPRISE = 'enterprise';
-    case LEGACY = 'legacy';
+    case Free = 'free';
+    case Pro = 'pro';
+    case Team = 'team';
+    case Enterprise = 'enterprise';
+    case Legacy = 'legacy';
 }

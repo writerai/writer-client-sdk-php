@@ -22,6 +22,6 @@ class TermExampleCreate
 	public function __construct()
 	{
 		$this->example = "";
-		$this->type = \WriterAi\SDK\Models\Shared\TermExampleCreateType::GOOD;
+		$this->type = \WriterAi\SDK\Models\Shared\TermExampleCreateType::Good;
 	}
 }

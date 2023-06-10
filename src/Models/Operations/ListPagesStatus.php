@@ -13,6 +13,6 @@ namespace WriterAi\SDK\Models\Operations;
  */
 enum ListPagesStatus: string
 {
-    case LIVE = 'live';
-    case OFFLINE = 'offline';
+    case Live = 'live';
+    case Offline = 'offline';
 }

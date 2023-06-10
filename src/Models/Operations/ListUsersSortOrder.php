@@ -13,6 +13,6 @@ namespace WriterAi\SDK\Models\Operations;
  */
 enum ListUsersSortOrder: string
 {
-    case ASC = 'asc';
-    case DESC = 'desc';
+    case Asc = 'asc';
+    case Desc = 'desc';
 }

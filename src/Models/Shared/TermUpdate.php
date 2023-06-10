@@ -100,6 +100,6 @@ class TermUpdate
 		$this->pos = null;
 		$this->tags = null;
 		$this->term = "";
-		$this->type = \WriterAi\SDK\Models\Shared\TermUpdateType::APPROVED;
+		$this->type = \WriterAi\SDK\Models\Shared\TermUpdateType::Approved;
 	}
 }

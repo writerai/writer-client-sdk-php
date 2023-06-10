@@ -101,6 +101,6 @@ class TermCreate
 		$this->reference = null;
 		$this->tags = null;
 		$this->term = "";
-		$this->type = \WriterAi\SDK\Models\Shared\TermCreateType::APPROVED;
+		$this->type = \WriterAi\SDK\Models\Shared\TermCreateType::Approved;
 	}
 }

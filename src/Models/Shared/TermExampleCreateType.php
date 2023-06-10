@@ -11,6 +11,6 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum TermExampleCreateType: string
 {
-    case GOOD = 'good';
-    case BAD = 'bad';
+    case Good = 'good';
+    case Bad = 'bad';
 }

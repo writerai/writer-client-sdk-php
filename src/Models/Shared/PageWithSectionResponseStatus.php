@@ -11,6 +11,6 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum PageWithSectionResponseStatus: string
 {
-    case LIVE = 'live';
-    case OFFLINE = 'offline';
+    case Live = 'live';
+    case Offline = 'offline';
 }

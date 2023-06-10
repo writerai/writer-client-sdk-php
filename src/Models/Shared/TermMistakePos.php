@@ -11,8 +11,8 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum TermMistakePos: string
 {
-    case NOUN = 'noun';
-    case VERB = 'verb';
-    case ADVERB = 'adverb';
-    case ADJECTIVE = 'adjective';
+    case Noun = 'noun';
+    case Verb = 'verb';
+    case Adverb = 'adverb';
+    case Adjective = 'adjective';
 }

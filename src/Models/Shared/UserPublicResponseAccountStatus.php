@@ -11,6 +11,6 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum UserPublicResponseAccountStatus: string
 {
-    case INVITED = 'invited';
-    case SIGNED_UP = 'signed_up';
+    case Invited = 'invited';
+    case SignedUp = 'signed_up';
 }

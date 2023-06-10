@@ -11,8 +11,8 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum MetaDataTier: string
 {
-    case ENTERPRISE1 = 'enterprise-1';
-    case ENTERPRISE2 = 'enterprise-2';
-    case ENTERPRISE3 = 'enterprise-3';
-    case ENTERPRISE4 = 'enterprise-4';
+    case Enterprise1 = 'enterprise-1';
+    case Enterprise2 = 'enterprise-2';
+    case Enterprise3 = 'enterprise-3';
+    case Enterprise4 = 'enterprise-4';
 }

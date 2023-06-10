@@ -135,6 +135,6 @@ class FullTermWithUser
 		$this->tags = null;
 		$this->term = "";
 		$this->termBankId = 0;
-		$this->type = \WriterAi\SDK\Models\Shared\FullTermWithUserType::APPROVED;
+		$this->type = \WriterAi\SDK\Models\Shared\FullTermWithUserType::Approved;
 	}
 }

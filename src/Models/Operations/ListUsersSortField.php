@@ -13,11 +13,11 @@ namespace WriterAi\SDK\Models\Operations;
  */
 enum ListUsersSortField: string
 {
-    case ID = 'id';
-    case NAME = 'name';
-    case CREATION_TIME = 'creationTime';
-    case DELETED = 'deleted';
-    case MODIFICATION_TIME = 'modificationTime';
-    case EMAIL = 'email';
-    case LAST_SEEN = 'lastSeen';
+    case Id = 'id';
+    case Name = 'name';
+    case CreationTime = 'creationTime';
+    case Deleted = 'deleted';
+    case ModificationTime = 'modificationTime';
+    case Email = 'email';
+    case LastSeen = 'lastSeen';
 }

@@ -11,7 +11,7 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum InputType: string
 {
-    case TEXTBOX = 'textbox';
-    case TEXTAREA = 'textarea';
-    case DROPDOWN = 'dropdown';
+    case Textbox = 'textbox';
+    case Textarea = 'textarea';
+    case Dropdown = 'dropdown';
 }

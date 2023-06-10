@@ -38,6 +38,6 @@ class TermExample
 		$this->id = null;
 		$this->termBankId = 0;
 		$this->termId = 0;
-		$this->type = \WriterAi\SDK\Models\Shared\TermExampleType::GOOD;
+		$this->type = \WriterAi\SDK\Models\Shared\TermExampleType::Good;
 	}
 }

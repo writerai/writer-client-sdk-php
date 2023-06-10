@@ -11,11 +11,11 @@ namespace WriterAi\SDK\Models\Shared;
 
 enum SubscriptionPublicResponseApiStatus: string
 {
-    case TRIALING = 'trialing';
-    case ACTIVE = 'active';
-    case PAST_DUE = 'past_due';
-    case INCOMPLETE = 'incomplete';
-    case INCOMPLETE_EXPIRED = 'incomplete_expired';
-    case UNPAID = 'unpaid';
-    case CANCELED = 'canceled';
+    case Trialing = 'trialing';
+    case Active = 'active';
+    case PastDue = 'past_due';
+    case Incomplete = 'incomplete';
+    case IncompleteExpired = 'incomplete_expired';
+    case Unpaid = 'unpaid';
+    case Canceled = 'canceled';
 }
