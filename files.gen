@@ -14,7 +14,6 @@ src/Terminology.php
 src/User.php
 src/Writer.php
 src/WriterBuilder.php
-.gitignore
 composer.json
 phpstan.neon
 src/Utils/EnumHandler.php

@@ -9,8 +9,6 @@ declare(strict_types=1);
 namespace WriterAi\SDK\Models\Operations;
 
 
-/**
- */
 enum FindTermsPartOfSpeech: string
 {
     case Noun = 'noun';
