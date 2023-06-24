@@ -12,6 +12,7 @@ src/Snippet.php
 src/Styleguide.php
 src/Terminology.php
 src/User.php
+src/Document.php
 src/Writer.php
 src/WriterBuilder.php
 composer.json
@@ -98,6 +99,12 @@ src/Models/Operations/ListUsersSortField.php
 src/Models/Operations/ListUsersSortOrder.php
 src/Models/Operations/ListUsersRequest.php
 src/Models/Operations/ListUsersResponse.php
+src/Models/Operations/GetDocumentDetailsRequest.php
+src/Models/Operations/GetDocumentDetailsResponse.php
+src/Models/Operations/ListTeamDocumentsSortField.php
+src/Models/Operations/ListTeamDocumentsSortOrder.php
+src/Models/Operations/ListTeamDocumentsRequest.php
+src/Models/Operations/ListTeamDocumentsResponse.php
 src/Models/Shared/FailResponse.php
 src/Models/Shared/FailMessage.php
 src/Models/Shared/ContentDetectorResponseLabel.php
@@ -184,6 +191,11 @@ src/Models/Shared/TermUpdate.php
 src/Models/Shared/PaginatedResultUserPublicResponse.php
 src/Models/Shared/UserPublicResponseAccountStatus.php
 src/Models/Shared/UserPublicResponse.php
+src/Models/Shared/DocumentAccess.php
+src/Models/Shared/Document.php
+src/Models/Shared/BriefDocuments.php
+src/Models/Shared/BriefDocumentAccess.php
+src/Models/Shared/BriefDocument.php
 src/Models/Shared/Security.php
 docs/sdks/writer/README.md
 docs/sdks/aicontentdetector/README.md
@@ -199,6 +211,7 @@ docs/sdks/snippet/README.md
 docs/sdks/styleguide/README.md
 docs/sdks/terminology/README.md
 docs/sdks/user/README.md
+docs/sdks/document/README.md
 USAGE.md
 docs/models/operations/DetectContentRequest.md
 docs/models/operations/DetectContentResponse.md
@@ -266,6 +279,12 @@ docs/models/operations/ListUsersSortField.md
 docs/models/operations/ListUsersSortOrder.md
 docs/models/operations/ListUsersRequest.md
 docs/models/operations/ListUsersResponse.md
+docs/models/operations/GetDocumentDetailsRequest.md
+docs/models/operations/GetDocumentDetailsResponse.md
+docs/models/operations/ListTeamDocumentsSortField.md
+docs/models/operations/ListTeamDocumentsSortOrder.md
+docs/models/operations/ListTeamDocumentsRequest.md
+docs/models/operations/ListTeamDocumentsResponse.md
 docs/models/shared/FailResponse.md
 docs/models/shared/FailMessage.md
 docs/models/shared/ContentDetectorResponseLabel.md
@@ -352,4 +371,9 @@ docs/models/shared/TermUpdate.md
 docs/models/shared/PaginatedResultUserPublicResponse.md
 docs/models/shared/UserPublicResponseAccountStatus.md
 docs/models/shared/UserPublicResponse.md
+docs/models/shared/DocumentAccess.md
+docs/models/shared/Document.md
+docs/models/shared/BriefDocuments.md
+docs/models/shared/BriefDocumentAccess.md
+docs/models/shared/BriefDocument.md
 docs/models/shared/Security.md

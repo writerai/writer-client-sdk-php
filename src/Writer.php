@@ -110,6 +110,13 @@ class Writer
      * @var User $$user
      */
 	public User $user;
+	
+    /**
+     * Methods related to document
+     * 
+     * @var Document $$document
+     */
+	public Document $document;
 		
 	private SDKConfiguration $sdkConfiguration;
 
@@ -155,5 +162,7 @@ class Writer
 		$this->terminology = new Terminology($this->sdkConfiguration);
 		
 		$this->user = new User($this->sdkConfiguration);
+		
+		$this->document = new Document($this->sdkConfiguration);
 	}
 }

@@ -140,6 +140,11 @@ try {
 ### [user](docs/sdks/user/README.md)
 
 * [list](docs/sdks/user/README.md#list) - List users
+
+### [document](docs/sdks/document/README.md)
+
+* [get](docs/sdks/document/README.md#get) - Get document details
+* [list](docs/sdks/document/README.md#list) - List team documents
 <!-- End SDK Available Operations -->
 
 ### Maturity
