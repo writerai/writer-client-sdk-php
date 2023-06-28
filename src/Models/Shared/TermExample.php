@@ -29,8 +29,8 @@ class TermExample
     public int $termId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermExampleTypeEnum>')]
-    public TermExampleTypeEnum $type;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermExampleType>')]
+    public TermExampleType $type;
     
 	public function __construct()
 	{
@@ -38,6 +38,6 @@ class TermExample
 		$this->id = null;
 		$this->termBankId = 0;
 		$this->termId = 0;
-		$this->type = \WriterAi\SDK\Models\Shared\TermExampleTypeEnum::GOOD;
+		$this->type = \WriterAi\SDK\Models\Shared\TermExampleType::Good;
 	}
 }

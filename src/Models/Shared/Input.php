@@ -54,8 +54,8 @@ class Input
     public ?string $subtitle = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\InputTypeEnum>')]
-    public InputTypeEnum $type;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\InputType>')]
+    public InputType $type;
     
 	#[\JMS\Serializer\Annotation\SerializedName('unitCopy')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -72,7 +72,7 @@ class Input
 		$this->options = null;
 		$this->required = false;
 		$this->subtitle = null;
-		$this->type = \WriterAi\SDK\Models\Shared\InputTypeEnum::TEXTBOX;
+		$this->type = \WriterAi\SDK\Models\Shared\InputType::Textbox;
 		$this->unitCopy = null;
 	}
 }

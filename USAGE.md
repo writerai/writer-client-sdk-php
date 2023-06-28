@@ -3,17 +3,14 @@
 <?php
 
 declare(strict_types=1);
+require_once 'vendor/autoload.php';
 
-use WriterAi\SDK\Writer;
+use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DetectContentRequest;
 use \WriterAi\SDK\Models\Shared\ContentDetectorRequest;
 
-$security = new Security();
-$security->apiKey = 'YOUR_API_KEY_HERE';
-
 $sdk = Writer::builder()
-    ->setSecurity($security);
     ->build();
 
 try {

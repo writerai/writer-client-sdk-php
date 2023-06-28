@@ -16,12 +16,12 @@ class TermExampleCreate
     public string $example;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermExampleCreateTypeEnum>')]
-    public TermExampleCreateTypeEnum $type;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermExampleCreateType>')]
+    public TermExampleCreateType $type;
     
 	public function __construct()
 	{
 		$this->example = "";
-		$this->type = \WriterAi\SDK\Models\Shared\TermExampleCreateTypeEnum::GOOD;
+		$this->type = \WriterAi\SDK\Models\Shared\TermExampleCreateType::Good;
 	}
 }

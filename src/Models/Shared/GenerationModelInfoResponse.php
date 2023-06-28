@@ -20,13 +20,13 @@ class GenerationModelInfoResponse
     public string $name;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\GenerationModelInfoResponseTypeEnum>')]
-    public GenerationModelInfoResponseTypeEnum $type;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\GenerationModelInfoResponseType>')]
+    public GenerationModelInfoResponseType $type;
     
 	public function __construct()
 	{
 		$this->id = "";
 		$this->name = "";
-		$this->type = \WriterAi\SDK\Models\Shared\GenerationModelInfoResponseTypeEnum::GPT;
+		$this->type = \WriterAi\SDK\Models\Shared\GenerationModelInfoResponseType::Gpt;
 	}
 }

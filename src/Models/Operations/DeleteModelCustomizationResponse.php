@@ -36,13 +36,8 @@ class DeleteModelCustomizationResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * $deleteModelCustomization200ApplicationJSONObject
-     * 
-     * @var ?array<string, mixed> $deleteModelCustomization200ApplicationJSONObject
-     */
 	
-    public ?array $deleteModelCustomization200ApplicationJSONObject = null;
+    public ?DeleteModelCustomization200ApplicationJSON $deleteModelCustomization200ApplicationJSONObject = null;
     
 	public function __construct()
 	{

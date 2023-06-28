@@ -90,9 +90,9 @@ class FullTermWithUser
     public TerminologyUser $modifiedUser;
     
 	#[\JMS\Serializer\Annotation\SerializedName('pos')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\FullTermWithUserPosEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\FullTermWithUserPos>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?FullTermWithUserPosEnum $pos = null;
+    public ?FullTermWithUserPos $pos = null;
     
     /**
      * $tags
@@ -113,8 +113,8 @@ class FullTermWithUser
     public int $termBankId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\FullTermWithUserTypeEnum>')]
-    public FullTermWithUserTypeEnum $type;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\FullTermWithUserType>')]
+    public FullTermWithUserType $type;
     
 	public function __construct()
 	{
@@ -135,6 +135,6 @@ class FullTermWithUser
 		$this->tags = null;
 		$this->term = "";
 		$this->termBankId = 0;
-		$this->type = \WriterAi\SDK\Models\Shared\FullTermWithUserTypeEnum::APPROVED;
+		$this->type = \WriterAi\SDK\Models\Shared\FullTermWithUserType::Approved;
 	}
 }

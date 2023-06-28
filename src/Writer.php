@@ -8,6 +8,12 @@ declare(strict_types=1);
 
 namespace WriterAi\SDK;
 
+/**
+ * Writer
+ * 
+ * @package WriterAi\SDK
+ * @access public
+ */
 class Writer
 {
 	public const SERVERS = [
@@ -104,17 +110,15 @@ class Writer
      * @var User $$user
      */
 	public User $user;
+	
+    /**
+     * Methods related to document
+     * 
+     * @var Document $$document
+     */
+	public Document $document;
 		
-	// SDK private variables namespaced with _ to avoid conflicts with API models
-	private ?\GuzzleHttp\ClientInterface $_defaultClient;
-	private ?\GuzzleHttp\ClientInterface $_securityClient;
-	private ?Models\Shared\Security $_security;
-	private string $_serverUrl;
-	private string $_language = 'php';
-	private string $_sdkVersion = '1.0.1';
-	private string $_genVersion = '2.18.1';
-	/** @var array<string, array<string, array<string, mixed>>> */
-	private ?array $_globals;
+	private SDKConfiguration $sdkConfiguration;
 
 	/**
 	 * Returns a new instance of the SDK builder used to configure and create the SDK instance.
@@ -127,169 +131,38 @@ class Writer
 	}
 
 	/**
-	 * @param \GuzzleHttp\ClientInterface|null $client	 
-	 * @param Models\Shared\Security|null $security
-	 * @param string $serverUrl
-	 * @param array<string, string>|null $params
-	 * @param array<string, array<string, array<string, string>>> $globals
+	 * @param SDKConfiguration $sdkConfiguration
 	 */
-	public function __construct(?\GuzzleHttp\ClientInterface $client, ?Models\Shared\Security $security, string $serverUrl, ?array $params, ?array $globals)
+	public function __construct(SDKConfiguration $sdkConfiguration)
 	{
-		$this->_defaultClient = $client;
+		$this->sdkConfiguration = $sdkConfiguration;
 		
-		if ($this->_defaultClient === null) {
-			$this->_defaultClient = new \GuzzleHttp\Client([
-				'timeout' => 60,
-			]);
-		}
-
-		$this->_securityClient = null;
-		if ($security !== null) {
-			$this->_security = $security;
-			$this->_securityClient = Utils\Utils::configureSecurityClient($this->_defaultClient, $this->_security);
-		}
+		$this->aiContentDetector = new AIContentDetector($this->sdkConfiguration);
 		
-		if ($this->_securityClient === null) {
-			$this->_securityClient = $this->_defaultClient;
-		}
-
-		if (!empty($serverUrl)) {
-			$this->_serverUrl = Utils\Utils::templateUrl($serverUrl, $params);
-		}
+		$this->billing = new Billing($this->sdkConfiguration);
 		
-		if (empty($this->_serverUrl)) {
-			$this->_serverUrl = $this::SERVERS[0];
-		}
-		$this->_globals = $globals;
+		$this->coWrite = new CoWrite($this->sdkConfiguration);
 		
-		$this->aiContentDetector = new AIContentDetector(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->completions = new Completions($this->sdkConfiguration);
 		
-		$this->billing = new Billing(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->content = new Content($this->sdkConfiguration);
 		
-		$this->coWrite = new CoWrite(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->downloadTheCustomizedModel = new DownloadTheCustomizedModel($this->sdkConfiguration);
 		
-		$this->completions = new Completions(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->files = new Files($this->sdkConfiguration);
 		
-		$this->content = new Content(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->modelCustomization = new ModelCustomization($this->sdkConfiguration);
 		
-		$this->downloadTheCustomizedModel = new DownloadTheCustomizedModel(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->models = new Models($this->sdkConfiguration);
 		
-		$this->files = new Files(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->snippet = new Snippet($this->sdkConfiguration);
 		
-		$this->modelCustomization = new ModelCustomization(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->styleguide = new Styleguide($this->sdkConfiguration);
 		
-		$this->models = new Models(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->terminology = new Terminology($this->sdkConfiguration);
 		
-		$this->snippet = new Snippet(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->user = new User($this->sdkConfiguration);
 		
-		$this->styleguide = new Styleguide(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
-		
-		$this->terminology = new Terminology(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
-		
-		$this->user = new User(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion,
-			$this->_globals
-		);
+		$this->document = new Document($this->sdkConfiguration);
 	}
 }

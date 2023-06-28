@@ -65,9 +65,9 @@ class TermUpdate
     public ?array $mistakes = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('pos')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermUpdatePosEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermUpdatePos>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?TermUpdatePosEnum $pos = null;
+    public ?TermUpdatePos $pos = null;
     
     /**
      * $tags
@@ -84,8 +84,8 @@ class TermUpdate
     public string $term;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermUpdateTypeEnum>')]
-    public TermUpdateTypeEnum $type;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\TermUpdateType>')]
+    public TermUpdateType $type;
     
 	public function __construct()
 	{
@@ -100,6 +100,6 @@ class TermUpdate
 		$this->pos = null;
 		$this->tags = null;
 		$this->term = "";
-		$this->type = \WriterAi\SDK\Models\Shared\TermUpdateTypeEnum::APPROVED;
+		$this->type = \WriterAi\SDK\Models\Shared\TermUpdateType::Approved;
 	}
 }

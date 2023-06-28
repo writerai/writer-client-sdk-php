@@ -1,0 +1,10 @@
+# AddTermsRequest
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `createTermsRequest`                                                                        | [\WriterAi\SDK\Models\Shared\CreateTermsRequest](../../models/shared/CreateTermsRequest.md) | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `organizationId`                                                                            | *?int*                                                                                      | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `teamId`                                                                                    | *int*                                                                                       | :heavy_check_mark:                                                                          | N/A                                                                                         |

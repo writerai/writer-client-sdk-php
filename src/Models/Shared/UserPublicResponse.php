@@ -12,8 +12,8 @@ namespace WriterAi\SDK\Models\Shared;
 class UserPublicResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('accountStatus')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\UserPublicResponseAccountStatusEnum>')]
-    public UserPublicResponseAccountStatusEnum $accountStatus;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\UserPublicResponseAccountStatus>')]
+    public UserPublicResponseAccountStatus $accountStatus;
     
 	#[\JMS\Serializer\Annotation\SerializedName('avatar')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -63,7 +63,7 @@ class UserPublicResponse
     
 	public function __construct()
 	{
-		$this->accountStatus = \WriterAi\SDK\Models\Shared\UserPublicResponseAccountStatusEnum::INVITED;
+		$this->accountStatus = \WriterAi\SDK\Models\Shared\UserPublicResponseAccountStatus::Invited;
 		$this->avatar = null;
 		$this->createdAt = new \DateTime();
 		$this->email = null;

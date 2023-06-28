@@ -36,13 +36,8 @@ class DeleteFileResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * $deleteFile200ApplicationJSONObject
-     * 
-     * @var ?array<string, mixed> $deleteFile200ApplicationJSONObject
-     */
 	
-    public ?array $deleteFile200ApplicationJSONObject = null;
+    public ?DeleteFile200ApplicationJSON $deleteFile200ApplicationJSONObject = null;
     
 	public function __construct()
 	{

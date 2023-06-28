@@ -29,8 +29,8 @@ class PagePublicApiResponse
     public ?SectionInfo $section = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\PagePublicApiResponseStatusEnum>')]
-    public PagePublicApiResponseStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\PagePublicApiResponseStatus>')]
+    public PagePublicApiResponseStatus $status;
     
 	#[\JMS\Serializer\Annotation\SerializedName('title')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -55,7 +55,7 @@ class PagePublicApiResponse
 		$this->id = 0;
 		$this->order = 0;
 		$this->section = null;
-		$this->status = \WriterAi\SDK\Models\Shared\PagePublicApiResponseStatusEnum::LIVE;
+		$this->status = \WriterAi\SDK\Models\Shared\PagePublicApiResponseStatus::Live;
 		$this->title = "";
 		$this->updatedAt = new \DateTime();
 		$this->updatedBy = null;

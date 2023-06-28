@@ -1,0 +1,11 @@
+# UpdateTermsRequest
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `updateTermsRequest`                                                                        | [\WriterAi\SDK\Models\Shared\UpdateTermsRequest](../../models/shared/UpdateTermsRequest.md) | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `xRequestID`                                                                                | *?string*                                                                                   | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `organizationId`                                                                            | *?int*                                                                                      | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `teamId`                                                                                    | *int*                                                                                       | :heavy_check_mark:                                                                          | N/A                                                                                         |

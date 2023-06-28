@@ -18,7 +18,7 @@ class ListPagesRequest
     public ?int $offset = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=status')]
-    public ?ListPagesStatusEnum $status = null;
+    public ?ListPagesStatus $status = null;
     
 	public function __construct()
 	{

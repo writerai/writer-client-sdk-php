@@ -1,0 +1,11 @@
+# UpdateSnippetsRequest
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `requestBody`                                                                            | array<[\WriterAi\SDK\Models\Shared\SnippetUpdate](../../models/shared/SnippetUpdate.md)> | :heavy_minus_sign:                                                                       | N/A                                                                                      |
+| `xRequestID`                                                                             | *?string*                                                                                | :heavy_minus_sign:                                                                       | N/A                                                                                      |
+| `organizationId`                                                                         | *?int*                                                                                   | :heavy_minus_sign:                                                                       | N/A                                                                                      |
+| `teamId`                                                                                 | *int*                                                                                    | :heavy_check_mark:                                                                       | N/A                                                                                      |
