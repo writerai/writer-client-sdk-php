@@ -32,20 +32,21 @@ $sdk = Writer::builder()
 try {
     $request = new CreateCompletionRequest();
     $request->completionRequest = new CompletionRequest();
-    $request->completionRequest->bestOf = 847252;
-    $request->completionRequest->frequencyPenalty = 4236.55;
-    $request->completionRequest->logprobs = 623564;
-    $request->completionRequest->maxTokens = 645894;
-    $request->completionRequest->minTokens = 384382;
-    $request->completionRequest->n = 437587;
-    $request->completionRequest->presencePenalty = 2975.34;
-    $request->completionRequest->prompt = 'debitis';
+    $request->completionRequest->bestOf = 1;
+    $request->completionRequest->frequencyPenalty = 8472.52;
+    $request->completionRequest->logprobs = 423655;
+    $request->completionRequest->maxTokens = 2048;
+    $request->completionRequest->minTokens = 1;
+    $request->completionRequest->n = 623564;
+    $request->completionRequest->presencePenalty = 6458.94;
+    $request->completionRequest->prompt = 'suscipit';
     $request->completionRequest->stop = [
-        'delectus',
+        'magnam',
+        'debitis',
     ];
-    $request->completionRequest->temperature = 2726.56;
-    $request->completionRequest->topP = 3834.41;
-    $request->modelId = 'molestiae';
+    $request->completionRequest->temperature = 0.7;
+    $request->completionRequest->topP = 1;
+    $request->modelId = 'ipsa';
 
     $response = $sdk->completions->create($request);
 
@@ -92,21 +93,24 @@ $sdk = Writer::builder()
 try {
     $request = new CreateModelCustomizationCompletionRequest();
     $request->completionRequest = new CompletionRequest();
-    $request->completionRequest->bestOf = 791725;
-    $request->completionRequest->frequencyPenalty = 8121.69;
-    $request->completionRequest->logprobs = 528895;
-    $request->completionRequest->maxTokens = 479977;
-    $request->completionRequest->minTokens = 568045;
-    $request->completionRequest->n = 392785;
-    $request->completionRequest->presencePenalty = 9255.97;
-    $request->completionRequest->prompt = 'temporibus';
+    $request->completionRequest->bestOf = 1;
+    $request->completionRequest->frequencyPenalty = 9636.63;
+    $request->completionRequest->logprobs = 272656;
+    $request->completionRequest->maxTokens = 2048;
+    $request->completionRequest->minTokens = 1;
+    $request->completionRequest->n = 383441;
+    $request->completionRequest->presencePenalty = 4776.65;
+    $request->completionRequest->prompt = 'minus';
     $request->completionRequest->stop = [
-        'quis',
+        'voluptatum',
+        'iusto',
+        'excepturi',
+        'nisi',
     ];
-    $request->completionRequest->temperature = 871.29;
-    $request->completionRequest->topP = 6481.72;
-    $request->customizationId = 'perferendis';
-    $request->modelId = 'ipsam';
+    $request->completionRequest->temperature = 0.7;
+    $request->completionRequest->topP = 1;
+    $request->customizationId = 'recusandae';
+    $request->modelId = 'temporibus';
 
     $response = $sdk->completions->createModelCustomizationCompletion($request);
 

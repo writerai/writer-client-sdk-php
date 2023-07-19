@@ -30,8 +30,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetDocumentDetailsRequest();
-    $request->documentId = 466311;
-    $request->teamId = 474697;
+    $request->documentId = 208876;
+    $request->teamId = 635059;
 
     $response = $sdk->document->get($request);
 
@@ -78,12 +78,12 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListTeamDocumentsRequest();
-    $request->limit = 244425;
-    $request->offset = 623510;
-    $request->search = 'quia';
-    $request->sortField = ListTeamDocumentsSortField::CreationTime;
+    $request->limit = 161309;
+    $request->offset = 995300;
+    $request->search = 'mollitia';
+    $request->sortField = ListTeamDocumentsSortField::ModificationTime;
     $request->sortOrder = ListTeamDocumentsSortOrder::Asc;
-    $request->teamId = 674752;
+    $request->teamId = 414369;
 
     $response = $sdk->document->list($request);
 

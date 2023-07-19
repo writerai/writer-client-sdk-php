@@ -36,16 +36,16 @@ try {
     $request = new CreateModelCustomizationRequest();
     $request->createCustomizationRequest = new CreateCustomizationRequest();
     $request->createCustomizationRequest->additionalHyperParameters = new HyperParameters();
-    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 520478;
-    $request->createCustomizationRequest->batchSize = 780529;
-    $request->createCustomizationRequest->description = 'dolorum';
-    $request->createCustomizationRequest->epochs = 118274;
-    $request->createCustomizationRequest->learningRate = 7206.33;
-    $request->createCustomizationRequest->name = 'Seth Conroy';
-    $request->createCustomizationRequest->promptTemplate = 'optio';
-    $request->createCustomizationRequest->trainingDatasetFileId = 'totam';
-    $request->createCustomizationRequest->validationDatasetFileId = 'beatae';
-    $request->modelId = 'commodi';
+    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 870088;
+    $request->createCustomizationRequest->batchSize = 978619;
+    $request->createCustomizationRequest->description = 'molestiae';
+    $request->createCustomizationRequest->epochs = 799159;
+    $request->createCustomizationRequest->learningRate = 8009.11;
+    $request->createCustomizationRequest->name = 'Deanna Sauer MD';
+    $request->createCustomizationRequest->promptTemplate = 'officia';
+    $request->createCustomizationRequest->trainingDatasetFileId = 'occaecati';
+    $request->createCustomizationRequest->validationDatasetFileId = 'fugit';
+    $request->modelId = 'deleniti';
 
     $response = $sdk->modelCustomization->create($request);
 
@@ -90,8 +90,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteModelCustomizationRequest();
-    $request->customizationId = 'molestiae';
-    $request->modelId = 'modi';
+    $request->customizationId = 'hic';
+    $request->modelId = 'optio';
 
     $response = $sdk->modelCustomization->delete($request);
 
@@ -136,8 +136,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetModelCustomizationRequest();
-    $request->customizationId = 'qui';
-    $request->modelId = 'impedit';
+    $request->customizationId = 'totam';
+    $request->modelId = 'beatae';
 
     $response = $sdk->modelCustomization->get($request);
 
@@ -182,7 +182,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListModelCustomizationsRequest();
-    $request->modelId = 'cum';
+    $request->modelId = 'commodi';
 
     $response = $sdk->modelCustomization->list($request);
 

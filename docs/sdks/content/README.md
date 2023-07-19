@@ -33,7 +33,7 @@ $sdk = Writer::builder()
 try {
     $request = new ContentCheckRequest();
     $request->contentRequest = new ContentRequest();
-    $request->contentRequest->content = 'repellendus';
+    $request->contentRequest->content = 'ab';
     $request->contentRequest->settings = new ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -51,7 +51,7 @@ try {
     $request->contentRequest->settings->substanceUseSensitivity = false;
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
-    $request->teamId = 957156;
+    $request->teamId = 337396;
 
     $response = $sdk->content->check($request);
 
@@ -99,7 +99,7 @@ $sdk = Writer::builder()
 try {
     $request = new ContentCorrectRequest();
     $request->contentRequest = new ContentRequest();
-    $request->contentRequest->content = 'quo';
+    $request->contentRequest->content = 'veritatis';
     $request->contentRequest->settings = new ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -117,8 +117,8 @@ try {
     $request->contentRequest->settings->substanceUseSensitivity = false;
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
-    $request->xRequestID = 'odit';
-    $request->teamId = 870013;
+    $request->xRequestID = 'deserunt';
+    $request->teamId = 20218;
 
     $response = $sdk->content->correct($request);
 

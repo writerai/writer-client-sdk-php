@@ -30,7 +30,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new PageDetailsRequest();
-    $request->pageId = 437032;
+    $request->pageId = 902599;
 
     $response = $sdk->styleguide->get($request);
 
@@ -76,8 +76,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListPagesRequest();
-    $request->limit = 902349;
-    $request->offset = 697631;
+    $request->limit = 681820;
+    $request->offset = 449950;
     $request->status = ListPagesStatus::Live;
 
     $response = $sdk->styleguide->listPages($request);

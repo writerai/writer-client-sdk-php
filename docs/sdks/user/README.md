@@ -31,11 +31,11 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListUsersRequest();
-    $request->limit = 995300;
-    $request->offset = 653108;
-    $request->search = 'occaecati';
-    $request->sortField = ListUsersSortField::Name;
-    $request->sortOrder = ListUsersSortOrder::Asc;
+    $request->limit = 634274;
+    $request->offset = 988374;
+    $request->search = 'sapiente';
+    $request->sortField = ListUsersSortField::Id;
+    $request->sortOrder = ListUsersSortOrder::Desc;
 
     $response = $sdk->user->list($request);
 

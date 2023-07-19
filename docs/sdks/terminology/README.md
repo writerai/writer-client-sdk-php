@@ -45,14 +45,12 @@ $sdk = Writer::builder()
 try {
     $request = new AddTermsRequest();
     $request->createTermsRequest = new CreateTermsRequest();
-    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Accumulate;
+    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Skip;
     $request->createTermsRequest->models = [
         new TermCreate(),
         new TermCreate(),
-        new TermCreate(),
-        new TermCreate(),
     ];
-    $request->teamId = 666767;
+    $request->teamId = 902349;
 
     $response = $sdk->terminology->add($request);
 
@@ -97,13 +95,11 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteTermsRequest();
-    $request->xRequestID = 'mollitia';
+    $request->xRequestID = 'quidem';
     $request->ids = [
-        170909,
-        210382,
-        358152,
+        60225,
     ];
-    $request->teamId = 128926;
+    $request->teamId = 969810;
 
     $response = $sdk->terminology->delete($request);
 
@@ -152,19 +148,18 @@ $sdk = Writer::builder()
 
 try {
     $request = new FindTermsRequest();
-    $request->limit = 750686;
-    $request->offset = 315428;
+    $request->limit = 666767;
+    $request->offset = 653140;
     $request->partOfSpeech = FindTermsPartOfSpeech::Adverb;
-    $request->sortField = FindTermsSortField::CreationTime;
+    $request->sortField = FindTermsSortField::Term;
     $request->sortOrder = FindTermsSortOrder::Asc;
     $request->tags = [
-        'accusantium',
-        'iure',
-        'culpa',
+        'explicabo',
+        'nobis',
     ];
-    $request->teamId = 988374;
-    $request->term = 'sapiente';
-    $request->type = FindTermsType::Approved;
+    $request->teamId = 315428;
+    $request->term = 'omnis';
+    $request->type = FindTermsType::Banned;
 
     $response = $sdk->terminology->find($request);
 
@@ -222,12 +217,14 @@ $sdk = Writer::builder()
 try {
     $request = new UpdateTermsRequest();
     $request->updateTermsRequest = new UpdateTermsRequest();
-    $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandling::Skip;
+    $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandling::Validate;
     $request->updateTermsRequest->models = [
         new TermUpdate(),
+        new TermUpdate(),
+        new TermUpdate(),
     ];
-    $request->xRequestID = 'culpa';
-    $request->teamId = 161309;
+    $request->xRequestID = 'accusantium';
+    $request->teamId = 438601;
 
     $response = $sdk->terminology->update($request);
 

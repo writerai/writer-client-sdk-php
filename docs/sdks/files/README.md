@@ -32,7 +32,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteFileRequest();
-    $request->fileId = 'molestiae';
+    $request->fileId = 'sapiente';
 
     $response = $sdk->files->delete($request);
 
@@ -77,7 +77,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetFileRequest();
-    $request->fileId = 'quod';
+    $request->fileId = 'quo';
 
     $response = $sdk->files->get($request);
 
@@ -170,8 +170,8 @@ try {
     $request = new UploadFileRequest();
     $request->uploadModelFileRequest = new UploadModelFileRequest();
     $request->uploadModelFileRequest->file = new UploadModelFileRequestFile();
-    $request->uploadModelFileRequest->file->content = 'quod';
-    $request->uploadModelFileRequest->file->file = 'esse';
+    $request->uploadModelFileRequest->file->content = 'odit';
+    $request->uploadModelFileRequest->file->file = 'at';
 
     $response = $sdk->files->upload($request);
 
