@@ -35,7 +35,7 @@ try {
     $request->completionRequest->bestOf = 1;
     $request->completionRequest->frequencyPenalty = 8472.52;
     $request->completionRequest->logprobs = 423655;
-    $request->completionRequest->maxTokens = 2048;
+    $request->completionRequest->maxTokens = 1024;
     $request->completionRequest->minTokens = 1;
     $request->completionRequest->n = 623564;
     $request->completionRequest->presencePenalty = 6458.94;
@@ -96,7 +96,7 @@ try {
     $request->completionRequest->bestOf = 1;
     $request->completionRequest->frequencyPenalty = 9636.63;
     $request->completionRequest->logprobs = 272656;
-    $request->completionRequest->maxTokens = 2048;
+    $request->completionRequest->maxTokens = 1024;
     $request->completionRequest->minTokens = 1;
     $request->completionRequest->n = 383441;
     $request->completionRequest->presencePenalty = 4776.65;
