@@ -35,7 +35,7 @@ class Files
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/file/{fileId}', \WriterAi\SDK\Models\Operations\DeleteFileRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -81,7 +81,7 @@ class Files
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/file/{fileId}', \WriterAi\SDK\Models\Operations\GetFileRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
@@ -127,7 +127,7 @@ class Files
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/file', \WriterAi\SDK\Models\Operations\ListFilesRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
@@ -178,7 +178,7 @@ class Files
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
