@@ -28,7 +28,7 @@ class Styleguide
      * @return \WriterAi\SDK\Models\Operations\PageDetailsResponse
      */
 	public function get(
-        \WriterAi\SDK\Models\Operations\PageDetailsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\PageDetailsRequest $request,
     ): \WriterAi\SDK\Models\Operations\PageDetailsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -74,7 +74,7 @@ class Styleguide
      * @return \WriterAi\SDK\Models\Operations\ListPagesResponse
      */
 	public function listPages(
-        \WriterAi\SDK\Models\Operations\ListPagesRequest $request,
+        ?\WriterAi\SDK\Models\Operations\ListPagesRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListPagesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

@@ -28,7 +28,7 @@ class DownloadTheCustomizedModel
      * @return \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse
      */
 	public function fetchFile(
-        \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest $request,
+        ?\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest $request,
     ): \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

@@ -79,7 +79,7 @@ class ModelCustomization
      * @return \WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponse
      */
 	public function delete(
-        \WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest $request,
+        ?\WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -125,7 +125,7 @@ class ModelCustomization
      * @return \WriterAi\SDK\Models\Operations\GetModelCustomizationResponse
      */
 	public function get(
-        \WriterAi\SDK\Models\Operations\GetModelCustomizationRequest $request,
+        ?\WriterAi\SDK\Models\Operations\GetModelCustomizationRequest $request,
     ): \WriterAi\SDK\Models\Operations\GetModelCustomizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -171,7 +171,7 @@ class ModelCustomization
      * @return \WriterAi\SDK\Models\Operations\ListModelCustomizationsResponse
      */
 	public function list(
-        \WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListModelCustomizationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

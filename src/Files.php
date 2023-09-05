@@ -28,7 +28,7 @@ class Files
      * @return \WriterAi\SDK\Models\Operations\DeleteFileResponse
      */
 	public function delete(
-        \WriterAi\SDK\Models\Operations\DeleteFileRequest $request,
+        ?\WriterAi\SDK\Models\Operations\DeleteFileRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -74,7 +74,7 @@ class Files
      * @return \WriterAi\SDK\Models\Operations\GetFileResponse
      */
 	public function get(
-        \WriterAi\SDK\Models\Operations\GetFileRequest $request,
+        ?\WriterAi\SDK\Models\Operations\GetFileRequest $request,
     ): \WriterAi\SDK\Models\Operations\GetFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -120,7 +120,7 @@ class Files
      * @return \WriterAi\SDK\Models\Operations\ListFilesResponse
      */
 	public function list(
-        \WriterAi\SDK\Models\Operations\ListFilesRequest $request,
+        ?\WriterAi\SDK\Models\Operations\ListFilesRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListFilesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

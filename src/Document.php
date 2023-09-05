@@ -28,7 +28,7 @@ class Document
      * @return \WriterAi\SDK\Models\Operations\GetDocumentDetailsResponse
      */
 	public function get(
-        \WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest $request,
     ): \WriterAi\SDK\Models\Operations\GetDocumentDetailsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -74,7 +74,7 @@ class Document
      * @return \WriterAi\SDK\Models\Operations\ListTeamDocumentsResponse
      */
 	public function list(
-        \WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListTeamDocumentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

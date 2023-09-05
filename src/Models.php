@@ -28,7 +28,7 @@ class Models
      * @return \WriterAi\SDK\Models\Operations\ListModelsResponse
      */
 	public function list(
-        \WriterAi\SDK\Models\Operations\ListModelsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\ListModelsRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListModelsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

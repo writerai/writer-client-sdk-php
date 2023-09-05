@@ -28,7 +28,7 @@ class Snippet
      * @return \WriterAi\SDK\Models\Operations\DeleteSnippetsResponse
      */
 	public function delete(
-        \WriterAi\SDK\Models\Operations\DeleteSnippetsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\DeleteSnippetsRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteSnippetsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,7 +79,7 @@ class Snippet
      * @return \WriterAi\SDK\Models\Operations\FindSnippetsResponse
      */
 	public function find(
-        \WriterAi\SDK\Models\Operations\FindSnippetsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\FindSnippetsRequest $request,
     ): \WriterAi\SDK\Models\Operations\FindSnippetsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -126,7 +126,7 @@ class Snippet
      * @return \WriterAi\SDK\Models\Operations\UpdateSnippetsResponse
      */
 	public function update(
-        \WriterAi\SDK\Models\Operations\UpdateSnippetsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\UpdateSnippetsRequest $request,
     ): \WriterAi\SDK\Models\Operations\UpdateSnippetsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -134,7 +134,9 @@ class Snippet
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
         if (!array_key_exists('headers', $options)) {
             $options['headers'] = [];

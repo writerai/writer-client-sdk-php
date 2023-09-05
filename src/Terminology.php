@@ -79,7 +79,7 @@ class Terminology
      * @return \WriterAi\SDK\Models\Operations\DeleteTermsResponse
      */
 	public function delete(
-        \WriterAi\SDK\Models\Operations\DeleteTermsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\DeleteTermsRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteTermsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -130,7 +130,7 @@ class Terminology
      * @return \WriterAi\SDK\Models\Operations\FindTermsResponse
      */
 	public function find(
-        \WriterAi\SDK\Models\Operations\FindTermsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\FindTermsRequest $request,
     ): \WriterAi\SDK\Models\Operations\FindTermsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

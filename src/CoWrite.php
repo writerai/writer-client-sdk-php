@@ -79,7 +79,7 @@ class CoWrite
      * @return \WriterAi\SDK\Models\Operations\ListTemplatesResponse
      */
 	public function listTemplates(
-        \WriterAi\SDK\Models\Operations\ListTemplatesRequest $request,
+        ?\WriterAi\SDK\Models\Operations\ListTemplatesRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListTemplatesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
