@@ -1,4 +1,4 @@
-# styleguide
+# Styleguide
 
 ## Overview
 
@@ -30,7 +30,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new PageDetailsRequest();
-    $request->pageId = 902599;
+    $request->pageId = 456150;
 
     $response = $sdk->styleguide->get($request);
 
@@ -76,8 +76,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListPagesRequest();
-    $request->limit = 681820;
-    $request->offset = 449950;
+    $request->limit = 216550;
+    $request->offset = 568434;
     $request->status = ListPagesStatus::Live;
 
     $response = $sdk->styleguide->listPages($request);

@@ -1,4 +1,4 @@
-# document
+# Document
 
 ## Overview
 
@@ -30,8 +30,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetDocumentDetailsRequest();
-    $request->documentId = 208876;
-    $request->teamId = 635059;
+    $request->documentId = 670638;
+    $request->teamId = 170909;
 
     $response = $sdk->document->get($request);
 
@@ -78,12 +78,12 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListTeamDocumentsRequest();
-    $request->limit = 161309;
-    $request->offset = 995300;
-    $request->search = 'mollitia';
-    $request->sortField = ListTeamDocumentsSortField::ModificationTime;
+    $request->limit = 210382;
+    $request->offset = 358152;
+    $request->search = 'explicabo';
+    $request->sortField = ListTeamDocumentsSortField::ModifiedByMeTime;
     $request->sortOrder = ListTeamDocumentsSortOrder::Asc;
-    $request->teamId = 414369;
+    $request->teamId = 607831;
 
     $response = $sdk->document->list($request);
 

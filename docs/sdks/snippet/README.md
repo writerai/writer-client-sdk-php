@@ -1,4 +1,4 @@
-# snippet
+# Snippet
 
 ## Overview
 
@@ -31,12 +31,11 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteSnippetsRequest();
-    $request->xRequestID = 'molestiae';
+    $request->xRequestID = 'occaecati';
     $request->ids = [
-        'qui',
-        'impedit',
+        'fugit',
     ];
-    $request->teamId = 736918;
+    $request->teamId = 537373;
 
     $response = $sdk->snippet->delete($request);
 
@@ -83,18 +82,18 @@ $sdk = Writer::builder()
 
 try {
     $request = new FindSnippetsRequest();
-    $request->limit = 456150;
-    $request->offset = 216550;
-    $request->search = 'excepturi';
+    $request->limit = 944669;
+    $request->offset = 758616;
+    $request->search = 'totam';
     $request->shortcuts = [
-        'perferendis',
+        'beatae',
     ];
-    $request->sortField = FindSnippetsSortField::Shortcut;
-    $request->sortOrder = FindSnippetsSortOrder::Desc;
+    $request->sortField = FindSnippetsSortField::CreationTime;
+    $request->sortOrder = FindSnippetsSortOrder::Asc;
     $request->tags = [
-        'iste',
+        'modi',
     ];
-    $request->teamId = 222321;
+    $request->teamId = 186332;
 
     $response = $sdk->snippet->find($request);
 
@@ -143,11 +142,9 @@ try {
     $request = new UpdateSnippetsRequest();
     $request->requestBody = [
         new SnippetUpdate(),
-        new SnippetUpdate(),
-        new SnippetUpdate(),
     ];
-    $request->xRequestID = 'laboriosam';
-    $request->teamId = 943749;
+    $request->xRequestID = 'impedit';
+    $request->teamId = 736918;
 
     $response = $sdk->snippet->update($request);
 

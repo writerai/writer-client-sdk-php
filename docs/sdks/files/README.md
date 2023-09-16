@@ -1,4 +1,4 @@
-# files
+# Files
 
 ## Overview
 
@@ -32,7 +32,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteFileRequest();
-    $request->fileId = 'sapiente';
+    $request->fileId = 'ab';
 
     $response = $sdk->files->delete($request);
 
@@ -77,7 +77,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetFileRequest();
-    $request->fileId = 'quo';
+    $request->fileId = 'quis';
 
     $response = $sdk->files->get($request);
 
@@ -170,8 +170,8 @@ try {
     $request = new UploadFileRequest();
     $request->uploadModelFileRequest = new UploadModelFileRequest();
     $request->uploadModelFileRequest->file = new UploadModelFileRequestFile();
-    $request->uploadModelFileRequest->file->content = 'odit';
-    $request->uploadModelFileRequest->file->file = 'at';
+    $request->uploadModelFileRequest->file->content = 'veritatis';
+    $request->uploadModelFileRequest->file->file = 'deserunt';
 
     $response = $sdk->files->upload($request);
 

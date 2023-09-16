@@ -1,4 +1,4 @@
-# downloadTheCustomizedModel
+# DownloadTheCustomizedModel
 
 ## Overview
 
@@ -29,8 +29,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new FetchCustomizedModelFileRequest();
-    $request->customizationId = 'ipsam';
-    $request->modelId = 'repellendus';
+    $request->customizationId = 'recusandae';
+    $request->modelId = 'temporibus';
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 

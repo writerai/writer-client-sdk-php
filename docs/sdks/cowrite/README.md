@@ -1,4 +1,4 @@
-# coWrite
+# CoWrite
 
 ## Overview
 
@@ -35,11 +35,9 @@ try {
     $request->generateTemplateRequest = new GenerateTemplateRequest();
     $request->generateTemplateRequest->inputs = [
         new MagicRequestInput(),
-        new MagicRequestInput(),
-        new MagicRequestInput(),
     ];
-    $request->generateTemplateRequest->templateId = 'quibusdam';
-    $request->teamId = 602763;
+    $request->generateTemplateRequest->templateId = 'distinctio';
+    $request->teamId = 844266;
 
     $response = $sdk->coWrite->generateContent($request);
 
@@ -84,8 +82,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListTemplatesRequest();
-    $request->teamId = 857946;
-    $request->templateId = 'corrupti';
+    $request->teamId = 602763;
+    $request->templateId = 'nulla';
 
     $response = $sdk->coWrite->listTemplates($request);
 

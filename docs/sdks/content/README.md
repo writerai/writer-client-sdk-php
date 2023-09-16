@@ -1,4 +1,4 @@
-# content
+# Content
 
 ## Overview
 
@@ -33,7 +33,7 @@ $sdk = Writer::builder()
 try {
     $request = new ContentCheckRequest();
     $request->contentRequest = new ContentRequest();
-    $request->contentRequest->content = 'ab';
+    $request->contentRequest->content = 'placeat';
     $request->contentRequest->settings = new ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -51,7 +51,7 @@ try {
     $request->contentRequest->settings->substanceUseSensitivity = false;
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
-    $request->teamId = 337396;
+    $request->teamId = 528895;
 
     $response = $sdk->content->check($request);
 
@@ -99,7 +99,7 @@ $sdk = Writer::builder()
 try {
     $request = new ContentCorrectRequest();
     $request->contentRequest = new ContentRequest();
-    $request->contentRequest->content = 'veritatis';
+    $request->contentRequest->content = 'iusto';
     $request->contentRequest->settings = new ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -117,8 +117,8 @@ try {
     $request->contentRequest->settings->substanceUseSensitivity = false;
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
-    $request->xRequestID = 'deserunt';
-    $request->teamId = 20218;
+    $request->xRequestID = 'excepturi';
+    $request->teamId = 392785;
 
     $response = $sdk->content->correct($request);
 

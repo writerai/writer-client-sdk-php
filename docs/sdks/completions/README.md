@@ -1,4 +1,4 @@
-# completions
+# Completions
 
 ## Overview
 
@@ -33,20 +33,19 @@ try {
     $request = new CreateCompletionRequest();
     $request->completionRequest = new CompletionRequest();
     $request->completionRequest->bestOf = 1;
-    $request->completionRequest->frequencyPenalty = 8472.52;
-    $request->completionRequest->logprobs = 423655;
+    $request->completionRequest->frequencyPenalty = 5448.83;
+    $request->completionRequest->logprobs = 847252;
     $request->completionRequest->maxTokens = 1024;
     $request->completionRequest->minTokens = 1;
-    $request->completionRequest->n = 623564;
-    $request->completionRequest->presencePenalty = 6458.94;
-    $request->completionRequest->prompt = 'suscipit';
+    $request->completionRequest->n = 423655;
+    $request->completionRequest->presencePenalty = 6235.64;
+    $request->completionRequest->prompt = 'deserunt';
     $request->completionRequest->stop = [
-        'magnam',
-        'debitis',
+        'suscipit',
     ];
     $request->completionRequest->temperature = 0.7;
     $request->completionRequest->topP = 1;
-    $request->modelId = 'ipsa';
+    $request->modelId = 'iure';
 
     $response = $sdk->completions->create($request);
 
@@ -94,23 +93,20 @@ try {
     $request = new CreateModelCustomizationCompletionRequest();
     $request->completionRequest = new CompletionRequest();
     $request->completionRequest->bestOf = 1;
-    $request->completionRequest->frequencyPenalty = 9636.63;
-    $request->completionRequest->logprobs = 272656;
+    $request->completionRequest->frequencyPenalty = 2975.34;
+    $request->completionRequest->logprobs = 891773;
     $request->completionRequest->maxTokens = 1024;
     $request->completionRequest->minTokens = 1;
-    $request->completionRequest->n = 383441;
-    $request->completionRequest->presencePenalty = 4776.65;
-    $request->completionRequest->prompt = 'minus';
+    $request->completionRequest->n = 56713;
+    $request->completionRequest->presencePenalty = 9636.63;
+    $request->completionRequest->prompt = 'tempora';
     $request->completionRequest->stop = [
-        'voluptatum',
-        'iusto',
-        'excepturi',
-        'nisi',
+        'suscipit',
     ];
     $request->completionRequest->temperature = 0.7;
     $request->completionRequest->topP = 1;
-    $request->customizationId = 'recusandae';
-    $request->modelId = 'temporibus';
+    $request->customizationId = 'molestiae';
+    $request->modelId = 'minus';
 
     $response = $sdk->completions->createModelCustomizationCompletion($request);
 

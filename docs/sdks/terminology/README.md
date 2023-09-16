@@ -1,4 +1,4 @@
-# terminology
+# Terminology
 
 ## Overview
 
@@ -45,12 +45,11 @@ $sdk = Writer::builder()
 try {
     $request = new AddTermsRequest();
     $request->createTermsRequest = new CreateTermsRequest();
-    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Skip;
+    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Accumulate;
     $request->createTermsRequest->models = [
         new TermCreate(),
-        new TermCreate(),
     ];
-    $request->teamId = 902349;
+    $request->teamId = 324141;
 
     $response = $sdk->terminology->add($request);
 
@@ -95,11 +94,11 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteTermsRequest();
-    $request->xRequestID = 'quidem';
+    $request->xRequestID = 'natus';
     $request->ids = [
-        60225,
+        149675,
     ];
-    $request->teamId = 969810;
+    $request->teamId = 612096;
 
     $response = $sdk->terminology->delete($request);
 
@@ -148,17 +147,16 @@ $sdk = Writer::builder()
 
 try {
     $request = new FindTermsRequest();
-    $request->limit = 666767;
-    $request->offset = 653140;
-    $request->partOfSpeech = FindTermsPartOfSpeech::Adverb;
-    $request->sortField = FindTermsSortField::Term;
-    $request->sortOrder = FindTermsSortOrder::Asc;
+    $request->limit = 222321;
+    $request->offset = 616934;
+    $request->partOfSpeech = FindTermsPartOfSpeech::Verb;
+    $request->sortField = FindTermsSortField::Type;
+    $request->sortOrder = FindTermsSortOrder::Desc;
     $request->tags = [
-        'explicabo',
-        'nobis',
+        'fuga',
     ];
-    $request->teamId = 315428;
-    $request->term = 'omnis';
+    $request->teamId = 449950;
+    $request->term = 'corporis';
     $request->type = FindTermsType::Banned;
 
     $response = $sdk->terminology->find($request);
@@ -220,11 +218,9 @@ try {
     $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandling::Validate;
     $request->updateTermsRequest->models = [
         new TermUpdate(),
-        new TermUpdate(),
-        new TermUpdate(),
     ];
-    $request->xRequestID = 'accusantium';
-    $request->teamId = 438601;
+    $request->xRequestID = 'saepe';
+    $request->teamId = 697631;
 
     $response = $sdk->terminology->update($request);
 

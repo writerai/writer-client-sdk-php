@@ -1,4 +1,4 @@
-# user
+# User
 
 ## Overview
 
@@ -31,10 +31,10 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListUsersRequest();
-    $request->limit = 634274;
-    $request->offset = 988374;
-    $request->search = 'sapiente';
-    $request->sortField = ListUsersSortField::Id;
+    $request->limit = 99280;
+    $request->offset = 60225;
+    $request->search = 'reiciendis';
+    $request->sortField = ListUsersSortField::ModificationTime;
     $request->sortOrder = ListUsersSortOrder::Desc;
 
     $response = $sdk->user->list($request);
