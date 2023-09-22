@@ -45,11 +45,11 @@ $sdk = Writer::builder()
 try {
     $request = new AddTermsRequest();
     $request->createTermsRequest = new CreateTermsRequest();
-    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Accumulate;
+    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Validate;
     $request->createTermsRequest->models = [
         new TermCreate(),
     ];
-    $request->teamId = 324141;
+    $request->teamId = 617636;
 
     $response = $sdk->terminology->add($request);
 
@@ -94,11 +94,11 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteTermsRequest();
-    $request->xRequestID = 'natus';
+    $request->xRequestID = 'sed';
     $request->ids = [
-        149675,
+        612096,
     ];
-    $request->teamId = 612096;
+    $request->teamId = 222321;
 
     $response = $sdk->terminology->delete($request);
 
@@ -147,16 +147,16 @@ $sdk = Writer::builder()
 
 try {
     $request = new FindTermsRequest();
-    $request->limit = 222321;
-    $request->offset = 616934;
-    $request->partOfSpeech = FindTermsPartOfSpeech::Verb;
+    $request->limit = 616934;
+    $request->offset = 386489;
+    $request->partOfSpeech = FindTermsPartOfSpeech::Adjective;
     $request->sortField = FindTermsSortField::Type;
     $request->sortOrder = FindTermsSortOrder::Desc;
     $request->tags = [
-        'fuga',
+        'in',
     ];
-    $request->teamId = 449950;
-    $request->term = 'corporis';
+    $request->teamId = 359508;
+    $request->term = 'iste';
     $request->type = FindTermsType::Banned;
 
     $response = $sdk->terminology->find($request);
@@ -215,12 +215,12 @@ $sdk = Writer::builder()
 try {
     $request = new UpdateTermsRequest();
     $request->updateTermsRequest = new UpdateTermsRequest();
-    $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandling::Validate;
+    $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandling::ValidateOnly;
     $request->updateTermsRequest->models = [
         new TermUpdate(),
     ];
-    $request->xRequestID = 'saepe';
-    $request->teamId = 697631;
+    $request->xRequestID = 'quidem';
+    $request->teamId = 99280;
 
     $response = $sdk->terminology->update($request);
 

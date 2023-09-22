@@ -31,11 +31,11 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteSnippetsRequest();
-    $request->xRequestID = 'occaecati';
+    $request->xRequestID = 'fugit';
     $request->ids = [
-        'fugit',
+        'deleniti',
     ];
-    $request->teamId = 537373;
+    $request->teamId = 944669;
 
     $response = $sdk->snippet->delete($request);
 
@@ -82,18 +82,18 @@ $sdk = Writer::builder()
 
 try {
     $request = new FindSnippetsRequest();
-    $request->limit = 944669;
-    $request->offset = 758616;
-    $request->search = 'totam';
+    $request->limit = 758616;
+    $request->offset = 521848;
+    $request->search = 'beatae';
     $request->shortcuts = [
-        'beatae',
+        'commodi',
     ];
     $request->sortField = FindSnippetsSortField::CreationTime;
     $request->sortOrder = FindSnippetsSortOrder::Asc;
     $request->tags = [
-        'modi',
+        'qui',
     ];
-    $request->teamId = 186332;
+    $request->teamId = 774234;
 
     $response = $sdk->snippet->find($request);
 
@@ -143,8 +143,8 @@ try {
     $request->requestBody = [
         new SnippetUpdate(),
     ];
-    $request->xRequestID = 'impedit';
-    $request->teamId = 736918;
+    $request->xRequestID = 'cum';
+    $request->teamId = 456150;
 
     $response = $sdk->snippet->update($request);
 

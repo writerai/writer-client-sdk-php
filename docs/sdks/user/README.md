@@ -31,9 +31,9 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListUsersRequest();
-    $request->limit = 99280;
-    $request->offset = 60225;
-    $request->search = 'reiciendis';
+    $request->limit = 60225;
+    $request->offset = 969810;
+    $request->search = 'est';
     $request->sortField = ListUsersSortField::ModificationTime;
     $request->sortOrder = ListUsersSortOrder::Desc;
 

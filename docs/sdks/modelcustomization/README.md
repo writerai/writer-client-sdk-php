@@ -36,16 +36,16 @@ try {
     $request = new CreateModelCustomizationRequest();
     $request->createCustomizationRequest = new CreateCustomizationRequest();
     $request->createCustomizationRequest->additionalHyperParameters = new HyperParameters();
-    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 20218;
-    $request->createCustomizationRequest->batchSize = 368241;
-    $request->createCustomizationRequest->description = 'repellendus';
-    $request->createCustomizationRequest->epochs = 957156;
-    $request->createCustomizationRequest->learningRate = 7781.57;
-    $request->createCustomizationRequest->name = 'Teri Strosin';
+    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 368241;
+    $request->createCustomizationRequest->batchSize = 832620;
+    $request->createCustomizationRequest->description = 'sapiente';
+    $request->createCustomizationRequest->epochs = 778157;
+    $request->createCustomizationRequest->learningRate = 1403.5;
+    $request->createCustomizationRequest->name = 'Wilfred Wolff';
     $request->createCustomizationRequest->promptTemplate = 'quod';
-    $request->createCustomizationRequest->trainingDatasetFileId = 'quod';
-    $request->createCustomizationRequest->validationDatasetFileId = 'esse';
-    $request->modelId = 'totam';
+    $request->createCustomizationRequest->trainingDatasetFileId = 'esse';
+    $request->createCustomizationRequest->validationDatasetFileId = 'totam';
+    $request->modelId = 'porro';
 
     $response = $sdk->modelCustomization->create($request);
 
@@ -90,8 +90,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteModelCustomizationRequest();
-    $request->customizationId = 'porro';
-    $request->modelId = 'dolorum';
+    $request->customizationId = 'dolorum';
+    $request->modelId = 'dicta';
 
     $response = $sdk->modelCustomization->delete($request);
 
@@ -136,8 +136,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetModelCustomizationRequest();
-    $request->customizationId = 'dicta';
-    $request->modelId = 'nam';
+    $request->customizationId = 'nam';
+    $request->modelId = 'officia';
 
     $response = $sdk->modelCustomization->get($request);
 
@@ -182,7 +182,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListModelCustomizationsRequest();
-    $request->modelId = 'officia';
+    $request->modelId = 'occaecati';
 
     $response = $sdk->modelCustomization->list($request);
 

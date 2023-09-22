@@ -31,7 +31,7 @@ $sdk = Writer::builder()
 try {
     $request = new DetectContentRequest();
     $request->contentDetectorRequest = new ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'provident';
+    $request->contentDetectorRequest->input = 'distinctio';
 
     $response = $sdk->aiContentDetector->detect($request);
 

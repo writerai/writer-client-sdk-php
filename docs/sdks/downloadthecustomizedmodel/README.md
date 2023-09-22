@@ -29,8 +29,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new FetchCustomizedModelFileRequest();
-    $request->customizationId = 'recusandae';
-    $request->modelId = 'temporibus';
+    $request->customizationId = 'temporibus';
+    $request->modelId = 'ab';
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 

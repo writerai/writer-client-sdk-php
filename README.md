@@ -40,8 +40,6 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```php
 <?php
 
@@ -59,7 +57,7 @@ $sdk = Writer::builder()
 try {
     $request = new DetectContentRequest();
     $request->contentDetectorRequest = new ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'corrupti';
+    $request->contentDetectorRequest->input = 'provident';
 
     $response = $sdk->aiContentDetector->detect($request);
 
@@ -148,6 +146,18 @@ try {
 * [get](docs/sdks/document/README.md#get) - Get document details
 * [list](docs/sdks/document/README.md#list) - List team documents
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 
