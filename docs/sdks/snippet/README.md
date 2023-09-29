@@ -1,4 +1,5 @@
 # Snippet
+(*snippet*)
 
 ## Overview
 
@@ -31,11 +32,11 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteSnippetsRequest();
-    $request->xRequestID = 'fugit';
+    $request->xRequestID = 'Van complexity';
     $request->ids = [
-        'deleniti',
+        'gladiolus',
     ];
-    $request->teamId = 944669;
+    $request->teamId = 921415;
 
     $response = $sdk->snippet->delete($request);
 
@@ -82,18 +83,18 @@ $sdk = Writer::builder()
 
 try {
     $request = new FindSnippetsRequest();
-    $request->limit = 758616;
-    $request->offset = 521848;
-    $request->search = 'beatae';
+    $request->limit = 40141;
+    $request->offset = 326883;
+    $request->search = 'underestimate Northeast';
     $request->shortcuts = [
-        'commodi',
+        'Electric',
     ];
     $request->sortField = FindSnippetsSortField::CreationTime;
     $request->sortOrder = FindSnippetsSortOrder::Asc;
     $request->tags = [
-        'qui',
+        'Granite',
     ];
-    $request->teamId = 774234;
+    $request->teamId = 591628;
 
     $response = $sdk->snippet->find($request);
 
@@ -143,8 +144,8 @@ try {
     $request->requestBody = [
         new SnippetUpdate(),
     ];
-    $request->xRequestID = 'cum';
-    $request->teamId = 456150;
+    $request->xRequestID = 'New Reactive dock';
+    $request->teamId = 627690;
 
     $response = $sdk->snippet->update($request);
 

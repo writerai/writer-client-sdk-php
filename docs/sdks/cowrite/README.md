@@ -1,4 +1,5 @@
 # CoWrite
+(*coWrite*)
 
 ## Overview
 
@@ -36,8 +37,8 @@ try {
     $request->generateTemplateRequest->inputs = [
         new MagicRequestInput(),
     ];
-    $request->generateTemplateRequest->templateId = 'quibusdam';
-    $request->teamId = 602763;
+    $request->generateTemplateRequest->templateId = 'very eek';
+    $request->teamId = 833315;
 
     $response = $sdk->coWrite->generateContent($request);
 
@@ -82,8 +83,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListTemplatesRequest();
-    $request->teamId = 857946;
-    $request->templateId = 'corrupti';
+    $request->teamId = 380445;
+    $request->templateId = 'Morocco transmit consequuntur';
 
     $response = $sdk->coWrite->listTemplates($request);
 

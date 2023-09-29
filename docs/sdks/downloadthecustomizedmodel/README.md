@@ -1,4 +1,5 @@
 # DownloadTheCustomizedModel
+(*downloadTheCustomizedModel*)
 
 ## Overview
 
@@ -29,8 +30,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new FetchCustomizedModelFileRequest();
-    $request->customizationId = 'temporibus';
-    $request->modelId = 'ab';
+    $request->customizationId = 'apology Silver';
+    $request->modelId = 'beyond connecting';
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 

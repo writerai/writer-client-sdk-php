@@ -1,4 +1,5 @@
 # AIContentDetector
+(*aiContentDetector*)
 
 ## Overview
 
@@ -31,7 +32,7 @@ $sdk = Writer::builder()
 try {
     $request = new DetectContentRequest();
     $request->contentDetectorRequest = new ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'distinctio';
+    $request->contentDetectorRequest->input = 'Folk Harbors';
 
     $response = $sdk->aiContentDetector->detect($request);
 

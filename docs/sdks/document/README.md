@@ -1,4 +1,5 @@
 # Document
+(*document*)
 
 ## Overview
 
@@ -30,8 +31,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetDocumentDetailsRequest();
-    $request->documentId = 170909;
-    $request->teamId = 210382;
+    $request->documentId = 700347;
+    $request->teamId = 90065;
 
     $response = $sdk->document->get($request);
 
@@ -78,12 +79,12 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListTeamDocumentsRequest();
-    $request->limit = 358152;
-    $request->offset = 128926;
-    $request->search = 'nobis';
-    $request->sortField = ListTeamDocumentsSortField::CreationTime;
+    $request->limit = 768578;
+    $request->offset = 99895;
+    $request->search = 'Metal Canada';
+    $request->sortField = ListTeamDocumentsSortField::OpenedByMeTime;
     $request->sortOrder = ListTeamDocumentsSortOrder::Desc;
-    $request->teamId = 363711;
+    $request->teamId = 785532;
 
     $response = $sdk->document->list($request);
 

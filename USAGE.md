@@ -18,7 +18,7 @@ $sdk = Writer::builder()
 try {
     $request = new DetectContentRequest();
     $request->contentDetectorRequest = new ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'corrupti';
+    $request->contentDetectorRequest->input = 'Folk Harbors';
 
     $response = $sdk->aiContentDetector->detect($request);
 

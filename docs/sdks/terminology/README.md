@@ -1,4 +1,5 @@
 # Terminology
+(*terminology*)
 
 ## Overview
 
@@ -45,11 +46,11 @@ $sdk = Writer::builder()
 try {
     $request = new AddTermsRequest();
     $request->createTermsRequest = new CreateTermsRequest();
-    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Validate;
+    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Skip;
     $request->createTermsRequest->models = [
         new TermCreate(),
     ];
-    $request->teamId = 617636;
+    $request->teamId = 823436;
 
     $response = $sdk->terminology->add($request);
 
@@ -94,11 +95,11 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteTermsRequest();
-    $request->xRequestID = 'sed';
+    $request->xRequestID = 'Van complexity';
     $request->ids = [
-        612096,
+        952479,
     ];
-    $request->teamId = 222321;
+    $request->teamId = 385950;
 
     $response = $sdk->terminology->delete($request);
 
@@ -147,16 +148,16 @@ $sdk = Writer::builder()
 
 try {
     $request = new FindTermsRequest();
-    $request->limit = 616934;
-    $request->offset = 386489;
-    $request->partOfSpeech = FindTermsPartOfSpeech::Adjective;
+    $request->limit = 40141;
+    $request->offset = 326883;
+    $request->partOfSpeech = FindTermsPartOfSpeech::Verb;
     $request->sortField = FindTermsSortField::Type;
     $request->sortOrder = FindTermsSortOrder::Desc;
     $request->tags = [
-        'in',
+        'Northeast',
     ];
-    $request->teamId = 359508;
-    $request->term = 'iste';
+    $request->teamId = 803382;
+    $request->term = 'Dynamic Granite';
     $request->type = FindTermsType::Banned;
 
     $response = $sdk->terminology->find($request);
@@ -219,8 +220,8 @@ try {
     $request->updateTermsRequest->models = [
         new TermUpdate(),
     ];
-    $request->xRequestID = 'quidem';
-    $request->teamId = 99280;
+    $request->xRequestID = 'Rock';
+    $request->teamId = 344620;
 
     $response = $sdk->terminology->update($request);
 

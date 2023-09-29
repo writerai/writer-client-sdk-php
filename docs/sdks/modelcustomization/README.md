@@ -1,4 +1,5 @@
 # ModelCustomization
+(*modelCustomization*)
 
 ## Overview
 
@@ -36,16 +37,16 @@ try {
     $request = new CreateModelCustomizationRequest();
     $request->createCustomizationRequest = new CreateCustomizationRequest();
     $request->createCustomizationRequest->additionalHyperParameters = new HyperParameters();
-    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 368241;
-    $request->createCustomizationRequest->batchSize = 832620;
-    $request->createCustomizationRequest->description = 'sapiente';
-    $request->createCustomizationRequest->epochs = 778157;
-    $request->createCustomizationRequest->learningRate = 1403.5;
-    $request->createCustomizationRequest->name = 'Wilfred Wolff';
-    $request->createCustomizationRequest->promptTemplate = 'quod';
-    $request->createCustomizationRequest->trainingDatasetFileId = 'esse';
-    $request->createCustomizationRequest->validationDatasetFileId = 'totam';
-    $request->modelId = 'porro';
+    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 486589;
+    $request->createCustomizationRequest->batchSize = 489382;
+    $request->createCustomizationRequest->description = 'Proactive systematic Graphical User Interface';
+    $request->createCustomizationRequest->epochs = 288408;
+    $request->createCustomizationRequest->learningRate = 1343.65;
+    $request->createCustomizationRequest->name = 'Cambridgeshire grey technology';
+    $request->createCustomizationRequest->promptTemplate = 'deposit';
+    $request->createCustomizationRequest->trainingDatasetFileId = 'Northwest';
+    $request->createCustomizationRequest->validationDatasetFileId = 'SUV quantify Polestar';
+    $request->modelId = 'physical Ameliorated';
 
     $response = $sdk->modelCustomization->create($request);
 
@@ -90,8 +91,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteModelCustomizationRequest();
-    $request->customizationId = 'dolorum';
-    $request->modelId = 'dicta';
+    $request->customizationId = 'Van complexity';
+    $request->modelId = 'synergy objective Aluminium';
 
     $response = $sdk->modelCustomization->delete($request);
 
@@ -136,8 +137,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetModelCustomizationRequest();
-    $request->customizationId = 'nam';
-    $request->modelId = 'officia';
+    $request->customizationId = 'Northeast Hatchback Kia';
+    $request->modelId = 'towards';
 
     $response = $sdk->modelCustomization->get($request);
 
@@ -182,7 +183,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListModelCustomizationsRequest();
-    $request->modelId = 'occaecati';
+    $request->modelId = 'Northeast Metal Canada';
 
     $response = $sdk->modelCustomization->list($request);
 
