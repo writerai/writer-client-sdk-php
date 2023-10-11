@@ -30,7 +30,11 @@ use \WriterAi\SDK\Models\Operations\CreateModelCustomizationRequest;
 use \WriterAi\SDK\Models\Shared\CreateCustomizationRequest;
 use \WriterAi\SDK\Models\Shared\HyperParameters;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -86,7 +90,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -132,7 +140,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\GetModelCustomizationRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -178,7 +190,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

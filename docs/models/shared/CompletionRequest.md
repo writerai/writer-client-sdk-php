@@ -13,6 +13,6 @@
 | `n`                | *?int*             | :heavy_minus_sign: | N/A                |                    |
 | `presencePenalty`  | *?float*           | :heavy_minus_sign: | N/A                |                    |
 | `prompt`           | *string*           | :heavy_check_mark: | N/A                |                    |
-| `stop`             | array<*string*>    | :heavy_minus_sign: | N/A                |                    |
+| `stop`             | array<*string*>    | :heavy_minus_sign: | N/A                | the,is,and         |
 | `temperature`      | *?float*           | :heavy_minus_sign: | N/A                | 0.7                |
 | `topP`             | *?float*           | :heavy_minus_sign: | N/A                | 1                  |

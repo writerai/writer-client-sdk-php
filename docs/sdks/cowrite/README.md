@@ -28,7 +28,11 @@ use \WriterAi\SDK\Models\Operations\GenerateContentRequest;
 use \WriterAi\SDK\Models\Shared\GenerateTemplateRequest;
 use \WriterAi\SDK\Models\Shared\MagicRequestInput;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -78,7 +82,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListTemplatesRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

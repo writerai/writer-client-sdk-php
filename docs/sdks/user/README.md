@@ -27,7 +27,11 @@ use \WriterAi\SDK\Models\Operations\ListUsersRequest;
 use \WriterAi\SDK\Models\Operations\ListUsersSortField;
 use \WriterAi\SDK\Models\Operations\ListUsersSortOrder;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

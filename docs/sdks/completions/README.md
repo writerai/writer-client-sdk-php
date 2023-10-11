@@ -27,7 +27,11 @@ use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\CreateCompletionRequest;
 use \WriterAi\SDK\Models\Shared\CompletionRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -87,7 +91,11 @@ use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\CreateModelCustomizationCompletionRequest;
 use \WriterAi\SDK\Models\Shared\CompletionRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

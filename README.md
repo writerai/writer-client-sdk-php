@@ -46,12 +46,16 @@ composer update
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DetectContentRequest;
-use \WriterAi\SDK\Models\Shared\ContentDetectorRequest;
+use WriterAi\SDK\Writer;
+use WriterAi\SDK\Models\Shared\Security;
+use WriterAi\SDK\Models\Operations\DetectContentRequest;
+use WriterAi\SDK\Models\Shared\ContentDetectorRequest;
+
+$security = new Security();
+$security->apiKey = '';
 
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -67,6 +71,7 @@ try {
 } catch (Exception $e) {
     // handle exception
 }
+
 ```
 <!-- End SDK Example Usage -->
 
@@ -152,6 +157,64 @@ try {
 <!-- Start Dev Containers -->
 
 <!-- End Dev Containers -->
+
+
+
+<!-- Start Global Parameters -->
+# Global Parameters
+
+A parameter is configured globally. This parameter must be set on the SDK client instance itself during initialization. When configured as an option during SDK initialization, This global value will be used as the default on the operations that use it. When such operations are called, there is a place in each to override the global value, if needed.
+
+For example, you can set `organizationId` to `639387` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
+
+
+## Available Globals
+
+The following global parameter is available. The required parameter must be set when you initialize the SDK client.
+
+| Name | Type | Required | Description |
+| ---- | ---- |:--------:| ----------- |
+| organizationId | int | ✔️ | The organizationId parameter. |
+
+
+
+## Example
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use WriterAi\SDK\Writer;
+use WriterAi\SDK\Models\Shared\Security;
+use WriterAi\SDK\Models\Operations\DetectContentRequest;
+use WriterAi\SDK\Models\Shared\ContentDetectorRequest;
+
+$security = new Security();
+$security->apiKey = '';
+
+$sdk = Writer::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new DetectContentRequest();
+    $request->contentDetectorRequest = new ContentDetectorRequest();
+    $request->contentDetectorRequest->input = 'Folk Harbors';
+
+    $response = $sdk->aiContentDetector->detect($request);
+
+    if ($response->contentDetectorResponses !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+
+```
+
+<!-- End Global Parameters -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

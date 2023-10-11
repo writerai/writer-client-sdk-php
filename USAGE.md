@@ -7,12 +7,16 @@
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DetectContentRequest;
-use \WriterAi\SDK\Models\Shared\ContentDetectorRequest;
+use WriterAi\SDK\Writer;
+use WriterAi\SDK\Models\Shared\Security;
+use WriterAi\SDK\Models\Operations\DetectContentRequest;
+use WriterAi\SDK\Models\Shared\ContentDetectorRequest;
+
+$security = new Security();
+$security->apiKey = '';
 
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -28,5 +32,6 @@ try {
 } catch (Exception $e) {
     // handle exception
 }
+
 ```
 <!-- End SDK Example Usage -->

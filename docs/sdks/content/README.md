@@ -28,7 +28,11 @@ use \WriterAi\SDK\Models\Operations\ContentCheckRequest;
 use \WriterAi\SDK\Models\Shared\ContentRequest;
 use \WriterAi\SDK\Models\Shared\ContentSettings;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -94,7 +98,11 @@ use \WriterAi\SDK\Models\Operations\ContentCorrectRequest;
 use \WriterAi\SDK\Models\Shared\ContentRequest;
 use \WriterAi\SDK\Models\Shared\ContentSettings;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

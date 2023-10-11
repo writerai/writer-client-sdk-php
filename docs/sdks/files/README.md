@@ -28,7 +28,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DeleteFileRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -73,7 +77,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\GetFileRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -118,7 +126,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListFilesRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -164,7 +176,11 @@ use \WriterAi\SDK\Models\Operations\UploadFileRequest;
 use \WriterAi\SDK\Models\Shared\UploadModelFileRequest;
 use \WriterAi\SDK\Models\Shared\UploadModelFileRequestFile;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

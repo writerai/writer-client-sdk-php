@@ -27,7 +27,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DeleteSnippetsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -78,7 +82,11 @@ use \WriterAi\SDK\Models\Operations\FindSnippetsRequest;
 use \WriterAi\SDK\Models\Operations\FindSnippetsSortField;
 use \WriterAi\SDK\Models\Operations\FindSnippetsSortOrder;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -136,7 +144,11 @@ use \WriterAi\SDK\Models\Operations\UpdateSnippetsRequest;
 use \WriterAi\SDK\Models\Shared\SnippetUpdate;
 use \WriterAi\SDK\Models\Shared\SnippetTagV2;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

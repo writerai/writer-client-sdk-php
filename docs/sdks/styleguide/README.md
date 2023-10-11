@@ -26,7 +26,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\PageDetailsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListPagesRequest;
 use \WriterAi\SDK\Models\Operations\ListPagesStatus;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

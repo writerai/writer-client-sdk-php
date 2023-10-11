@@ -26,7 +26,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -74,7 +78,11 @@ use \WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest;
 use \WriterAi\SDK\Models\Operations\ListTeamDocumentsSortField;
 use \WriterAi\SDK\Models\Operations\ListTeamDocumentsSortOrder;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

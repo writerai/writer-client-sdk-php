@@ -40,7 +40,11 @@ use \WriterAi\SDK\Models\Shared\TermCreatePos;
 use \WriterAi\SDK\Models\Shared\TermTagCreate;
 use \WriterAi\SDK\Models\Shared\TermCreateType;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -90,7 +94,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DeleteTermsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -143,7 +151,11 @@ use \WriterAi\SDK\Models\Operations\FindTermsSortField;
 use \WriterAi\SDK\Models\Operations\FindTermsSortOrder;
 use \WriterAi\SDK\Models\Operations\FindTermsType;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -210,7 +222,11 @@ use \WriterAi\SDK\Models\Shared\TermUpdatePos;
 use \WriterAi\SDK\Models\Shared\TermTagCreate;
 use \WriterAi\SDK\Models\Shared\TermUpdateType;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
