@@ -17,9 +17,9 @@ class SDKConfiguration
 	public int $serverIndex = 0;
 	public string $language = 'php';
 	public string $openapiDocVersion = '1.7';
-	public string $sdkVersion = '1.13.0';
-	public string $genVersion = '2.152.1';
-	public string $userAgent = 'speakeasy-sdk/php 1.13.0 2.152.1 1.7 writerai/writer-sdk';
+	public string $sdkVersion = '1.14.0';
+	public string $genVersion = '2.169.0';
+	public string $userAgent = 'speakeasy-sdk/php 1.14.0 2.169.0 1.7 writerai/writer-sdk';
 	/** @var array<string, array<string, array<string, mixed>>> */
 	public ?array $globals = [
     	'parameters' => []

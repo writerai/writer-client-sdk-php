@@ -103,11 +103,11 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteTermsRequest();
-    $request->xRequestID = 'Van complexity';
+    $request->xRequestID = 'string';
     $request->ids = [
-        952479,
+        545907,
     ];
-    $request->teamId = 385950;
+    $request->teamId = 841399;
 
     $response = $sdk->terminology->delete($request);
 
@@ -166,11 +166,11 @@ try {
     $request->sortField = FindTermsSortField::Type;
     $request->sortOrder = FindTermsSortOrder::Desc;
     $request->tags = [
-        'Northeast',
+        'string',
     ];
-    $request->teamId = 803382;
-    $request->term = 'Dynamic Granite';
-    $request->type = FindTermsType::Banned;
+    $request->teamId = 111247;
+    $request->term = 'string';
+    $request->type = FindTermsType::Approved;
 
     $response = $sdk->terminology->find($request);
 
@@ -236,8 +236,8 @@ try {
     $request->updateTermsRequest->models = [
         new TermUpdate(),
     ];
-    $request->xRequestID = 'Rock';
-    $request->teamId = 344620;
+    $request->xRequestID = 'string';
+    $request->teamId = 24555;
 
     $response = $sdk->terminology->update($request);
 

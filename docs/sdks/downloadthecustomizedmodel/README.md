@@ -34,8 +34,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new FetchCustomizedModelFileRequest();
-    $request->customizationId = 'apology Silver';
-    $request->modelId = 'beyond connecting';
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 

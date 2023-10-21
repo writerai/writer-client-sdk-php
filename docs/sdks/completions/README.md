@@ -44,13 +44,13 @@ try {
     $request->completionRequest->minTokens = 1;
     $request->completionRequest->n = 638424;
     $request->completionRequest->presencePenalty = 8592.13;
-    $request->completionRequest->prompt = 'innovative blue';
+    $request->completionRequest->prompt = 'string';
     $request->completionRequest->stop = [
-        'shred',
+        'string',
     ];
     $request->completionRequest->temperature = 0.7;
     $request->completionRequest->topP = 1;
-    $request->modelId = 'technology East';
+    $request->modelId = 'string';
 
     $response = $sdk->completions->create($request);
 
@@ -108,14 +108,14 @@ try {
     $request->completionRequest->minTokens = 1;
     $request->completionRequest->n = 951257;
     $request->completionRequest->presencePenalty = 3149.52;
-    $request->completionRequest->prompt = 'newton';
+    $request->completionRequest->prompt = 'string';
     $request->completionRequest->stop = [
-        'Rue',
+        'string',
     ];
     $request->completionRequest->temperature = 0.7;
     $request->completionRequest->topP = 1;
-    $request->customizationId = 'heavily green cum';
-    $request->modelId = 'parsing';
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->completions->createModelCustomizationCompletion($request);
 

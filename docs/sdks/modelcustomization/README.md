@@ -46,11 +46,11 @@ try {
     $request->createCustomizationRequest->description = 'Proactive systematic Graphical User Interface';
     $request->createCustomizationRequest->epochs = 288408;
     $request->createCustomizationRequest->learningRate = 1343.65;
-    $request->createCustomizationRequest->name = 'Cambridgeshire grey technology';
-    $request->createCustomizationRequest->promptTemplate = 'deposit';
-    $request->createCustomizationRequest->trainingDatasetFileId = 'Northwest';
-    $request->createCustomizationRequest->validationDatasetFileId = 'SUV quantify Polestar';
-    $request->modelId = 'physical Ameliorated';
+    $request->createCustomizationRequest->name = 'string';
+    $request->createCustomizationRequest->promptTemplate = 'string';
+    $request->createCustomizationRequest->trainingDatasetFileId = 'string';
+    $request->createCustomizationRequest->validationDatasetFileId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->create($request);
 
@@ -99,8 +99,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteModelCustomizationRequest();
-    $request->customizationId = 'Van complexity';
-    $request->modelId = 'synergy objective Aluminium';
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->delete($request);
 
@@ -149,8 +149,8 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetModelCustomizationRequest();
-    $request->customizationId = 'Northeast Hatchback Kia';
-    $request->modelId = 'towards';
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->get($request);
 
@@ -199,7 +199,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new ListModelCustomizationsRequest();
-    $request->modelId = 'Northeast Metal Canada';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->list($request);
 

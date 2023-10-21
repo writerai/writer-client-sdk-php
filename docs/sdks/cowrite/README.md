@@ -41,8 +41,8 @@ try {
     $request->generateTemplateRequest->inputs = [
         new MagicRequestInput(),
     ];
-    $request->generateTemplateRequest->templateId = 'very eek';
-    $request->teamId = 833315;
+    $request->generateTemplateRequest->templateId = 'string';
+    $request->teamId = 569932;
 
     $response = $sdk->coWrite->generateContent($request);
 
@@ -92,7 +92,7 @@ $sdk = Writer::builder()
 try {
     $request = new ListTemplatesRequest();
     $request->teamId = 380445;
-    $request->templateId = 'Morocco transmit consequuntur';
+    $request->templateId = 'string';
 
     $response = $sdk->coWrite->listTemplates($request);
 

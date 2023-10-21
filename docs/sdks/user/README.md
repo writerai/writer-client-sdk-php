@@ -38,9 +38,9 @@ try {
     $request = new ListUsersRequest();
     $request->limit = 768578;
     $request->offset = 99895;
-    $request->search = 'Metal Canada';
-    $request->sortField = ListUsersSortField::LastSeen;
-    $request->sortOrder = ListUsersSortOrder::Desc;
+    $request->search = 'string';
+    $request->sortField = ListUsersSortField::Deleted;
+    $request->sortOrder = ListUsersSortOrder::Asc;
 
     $response = $sdk->user->list($request);
 

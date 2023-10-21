@@ -37,7 +37,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new DeleteFileRequest();
-    $request->fileId = 'Van complexity';
+    $request->fileId = 'string';
 
     $response = $sdk->files->delete($request);
 
@@ -86,7 +86,7 @@ $sdk = Writer::builder()
 
 try {
     $request = new GetFileRequest();
-    $request->fileId = 'Northeast Hatchback Kia';
+    $request->fileId = 'string';
 
     $response = $sdk->files->get($request);
 
@@ -188,7 +188,7 @@ try {
     $request->uploadModelFileRequest = new UploadModelFileRequest();
     $request->uploadModelFileRequest->file = new UploadModelFileRequestFile();
     $request->uploadModelFileRequest->file->content = 'F?SRSKG@^n';
-    $request->uploadModelFileRequest->file->file = 'ullam';
+    $request->uploadModelFileRequest->file->file = 'string';
 
     $response = $sdk->files->upload($request);
 

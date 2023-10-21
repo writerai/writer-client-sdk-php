@@ -89,10 +89,10 @@ try {
     $request = new ListTeamDocumentsRequest();
     $request->limit = 768578;
     $request->offset = 99895;
-    $request->search = 'Metal Canada';
-    $request->sortField = ListTeamDocumentsSortField::OpenedByMeTime;
-    $request->sortOrder = ListTeamDocumentsSortOrder::Desc;
-    $request->teamId = 785532;
+    $request->search = 'string';
+    $request->sortField = ListTeamDocumentsSortField::ModificationTime;
+    $request->sortOrder = ListTeamDocumentsSortOrder::Asc;
+    $request->teamId = 678317;
 
     $response = $sdk->document->list($request);
 
