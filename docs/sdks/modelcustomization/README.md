@@ -1,4 +1,5 @@
-# modelCustomization
+# ModelCustomization
+(*modelCustomization*)
 
 ## Overview
 
@@ -29,23 +30,27 @@ use \WriterAi\SDK\Models\Operations\CreateModelCustomizationRequest;
 use \WriterAi\SDK\Models\Shared\CreateCustomizationRequest;
 use \WriterAi\SDK\Models\Shared\HyperParameters;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateModelCustomizationRequest();
     $request->createCustomizationRequest = new CreateCustomizationRequest();
     $request->createCustomizationRequest->additionalHyperParameters = new HyperParameters();
-    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 520478;
-    $request->createCustomizationRequest->batchSize = 780529;
-    $request->createCustomizationRequest->description = 'dolorum';
-    $request->createCustomizationRequest->epochs = 118274;
-    $request->createCustomizationRequest->learningRate = 7206.33;
-    $request->createCustomizationRequest->name = 'Seth Conroy';
-    $request->createCustomizationRequest->promptTemplate = 'optio';
-    $request->createCustomizationRequest->trainingDatasetFileId = 'totam';
-    $request->createCustomizationRequest->validationDatasetFileId = 'beatae';
-    $request->modelId = 'commodi';
+    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 486589;
+    $request->createCustomizationRequest->batchSize = 489382;
+    $request->createCustomizationRequest->description = 'Proactive systematic Graphical User Interface';
+    $request->createCustomizationRequest->epochs = 288408;
+    $request->createCustomizationRequest->learningRate = 1343.65;
+    $request->createCustomizationRequest->name = 'string';
+    $request->createCustomizationRequest->promptTemplate = 'string';
+    $request->createCustomizationRequest->trainingDatasetFileId = 'string';
+    $request->createCustomizationRequest->validationDatasetFileId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->create($request);
 
@@ -85,13 +90,17 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteModelCustomizationRequest();
-    $request->customizationId = 'molestiae';
-    $request->modelId = 'modi';
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->delete($request);
 
@@ -131,13 +140,17 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\GetModelCustomizationRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetModelCustomizationRequest();
-    $request->customizationId = 'qui';
-    $request->modelId = 'impedit';
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->get($request);
 
@@ -177,12 +190,16 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ListModelCustomizationsRequest();
-    $request->modelId = 'cum';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->list($request);
 

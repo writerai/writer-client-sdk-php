@@ -1,4 +1,5 @@
-# aiContentDetector
+# AIContentDetector
+(*aiContentDetector*)
 
 ## Overview
 
@@ -25,13 +26,17 @@ use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DetectContentRequest;
 use \WriterAi\SDK\Models\Shared\ContentDetectorRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DetectContentRequest();
     $request->contentDetectorRequest = new ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'provident';
+    $request->contentDetectorRequest->input = 'string';
 
     $response = $sdk->aiContentDetector->detect($request);
 

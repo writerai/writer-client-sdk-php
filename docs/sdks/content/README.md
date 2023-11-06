@@ -1,4 +1,5 @@
-# content
+# Content
+(*content*)
 
 ## Overview
 
@@ -27,13 +28,17 @@ use \WriterAi\SDK\Models\Operations\ContentCheckRequest;
 use \WriterAi\SDK\Models\Shared\ContentRequest;
 use \WriterAi\SDK\Models\Shared\ContentSettings;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ContentCheckRequest();
     $request->contentRequest = new ContentRequest();
-    $request->contentRequest->content = 'repellendus';
+    $request->contentRequest->content = 'string';
     $request->contentRequest->settings = new ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -51,7 +56,7 @@ try {
     $request->contentRequest->settings->substanceUseSensitivity = false;
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
-    $request->teamId = 957156;
+    $request->teamId = 935464;
 
     $response = $sdk->content->check($request);
 
@@ -93,13 +98,17 @@ use \WriterAi\SDK\Models\Operations\ContentCorrectRequest;
 use \WriterAi\SDK\Models\Shared\ContentRequest;
 use \WriterAi\SDK\Models\Shared\ContentSettings;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ContentCorrectRequest();
     $request->contentRequest = new ContentRequest();
-    $request->contentRequest->content = 'quo';
+    $request->contentRequest->content = 'string';
     $request->contentRequest->settings = new ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -117,8 +126,8 @@ try {
     $request->contentRequest->settings->substanceUseSensitivity = false;
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
-    $request->xRequestID = 'odit';
-    $request->teamId = 870013;
+    $request->xRequestID = 'string';
+    $request->teamId = 501355;
 
     $response = $sdk->content->correct($request);
 

@@ -1,4 +1,5 @@
-# user
+# User
+(*user*)
 
 ## Overview
 
@@ -26,15 +27,19 @@ use \WriterAi\SDK\Models\Operations\ListUsersRequest;
 use \WriterAi\SDK\Models\Operations\ListUsersSortField;
 use \WriterAi\SDK\Models\Operations\ListUsersSortOrder;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ListUsersRequest();
-    $request->limit = 995300;
-    $request->offset = 653108;
-    $request->search = 'occaecati';
-    $request->sortField = ListUsersSortField::Name;
+    $request->limit = 768578;
+    $request->offset = 99895;
+    $request->search = 'string';
+    $request->sortField = ListUsersSortField::Deleted;
     $request->sortOrder = ListUsersSortOrder::Asc;
 
     $response = $sdk->user->list($request);

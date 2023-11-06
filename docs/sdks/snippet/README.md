@@ -1,4 +1,5 @@
-# snippet
+# Snippet
+(*snippet*)
 
 ## Overview
 
@@ -26,16 +27,20 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DeleteSnippetsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteSnippetsRequest();
-    $request->xRequestID = 'esse';
+    $request->xRequestID = 'string';
     $request->ids = [
-        'excepturi',
+        'string',
     ];
-    $request->teamId = 135218;
+    $request->teamId = 545907;
 
     $response = $sdk->snippet->delete($request);
 
@@ -77,24 +82,27 @@ use \WriterAi\SDK\Models\Operations\FindSnippetsRequest;
 use \WriterAi\SDK\Models\Operations\FindSnippetsSortField;
 use \WriterAi\SDK\Models\Operations\FindSnippetsSortOrder;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new FindSnippetsRequest();
-    $request->limit = 18789;
-    $request->offset = 324141;
-    $request->search = 'natus';
+    $request->limit = 40141;
+    $request->offset = 326883;
+    $request->search = 'string';
     $request->shortcuts = [
-        'iste',
+        'string',
     ];
-    $request->sortField = FindSnippetsSortField::Shortcut;
+    $request->sortField = FindSnippetsSortField::CreationTime;
     $request->sortOrder = FindSnippetsSortOrder::Desc;
     $request->tags = [
-        'hic',
-        'saepe',
+        'string',
     ];
-    $request->teamId = 681820;
+    $request->teamId = 939943;
 
     $response = $sdk->snippet->find($request);
 
@@ -136,17 +144,20 @@ use \WriterAi\SDK\Models\Operations\UpdateSnippetsRequest;
 use \WriterAi\SDK\Models\Shared\SnippetUpdate;
 use \WriterAi\SDK\Models\Shared\SnippetTagV2;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new UpdateSnippetsRequest();
     $request->requestBody = [
         new SnippetUpdate(),
-        new SnippetUpdate(),
     ];
-    $request->xRequestID = 'corporis';
-    $request->teamId = 613064;
+    $request->xRequestID = 'string';
+    $request->teamId = 857478;
 
     $response = $sdk->snippet->update($request);
 

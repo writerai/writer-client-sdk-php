@@ -1,4 +1,5 @@
-# document
+# Document
+(*document*)
 
 ## Overview
 
@@ -25,13 +26,17 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetDocumentDetailsRequest();
-    $request->documentId = 466311;
-    $request->teamId = 474697;
+    $request->documentId = 700347;
+    $request->teamId = 90065;
 
     $response = $sdk->document->get($request);
 
@@ -73,17 +78,21 @@ use \WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest;
 use \WriterAi\SDK\Models\Operations\ListTeamDocumentsSortField;
 use \WriterAi\SDK\Models\Operations\ListTeamDocumentsSortOrder;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ListTeamDocumentsRequest();
-    $request->limit = 244425;
-    $request->offset = 623510;
-    $request->search = 'quia';
-    $request->sortField = ListTeamDocumentsSortField::CreationTime;
+    $request->limit = 768578;
+    $request->offset = 99895;
+    $request->search = 'string';
+    $request->sortField = ListTeamDocumentsSortField::ModificationTime;
     $request->sortOrder = ListTeamDocumentsSortOrder::Asc;
-    $request->teamId = 674752;
+    $request->teamId = 678317;
 
     $response = $sdk->document->list($request);
 

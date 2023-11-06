@@ -1,4 +1,5 @@
-# billing
+# Billing
+(*billing*)
 
 ## Overview
 
@@ -23,7 +24,11 @@ require_once 'vendor/autoload.php';
 use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

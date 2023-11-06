@@ -1,4 +1,5 @@
-# styleguide
+# Styleguide
+(*styleguide*)
 
 ## Overview
 
@@ -25,12 +26,16 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\PageDetailsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new PageDetailsRequest();
-    $request->pageId = 437032;
+    $request->pageId = 700347;
 
     $response = $sdk->styleguide->get($request);
 
@@ -71,13 +76,17 @@ use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListPagesRequest;
 use \WriterAi\SDK\Models\Operations\ListPagesStatus;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ListPagesRequest();
-    $request->limit = 902349;
-    $request->offset = 697631;
+    $request->limit = 763372;
+    $request->offset = 760116;
     $request->status = ListPagesStatus::Live;
 
     $response = $sdk->styleguide->listPages($request);

@@ -28,15 +28,15 @@ class Files
      * @return \WriterAi\SDK\Models\Operations\DeleteFileResponse
      */
 	public function delete(
-        \WriterAi\SDK\Models\Operations\DeleteFileRequest $request,
+        ?\WriterAi\SDK\Models\Operations\DeleteFileRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/file/{fileId}', \WriterAi\SDK\Models\Operations\DeleteFileRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
@@ -74,15 +74,15 @@ class Files
      * @return \WriterAi\SDK\Models\Operations\GetFileResponse
      */
 	public function get(
-        \WriterAi\SDK\Models\Operations\GetFileRequest $request,
+        ?\WriterAi\SDK\Models\Operations\GetFileRequest $request,
     ): \WriterAi\SDK\Models\Operations\GetFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/file/{fileId}', \WriterAi\SDK\Models\Operations\GetFileRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
@@ -120,15 +120,15 @@ class Files
      * @return \WriterAi\SDK\Models\Operations\ListFilesResponse
      */
 	public function list(
-        \WriterAi\SDK\Models\Operations\ListFilesRequest $request,
+        ?\WriterAi\SDK\Models\Operations\ListFilesRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListFilesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/file', \WriterAi\SDK\Models\Operations\ListFilesRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
@@ -178,8 +178,8 @@ class Files
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         

@@ -1,4 +1,5 @@
-# downloadTheCustomizedModel
+# DownloadTheCustomizedModel
+(*downloadTheCustomizedModel*)
 
 ## Overview
 
@@ -24,13 +25,17 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new FetchCustomizedModelFileRequest();
-    $request->customizationId = 'at';
-    $request->modelId = 'maiores';
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 

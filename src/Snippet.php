@@ -28,7 +28,7 @@ class Snippet
      * @return \WriterAi\SDK\Models\Operations\DeleteSnippetsResponse
      */
 	public function delete(
-        \WriterAi\SDK\Models\Operations\DeleteSnippetsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\DeleteSnippetsRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteSnippetsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +40,8 @@ class Snippet
         if (!array_key_exists('headers', $options)) {
             $options['headers'] = [];
         }
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
@@ -79,7 +79,7 @@ class Snippet
      * @return \WriterAi\SDK\Models\Operations\FindSnippetsResponse
      */
 	public function find(
-        \WriterAi\SDK\Models\Operations\FindSnippetsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\FindSnippetsRequest $request,
     ): \WriterAi\SDK\Models\Operations\FindSnippetsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -87,8 +87,8 @@ class Snippet
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\WriterAi\SDK\Models\Operations\FindSnippetsRequest::class, $request, $this->sdkConfiguration->globals));
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
@@ -126,7 +126,7 @@ class Snippet
      * @return \WriterAi\SDK\Models\Operations\UpdateSnippetsResponse
      */
 	public function update(
-        \WriterAi\SDK\Models\Operations\UpdateSnippetsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\UpdateSnippetsRequest $request,
     ): \WriterAi\SDK\Models\Operations\UpdateSnippetsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -134,13 +134,15 @@ class Snippet
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
         if (!array_key_exists('headers', $options)) {
             $options['headers'] = [];
         }
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         

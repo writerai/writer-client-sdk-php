@@ -1,4 +1,5 @@
-# terminology
+# Terminology
+(*terminology*)
 
 ## Overview
 
@@ -39,20 +40,21 @@ use \WriterAi\SDK\Models\Shared\TermCreatePos;
 use \WriterAi\SDK\Models\Shared\TermTagCreate;
 use \WriterAi\SDK\Models\Shared\TermCreateType;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AddTermsRequest();
     $request->createTermsRequest = new CreateTermsRequest();
-    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Accumulate;
+    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Skip;
     $request->createTermsRequest->models = [
         new TermCreate(),
-        new TermCreate(),
-        new TermCreate(),
-        new TermCreate(),
     ];
-    $request->teamId = 666767;
+    $request->teamId = 823436;
 
     $response = $sdk->terminology->add($request);
 
@@ -92,18 +94,20 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DeleteTermsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteTermsRequest();
-    $request->xRequestID = 'mollitia';
+    $request->xRequestID = 'string';
     $request->ids = [
-        170909,
-        210382,
-        358152,
+        545907,
     ];
-    $request->teamId = 128926;
+    $request->teamId = 841399;
 
     $response = $sdk->terminology->delete($request);
 
@@ -147,23 +151,25 @@ use \WriterAi\SDK\Models\Operations\FindTermsSortField;
 use \WriterAi\SDK\Models\Operations\FindTermsSortOrder;
 use \WriterAi\SDK\Models\Operations\FindTermsType;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new FindTermsRequest();
-    $request->limit = 750686;
-    $request->offset = 315428;
-    $request->partOfSpeech = FindTermsPartOfSpeech::Adverb;
-    $request->sortField = FindTermsSortField::CreationTime;
-    $request->sortOrder = FindTermsSortOrder::Asc;
+    $request->limit = 40141;
+    $request->offset = 326883;
+    $request->partOfSpeech = FindTermsPartOfSpeech::Verb;
+    $request->sortField = FindTermsSortField::Type;
+    $request->sortOrder = FindTermsSortOrder::Desc;
     $request->tags = [
-        'accusantium',
-        'iure',
-        'culpa',
+        'string',
     ];
-    $request->teamId = 988374;
-    $request->term = 'sapiente';
+    $request->teamId = 111247;
+    $request->term = 'string';
     $request->type = FindTermsType::Approved;
 
     $response = $sdk->terminology->find($request);
@@ -216,18 +222,22 @@ use \WriterAi\SDK\Models\Shared\TermUpdatePos;
 use \WriterAi\SDK\Models\Shared\TermTagCreate;
 use \WriterAi\SDK\Models\Shared\TermUpdateType;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new UpdateTermsRequest();
     $request->updateTermsRequest = new UpdateTermsRequest();
-    $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandling::Skip;
+    $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandling::ValidateOnly;
     $request->updateTermsRequest->models = [
         new TermUpdate(),
     ];
-    $request->xRequestID = 'culpa';
-    $request->teamId = 161309;
+    $request->xRequestID = 'string';
+    $request->teamId = 24555;
 
     $response = $sdk->terminology->update($request);
 

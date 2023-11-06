@@ -1,4 +1,5 @@
-# files
+# Files
+(*files*)
 
 ## Overview
 
@@ -27,12 +28,16 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\DeleteFileRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteFileRequest();
-    $request->fileId = 'molestiae';
+    $request->fileId = 'string';
 
     $response = $sdk->files->delete($request);
 
@@ -72,12 +77,16 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\GetFileRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetFileRequest();
-    $request->fileId = 'quod';
+    $request->fileId = 'string';
 
     $response = $sdk->files->get($request);
 
@@ -117,7 +126,11 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListFilesRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -163,15 +176,19 @@ use \WriterAi\SDK\Models\Operations\UploadFileRequest;
 use \WriterAi\SDK\Models\Shared\UploadModelFileRequest;
 use \WriterAi\SDK\Models\Shared\UploadModelFileRequestFile;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new UploadFileRequest();
     $request->uploadModelFileRequest = new UploadModelFileRequest();
     $request->uploadModelFileRequest->file = new UploadModelFileRequestFile();
-    $request->uploadModelFileRequest->file->content = 'quod';
-    $request->uploadModelFileRequest->file->file = 'esse';
+    $request->uploadModelFileRequest->file->content = 'F?SRSKG@^n';
+    $request->uploadModelFileRequest->file->file = 'string';
 
     $response = $sdk->files->upload($request);
 

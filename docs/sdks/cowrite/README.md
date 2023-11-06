@@ -1,4 +1,5 @@
-# coWrite
+# CoWrite
+(*coWrite*)
 
 ## Overview
 
@@ -27,7 +28,11 @@ use \WriterAi\SDK\Models\Operations\GenerateContentRequest;
 use \WriterAi\SDK\Models\Shared\GenerateTemplateRequest;
 use \WriterAi\SDK\Models\Shared\MagicRequestInput;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -35,11 +40,9 @@ try {
     $request->generateTemplateRequest = new GenerateTemplateRequest();
     $request->generateTemplateRequest->inputs = [
         new MagicRequestInput(),
-        new MagicRequestInput(),
-        new MagicRequestInput(),
     ];
-    $request->generateTemplateRequest->templateId = 'quibusdam';
-    $request->teamId = 602763;
+    $request->generateTemplateRequest->templateId = 'string';
+    $request->teamId = 569932;
 
     $response = $sdk->coWrite->generateContent($request);
 
@@ -79,13 +82,17 @@ use \WriterAi\SDK\Writer;
 use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\ListTemplatesRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ListTemplatesRequest();
-    $request->teamId = 857946;
-    $request->templateId = 'corrupti';
+    $request->teamId = 380445;
+    $request->templateId = 'string';
 
     $response = $sdk->coWrite->listTemplates($request);
 

@@ -1,4 +1,5 @@
-# completions
+# Completions
+(*completions*)
 
 ## Overview
 
@@ -26,26 +27,30 @@ use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\CreateCompletionRequest;
 use \WriterAi\SDK\Models\Shared\CompletionRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateCompletionRequest();
     $request->completionRequest = new CompletionRequest();
-    $request->completionRequest->bestOf = 847252;
-    $request->completionRequest->frequencyPenalty = 4236.55;
-    $request->completionRequest->logprobs = 623564;
-    $request->completionRequest->maxTokens = 645894;
-    $request->completionRequest->minTokens = 384382;
-    $request->completionRequest->n = 437587;
-    $request->completionRequest->presencePenalty = 2975.34;
-    $request->completionRequest->prompt = 'debitis';
+    $request->completionRequest->bestOf = 1;
+    $request->completionRequest->frequencyPenalty = 4865.89;
+    $request->completionRequest->logprobs = 489382;
+    $request->completionRequest->maxTokens = 1024;
+    $request->completionRequest->minTokens = 1;
+    $request->completionRequest->n = 638424;
+    $request->completionRequest->presencePenalty = 8592.13;
+    $request->completionRequest->prompt = 'string';
     $request->completionRequest->stop = [
-        'delectus',
+        'string',
     ];
-    $request->completionRequest->temperature = 2726.56;
-    $request->completionRequest->topP = 3834.41;
-    $request->modelId = 'molestiae';
+    $request->completionRequest->temperature = 0.7;
+    $request->completionRequest->topP = 1;
+    $request->modelId = 'string';
 
     $response = $sdk->completions->create($request);
 
@@ -86,27 +91,31 @@ use \WriterAi\SDK\Models\Shared\Security;
 use \WriterAi\SDK\Models\Operations\CreateModelCustomizationCompletionRequest;
 use \WriterAi\SDK\Models\Shared\CompletionRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateModelCustomizationCompletionRequest();
     $request->completionRequest = new CompletionRequest();
-    $request->completionRequest->bestOf = 791725;
-    $request->completionRequest->frequencyPenalty = 8121.69;
-    $request->completionRequest->logprobs = 528895;
-    $request->completionRequest->maxTokens = 479977;
-    $request->completionRequest->minTokens = 568045;
-    $request->completionRequest->n = 392785;
-    $request->completionRequest->presencePenalty = 9255.97;
-    $request->completionRequest->prompt = 'temporibus';
+    $request->completionRequest->bestOf = 1;
+    $request->completionRequest->frequencyPenalty = 9195.03;
+    $request->completionRequest->logprobs = 41297;
+    $request->completionRequest->maxTokens = 1024;
+    $request->completionRequest->minTokens = 1;
+    $request->completionRequest->n = 951257;
+    $request->completionRequest->presencePenalty = 3149.52;
+    $request->completionRequest->prompt = 'string';
     $request->completionRequest->stop = [
-        'quis',
+        'string',
     ];
-    $request->completionRequest->temperature = 871.29;
-    $request->completionRequest->topP = 6481.72;
-    $request->customizationId = 'perferendis';
-    $request->modelId = 'ipsam';
+    $request->completionRequest->temperature = 0.7;
+    $request->completionRequest->topP = 1;
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->completions->createModelCustomizationCompletion($request);
 
