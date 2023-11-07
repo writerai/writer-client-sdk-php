@@ -36,14 +36,6 @@ class UpdateSnippetsResponse
     public ?array $headers = null;
     
     /**
-     * $snippetWithUsers
-     * 
-     * @var ?array<\WriterAi\SDK\Models\Shared\SnippetWithUser> $snippetWithUsers
-     */
-	
-    public ?array $snippetWithUsers = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -59,13 +51,21 @@ class UpdateSnippetsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
+    /**
+     * $classes
+     * 
+     * @var ?array<\WriterAi\SDK\Models\Shared\SnippetWithUser> $classes
+     */
+	
+    public ?array $classes = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->failResponse = null;
 		$this->headers = null;
-		$this->snippetWithUsers = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->classes = null;
 	}
 }

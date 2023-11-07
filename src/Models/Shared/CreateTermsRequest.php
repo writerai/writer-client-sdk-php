@@ -12,9 +12,9 @@ namespace WriterAi\SDK\Models\Shared;
 class CreateTermsRequest
 {
 	#[\JMS\Serializer\Annotation\SerializedName('failHandling')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\CreateTermsRequestFailHandling>')]
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\FailHandling>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?CreateTermsRequestFailHandling $failHandling = null;
+    public ?FailHandling $failHandling = null;
     
     /**
      * $models

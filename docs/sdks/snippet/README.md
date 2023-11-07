@@ -1,5 +1,5 @@
 # Snippet
-(*snippet*)
+
 
 ## Overview
 
@@ -23,19 +23,19 @@ Delete snippets
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DeleteSnippetsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteSnippetsRequest();
+    $request = new Operations\DeleteSnippetsRequest();
     $request->xRequestID = 'string';
     $request->ids = [
         'string',
@@ -76,29 +76,27 @@ Find snippets
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\FindSnippetsRequest;
-use \WriterAi\SDK\Models\Operations\FindSnippetsSortField;
-use \WriterAi\SDK\Models\Operations\FindSnippetsSortOrder;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new FindSnippetsRequest();
+    $request = new Operations\FindSnippetsRequest();
     $request->limit = 40141;
     $request->offset = 326883;
     $request->search = 'string';
     $request->shortcuts = [
         'string',
     ];
-    $request->sortField = FindSnippetsSortField::CreationTime;
-    $request->sortOrder = FindSnippetsSortOrder::Desc;
+    $request->sortField = Operations\SortField::CreationTime;
+    $request->sortOrder = Operations\SortOrder::Desc;
     $request->tags = [
         'string',
     ];
@@ -138,30 +136,28 @@ Update snippets
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\UpdateSnippetsRequest;
-use \WriterAi\SDK\Models\Shared\SnippetUpdate;
-use \WriterAi\SDK\Models\Shared\SnippetTagV2;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateSnippetsRequest();
+    $request = new Operations\UpdateSnippetsRequest();
     $request->requestBody = [
-        new SnippetUpdate(),
+        new Shared\SnippetUpdate(),
     ];
     $request->xRequestID = 'string';
     $request->teamId = 857478;
 
     $response = $sdk->snippet->update($request);
 
-    if ($response->snippetWithUsers !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {

@@ -20,8 +20,8 @@ class SubscriptionPublicResponseApi
     public MetaData $meta;
     
 	#[\JMS\Serializer\Annotation\SerializedName('productName')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiProductName>')]
-    public SubscriptionPublicResponseApiProductName $productName;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\ProductName>')]
+    public ProductName $productName;
     
 	#[\JMS\Serializer\Annotation\SerializedName('seats')]
     #[\JMS\Serializer\Annotation\Type('int')]
@@ -43,7 +43,7 @@ class SubscriptionPublicResponseApi
 	{
 		$this->createdAt = new \DateTime();
 		$this->meta = new \WriterAi\SDK\Models\Shared\MetaData();
-		$this->productName = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiProductName::Free;
+		$this->productName = \WriterAi\SDK\Models\Shared\ProductName::Free;
 		$this->seats = 0;
 		$this->status = \WriterAi\SDK\Models\Shared\SubscriptionPublicResponseApiStatus::Trialing;
 		$this->subscriptionId = "";

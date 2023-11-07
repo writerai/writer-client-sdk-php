@@ -21,13 +21,13 @@ class FindTermsRequest
     public ?int $organizationId = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=partOfSpeech')]
-    public ?FindTermsPartOfSpeech $partOfSpeech = null;
+    public ?PartOfSpeech $partOfSpeech = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sortField')]
-    public ?FindTermsSortField $sortField = null;
+    public ?QueryParamSortField $sortField = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sortOrder')]
-    public ?FindTermsSortOrder $sortOrder = null;
+    public ?QueryParamSortOrder $sortOrder = null;
     
     /**
      * $tags
@@ -44,7 +44,7 @@ class FindTermsRequest
     public ?string $term = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
-    public ?FindTermsType $type = null;
+    public ?Type $type = null;
     
 	public function __construct()
 	{

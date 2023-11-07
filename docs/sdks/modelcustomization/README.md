@@ -1,5 +1,5 @@
 # ModelCustomization
-(*modelCustomization*)
+
 
 ## Overview
 
@@ -24,23 +24,21 @@ Create model customization
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\CreateModelCustomizationRequest;
-use \WriterAi\SDK\Models\Shared\CreateCustomizationRequest;
-use \WriterAi\SDK\Models\Shared\HyperParameters;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateModelCustomizationRequest();
-    $request->createCustomizationRequest = new CreateCustomizationRequest();
-    $request->createCustomizationRequest->additionalHyperParameters = new HyperParameters();
+    $request = new Operations\CreateModelCustomizationRequest();
+    $request->createCustomizationRequest = new Shared\CreateCustomizationRequest();
+    $request->createCustomizationRequest->additionalHyperParameters = new Shared\HyperParameters();
     $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 486589;
     $request->createCustomizationRequest->batchSize = 489382;
     $request->createCustomizationRequest->description = 'Proactive systematic Graphical User Interface';
@@ -86,25 +84,25 @@ Delete Model customization
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteModelCustomizationRequest();
+    $request = new Operations\DeleteModelCustomizationRequest();
     $request->customizationId = 'string';
     $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->delete($request);
 
-    if ($response->deleteModelCustomization200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -136,19 +134,19 @@ Get model customization
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\GetModelCustomizationRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetModelCustomizationRequest();
+    $request = new Operations\GetModelCustomizationRequest();
     $request->customizationId = 'string';
     $request->modelId = 'string';
 
@@ -186,19 +184,19 @@ List model customizations
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListModelCustomizationsRequest();
+    $request = new Operations\ListModelCustomizationsRequest();
     $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->list($request);

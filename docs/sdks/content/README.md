@@ -1,5 +1,5 @@
 # Content
-(*content*)
+
 
 ## Overview
 
@@ -22,24 +22,22 @@ Check your content against your preset styleguide.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ContentCheckRequest;
-use \WriterAi\SDK\Models\Shared\ContentRequest;
-use \WriterAi\SDK\Models\Shared\ContentSettings;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ContentCheckRequest();
-    $request->contentRequest = new ContentRequest();
+    $request = new Operations\ContentCheckRequest();
+    $request->contentRequest = new Shared\ContentRequest();
     $request->contentRequest->content = 'string';
-    $request->contentRequest->settings = new ContentSettings();
+    $request->contentRequest->settings = new Shared\ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
     $request->contentRequest->settings->contentSafeguards = false;
@@ -92,24 +90,22 @@ Apply the style guide suggestions directly to your content.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ContentCorrectRequest;
-use \WriterAi\SDK\Models\Shared\ContentRequest;
-use \WriterAi\SDK\Models\Shared\ContentSettings;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ContentCorrectRequest();
-    $request->contentRequest = new ContentRequest();
+    $request = new Operations\ContentCorrectRequest();
+    $request->contentRequest = new Shared\ContentRequest();
     $request->contentRequest->content = 'string';
-    $request->contentRequest->settings = new ContentSettings();
+    $request->contentRequest->settings = new Shared\ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
     $request->contentRequest->settings->contentSafeguards = false;

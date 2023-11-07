@@ -52,7 +52,7 @@ class DeleteFileResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
 	
-    public ?DeleteFile200ApplicationJSON $deleteFile200ApplicationJSONObject = null;
+    public ?DeleteFileResponseBody $object = null;
     
 	public function __construct()
 	{
@@ -61,6 +61,6 @@ class DeleteFileResponse
 		$this->headers = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->deleteFile200ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

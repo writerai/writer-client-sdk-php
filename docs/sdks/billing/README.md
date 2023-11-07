@@ -1,5 +1,5 @@
 # Billing
-(*billing*)
+
 
 ## Overview
 
@@ -21,13 +21,13 @@ Get your organization subscription details
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 

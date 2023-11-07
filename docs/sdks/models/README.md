@@ -1,5 +1,5 @@
 # Models
-(*models*)
+
 
 ## Overview
 
@@ -21,19 +21,19 @@ List available LLM models
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListModelsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListModelsRequest();
+    $request = new Operations\ListModelsRequest();
 
     $response = $sdk->models->list($request);
 

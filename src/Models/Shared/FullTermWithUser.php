@@ -113,8 +113,8 @@ class FullTermWithUser
     public int $termBankId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\FullTermWithUserType>')]
-    public FullTermWithUserType $type;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\Type>')]
+    public Type $type;
     
 	public function __construct()
 	{
@@ -135,6 +135,6 @@ class FullTermWithUser
 		$this->tags = null;
 		$this->term = "";
 		$this->termBankId = 0;
-		$this->type = \WriterAi\SDK\Models\Shared\FullTermWithUserType::Approved;
+		$this->type = \WriterAi\SDK\Models\Shared\Type::Approved;
 	}
 }

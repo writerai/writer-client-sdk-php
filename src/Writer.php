@@ -21,13 +21,6 @@ class Writer
 	];
   	
     /**
-     * Methods related to AI Content Detector
-     * 
-     * @var AIContentDetector $$aiContentDetector
-     */
-	public AIContentDetector $aiContentDetector;
-	
-    /**
      * Methods related to Billing
      * 
      * @var Billing $$billing
@@ -35,18 +28,11 @@ class Writer
 	public Billing $billing;
 	
     /**
-     * Methods related to CoWrite
+     * Methods related to AI Content Detector
      * 
-     * @var CoWrite $$coWrite
+     * @var AIContentDetector $$aiContentDetector
      */
-	public CoWrite $coWrite;
-	
-    /**
-     * Methods related to Completions
-     * 
-     * @var Completions $$completions
-     */
-	public Completions $completions;
+	public AIContentDetector $aiContentDetector;
 	
     /**
      * Methods related to Content
@@ -56,11 +42,11 @@ class Writer
 	public Content $content;
 	
     /**
-     * Methods related to Download the customized model
+     * Methods related to CoWrite
      * 
-     * @var DownloadTheCustomizedModel $$downloadTheCustomizedModel
+     * @var CoWrite $$coWrite
      */
-	public DownloadTheCustomizedModel $downloadTheCustomizedModel;
+	public CoWrite $coWrite;
 	
     /**
      * Methods related to Files
@@ -70,6 +56,20 @@ class Writer
 	public Files $files;
 	
     /**
+     * Methods related to Model
+     * 
+     * @var Models $$models
+     */
+	public Models $models;
+	
+    /**
+     * Methods related to Completions
+     * 
+     * @var Completions $$completions
+     */
+	public Completions $completions;
+	
+    /**
      * Methods related to Model Customization
      * 
      * @var ModelCustomization $$modelCustomization
@@ -77,11 +77,18 @@ class Writer
 	public ModelCustomization $modelCustomization;
 	
     /**
-     * Methods related to Model
+     * Methods related to Download the customized model
      * 
-     * @var Models $$models
+     * @var DownloadTheCustomizedModel $$downloadTheCustomizedModel
      */
-	public Models $models;
+	public DownloadTheCustomizedModel $downloadTheCustomizedModel;
+	
+    /**
+     * Methods related to document
+     * 
+     * @var Document $$document
+     */
+	public Document $document;
 	
     /**
      * Methods related to Snippets
@@ -110,13 +117,6 @@ class Writer
      * @var User $$user
      */
 	public User $user;
-	
-    /**
-     * Methods related to document
-     * 
-     * @var Document $$document
-     */
-	public Document $document;
 		
 	private SDKConfiguration $sdkConfiguration;
 
@@ -137,23 +137,25 @@ class Writer
 	{
 		$this->sdkConfiguration = $sdkConfiguration;
 		
-		$this->aiContentDetector = new AIContentDetector($this->sdkConfiguration);
-		
 		$this->billing = new Billing($this->sdkConfiguration);
 		
-		$this->coWrite = new CoWrite($this->sdkConfiguration);
-		
-		$this->completions = new Completions($this->sdkConfiguration);
+		$this->aiContentDetector = new AIContentDetector($this->sdkConfiguration);
 		
 		$this->content = new Content($this->sdkConfiguration);
 		
-		$this->downloadTheCustomizedModel = new DownloadTheCustomizedModel($this->sdkConfiguration);
+		$this->coWrite = new CoWrite($this->sdkConfiguration);
 		
 		$this->files = new Files($this->sdkConfiguration);
 		
+		$this->models = new Models($this->sdkConfiguration);
+		
+		$this->completions = new Completions($this->sdkConfiguration);
+		
 		$this->modelCustomization = new ModelCustomization($this->sdkConfiguration);
 		
-		$this->models = new Models($this->sdkConfiguration);
+		$this->downloadTheCustomizedModel = new DownloadTheCustomizedModel($this->sdkConfiguration);
+		
+		$this->document = new Document($this->sdkConfiguration);
 		
 		$this->snippet = new Snippet($this->sdkConfiguration);
 		
@@ -162,7 +164,5 @@ class Writer
 		$this->terminology = new Terminology($this->sdkConfiguration);
 		
 		$this->user = new User($this->sdkConfiguration);
-		
-		$this->document = new Document($this->sdkConfiguration);
 	}
 }

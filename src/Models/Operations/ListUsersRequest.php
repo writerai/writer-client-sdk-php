@@ -21,10 +21,10 @@ class ListUsersRequest
     public ?string $search = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sortField')]
-    public ?ListUsersSortField $sortField = null;
+    public ?ListUsersQueryParamSortField $sortField = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sortOrder')]
-    public ?ListUsersSortOrder $sortOrder = null;
+    public ?ListUsersQueryParamSortOrder $sortOrder = null;
     
 	public function __construct()
 	{

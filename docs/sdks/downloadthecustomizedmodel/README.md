@@ -1,5 +1,5 @@
 # DownloadTheCustomizedModel
-(*downloadTheCustomizedModel*)
+
 
 ## Overview
 
@@ -21,25 +21,25 @@ Download your fine-tuned model (available only for Palmyra Base and Palmyra Larg
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new FetchCustomizedModelFileRequest();
+    $request = new Operations\FetchCustomizedModelFileRequest();
     $request->customizationId = 'string';
     $request->modelId = 'string';
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 
-    if ($response->fetchCustomizedModelFile200ApplicationOctetStreamBinaryString !== null) {
+    if ($response->bytes !== null) {
         // handle response
     }
 } catch (Exception $e) {

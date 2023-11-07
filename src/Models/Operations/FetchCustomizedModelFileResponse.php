@@ -52,7 +52,7 @@ class FetchCustomizedModelFileResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
 	
-    public ?string $fetchCustomizedModelFile200ApplicationOctetStreamBinaryString = null;
+    public ?string $bytes = null;
     
 	public function __construct()
 	{
@@ -61,6 +61,6 @@ class FetchCustomizedModelFileResponse
 		$this->headers = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->fetchCustomizedModelFile200ApplicationOctetStreamBinaryString = null;
+		$this->bytes = null;
 	}
 }

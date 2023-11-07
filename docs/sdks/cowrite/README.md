@@ -1,5 +1,5 @@
 # CoWrite
-(*coWrite*)
+
 
 ## Overview
 
@@ -22,24 +22,22 @@ Generate content using predefined templates
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\GenerateContentRequest;
-use \WriterAi\SDK\Models\Shared\GenerateTemplateRequest;
-use \WriterAi\SDK\Models\Shared\MagicRequestInput;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GenerateContentRequest();
-    $request->generateTemplateRequest = new GenerateTemplateRequest();
+    $request = new Operations\GenerateContentRequest();
+    $request->generateTemplateRequest = new Shared\GenerateTemplateRequest();
     $request->generateTemplateRequest->inputs = [
-        new MagicRequestInput(),
+        new Shared\MagicRequestInput(),
     ];
     $request->generateTemplateRequest->templateId = 'string';
     $request->teamId = 569932;
@@ -78,19 +76,19 @@ Get a list of your existing CoWrite templates
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListTemplatesRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListTemplatesRequest();
+    $request = new Operations\ListTemplatesRequest();
     $request->teamId = 380445;
     $request->templateId = 'string';
 

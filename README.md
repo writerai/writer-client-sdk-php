@@ -46,26 +46,20 @@ composer update
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use WriterAi\SDK\Writer;
-use WriterAi\SDK\Models\Shared\Security;
-use WriterAi\SDK\Models\Operations\DetectContentRequest;
-use WriterAi\SDK\Models\Shared\ContentDetectorRequest;
+use WriterAi\SDK;
+use WriterAi\SDK\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DetectContentRequest();
-    $request->contentDetectorRequest = new ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'string';
+    $response = $sdk->billing->getSubscriptionDetails();
 
-    $response = $sdk->aiContentDetector->detect($request);
-
-    if ($response->contentDetectorResponses !== null) {
+    if ($response->subscriptionPublicResponseApi !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -79,84 +73,82 @@ try {
 ## Available Resources and Operations
 
 
-### [aiContentDetector](docs/sdks/aicontentdetector/README.md)
-
-* [detect](docs/sdks/aicontentdetector/README.md#detect) - Content detector api
-
-### [billing](docs/sdks/billing/README.md)
+### [Billing](docs/sdks/billing/README.md)
 
 * [getSubscriptionDetails](docs/sdks/billing/README.md#getsubscriptiondetails) - Get your organization subscription details
 
-### [coWrite](docs/sdks/cowrite/README.md)
+### [AIContentDetector](docs/sdks/aicontentdetector/README.md)
 
-* [generateContent](docs/sdks/cowrite/README.md#generatecontent) - Generate content using predefined templates
-* [listTemplates](docs/sdks/cowrite/README.md#listtemplates) - Get a list of your existing CoWrite templates
+* [detect](docs/sdks/aicontentdetector/README.md#detect) - Content detector api
 
-### [completions](docs/sdks/completions/README.md)
-
-* [create](docs/sdks/completions/README.md#create) - Create completion for LLM model
-* [createModelCustomizationCompletion](docs/sdks/completions/README.md#createmodelcustomizationcompletion) - Create completion for LLM customization model
-
-### [content](docs/sdks/content/README.md)
+### [Content](docs/sdks/content/README.md)
 
 * [check](docs/sdks/content/README.md#check) - Check your content against your preset styleguide.
 * [correct](docs/sdks/content/README.md#correct) - Apply the style guide suggestions directly to your content.
 
-### [downloadTheCustomizedModel](docs/sdks/downloadthecustomizedmodel/README.md)
+### [CoWrite](docs/sdks/cowrite/README.md)
 
-* [fetchFile](docs/sdks/downloadthecustomizedmodel/README.md#fetchfile) - Download your fine-tuned model (available only for Palmyra Base and Palmyra Large)
+* [generateContent](docs/sdks/cowrite/README.md#generatecontent) - Generate content using predefined templates
+* [listTemplates](docs/sdks/cowrite/README.md#listtemplates) - Get a list of your existing CoWrite templates
 
-### [files](docs/sdks/files/README.md)
+### [Files](docs/sdks/files/README.md)
 
 * [delete](docs/sdks/files/README.md#delete) - Delete file
 * [get](docs/sdks/files/README.md#get) - Get file
 * [list](docs/sdks/files/README.md#list) - List files
 * [upload](docs/sdks/files/README.md#upload) - Upload file
 
-### [modelCustomization](docs/sdks/modelcustomization/README.md)
+### [Models](docs/sdks/models/README.md)
+
+* [list](docs/sdks/models/README.md#list) - List available LLM models
+
+### [Completions](docs/sdks/completions/README.md)
+
+* [create](docs/sdks/completions/README.md#create) - Create completion for LLM model
+* [createModelCustomizationCompletion](docs/sdks/completions/README.md#createmodelcustomizationcompletion) - Create completion for LLM customization model
+
+### [ModelCustomization](docs/sdks/modelcustomization/README.md)
 
 * [create](docs/sdks/modelcustomization/README.md#create) - Create model customization
 * [delete](docs/sdks/modelcustomization/README.md#delete) - Delete Model customization
 * [get](docs/sdks/modelcustomization/README.md#get) - Get model customization
 * [list](docs/sdks/modelcustomization/README.md#list) - List model customizations
 
-### [models](docs/sdks/models/README.md)
+### [DownloadTheCustomizedModel](docs/sdks/downloadthecustomizedmodel/README.md)
 
-* [list](docs/sdks/models/README.md#list) - List available LLM models
+* [fetchFile](docs/sdks/downloadthecustomizedmodel/README.md#fetchfile) - Download your fine-tuned model (available only for Palmyra Base and Palmyra Large)
 
-### [snippet](docs/sdks/snippet/README.md)
+### [Document](docs/sdks/document/README.md)
+
+* [get](docs/sdks/document/README.md#get) - Get document details
+* [list](docs/sdks/document/README.md#list) - List team documents
+
+### [Snippet](docs/sdks/snippet/README.md)
 
 * [delete](docs/sdks/snippet/README.md#delete) - Delete snippets
 * [find](docs/sdks/snippet/README.md#find) - Find snippets
 * [update](docs/sdks/snippet/README.md#update) - Update snippets
 
-### [styleguide](docs/sdks/styleguide/README.md)
+### [Styleguide](docs/sdks/styleguide/README.md)
 
 * [get](docs/sdks/styleguide/README.md#get) - Page details
 * [listPages](docs/sdks/styleguide/README.md#listpages) - List your styleguide pages
 
-### [terminology](docs/sdks/terminology/README.md)
+### [Terminology](docs/sdks/terminology/README.md)
 
 * [add](docs/sdks/terminology/README.md#add) - Add terms
 * [delete](docs/sdks/terminology/README.md#delete) - Delete terms
 * [find](docs/sdks/terminology/README.md#find) - Find terms
 * [update](docs/sdks/terminology/README.md#update) - Update terms
 
-### [user](docs/sdks/user/README.md)
+### [User](docs/sdks/user/README.md)
 
 * [list](docs/sdks/user/README.md#list) - List users
-
-### [document](docs/sdks/document/README.md)
-
-* [get](docs/sdks/document/README.md#get) - Get document details
-* [list](docs/sdks/document/README.md#list) - List team documents
 <!-- End SDK Available Operations -->
 
 
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
@@ -167,7 +159,7 @@ try {
 
 A parameter is configured globally. This parameter must be set on the SDK client instance itself during initialization. When configured as an option during SDK initialization, This global value will be used as the default on the operations that use it. When such operations are called, there is a place in each to override the global value, if needed.
 
-For example, you can set `organizationId` to `297548` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
+For example, you can set `organizationId` to `678317` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
 
 
 ## Available Globals
@@ -188,26 +180,25 @@ The following global parameter is available. The required parameter must be set 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use WriterAi\SDK\Writer;
-use WriterAi\SDK\Models\Shared\Security;
-use WriterAi\SDK\Models\Operations\DetectContentRequest;
-use WriterAi\SDK\Models\Shared\ContentDetectorRequest;
+use WriterAi\SDK;
+use WriterAi\SDK\Models\Shared;
+use WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DetectContentRequest();
-    $request->contentDetectorRequest = new ContentDetectorRequest();
+    $request = new Operations\DetectContentRequest();
+    $request->contentDetectorRequest = new Shared\ContentDetectorRequest();
     $request->contentDetectorRequest->input = 'string';
 
     $response = $sdk->aiContentDetector->detect($request);
 
-    if ($response->contentDetectorResponses !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -215,7 +206,6 @@ try {
 }
 
 ```
-
 <!-- End Global Parameters -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->

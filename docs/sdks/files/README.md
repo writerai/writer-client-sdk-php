@@ -1,5 +1,5 @@
 # Files
-(*files*)
+
 
 ## Overview
 
@@ -24,24 +24,24 @@ Delete file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DeleteFileRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteFileRequest();
+    $request = new Operations\DeleteFileRequest();
     $request->fileId = 'string';
 
     $response = $sdk->files->delete($request);
 
-    if ($response->deleteFile200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -73,19 +73,19 @@ Get file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\GetFileRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetFileRequest();
+    $request = new Operations\GetFileRequest();
     $request->fileId = 'string';
 
     $response = $sdk->files->get($request);
@@ -122,19 +122,19 @@ List files
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListFilesRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListFilesRequest();
+    $request = new Operations\ListFilesRequest();
 
     $response = $sdk->files->list($request);
 
@@ -170,25 +170,23 @@ Upload file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\UploadFileRequest;
-use \WriterAi\SDK\Models\Shared\UploadModelFileRequest;
-use \WriterAi\SDK\Models\Shared\UploadModelFileRequestFile;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UploadFileRequest();
-    $request->uploadModelFileRequest = new UploadModelFileRequest();
-    $request->uploadModelFileRequest->file = new UploadModelFileRequestFile();
-    $request->uploadModelFileRequest->file->content = 'F?SRSKG@^n';
-    $request->uploadModelFileRequest->file->file = 'string';
+    $request = new Operations\UploadFileRequest();
+    $request->uploadModelFileRequest = new Shared\UploadModelFileRequest();
+    $request->uploadModelFileRequest->file = new Shared\File();
+    $request->uploadModelFileRequest->file->content = '0x87cbca97eC';
+    $request->uploadModelFileRequest->file->fileName = 'ullam.wav';
 
     $response = $sdk->files->upload($request);
 

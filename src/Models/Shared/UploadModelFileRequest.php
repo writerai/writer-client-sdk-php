@@ -12,10 +12,10 @@ use \WriterAi\SDK\Utils\SpeakeasyMetadata;
 class UploadModelFileRequest
 {
 	#[SpeakeasyMetadata('multipartForm:file=true')]
-    public UploadModelFileRequestFile $file;
+    public File $file;
     
 	public function __construct()
 	{
-		$this->file = new \WriterAi\SDK\Models\Shared\UploadModelFileRequestFile();
+		$this->file = new \WriterAi\SDK\Models\Shared\File();
 	}
 }

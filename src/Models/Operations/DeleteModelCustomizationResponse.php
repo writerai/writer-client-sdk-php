@@ -52,7 +52,7 @@ class DeleteModelCustomizationResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
 	
-    public ?DeleteModelCustomization200ApplicationJSON $deleteModelCustomization200ApplicationJSONObject = null;
+    public ?DeleteModelCustomizationResponseBody $object = null;
     
 	public function __construct()
 	{
@@ -61,6 +61,6 @@ class DeleteModelCustomizationResponse
 		$this->headers = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->deleteModelCustomization200ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

@@ -1,5 +1,5 @@
 # User
-(*user*)
+
 
 ## Overview
 
@@ -21,26 +21,24 @@ List users
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListUsersRequest;
-use \WriterAi\SDK\Models\Operations\ListUsersSortField;
-use \WriterAi\SDK\Models\Operations\ListUsersSortOrder;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUsersRequest();
+    $request = new Operations\ListUsersRequest();
     $request->limit = 768578;
     $request->offset = 99895;
     $request->search = 'string';
-    $request->sortField = ListUsersSortField::Deleted;
-    $request->sortOrder = ListUsersSortOrder::Asc;
+    $request->sortField = Operations\ListUsersQueryParamSortField::Deleted;
+    $request->sortOrder = Operations\ListUsersQueryParamSortOrder::Asc;
 
     $response = $sdk->user->list($request);
 

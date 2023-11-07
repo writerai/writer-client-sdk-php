@@ -12,8 +12,8 @@ namespace WriterAi\SDK\Models\Shared;
 class ContentDetectorResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('label')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\ContentDetectorResponseLabel>')]
-    public ContentDetectorResponseLabel $label;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\Label>')]
+    public Label $label;
     
 	#[\JMS\Serializer\Annotation\SerializedName('score')]
     #[\JMS\Serializer\Annotation\Type('float')]
@@ -21,7 +21,7 @@ class ContentDetectorResponse
     
 	public function __construct()
 	{
-		$this->label = \WriterAi\SDK\Models\Shared\ContentDetectorResponseLabel::Fake;
+		$this->label = \WriterAi\SDK\Models\Shared\Label::Fake;
 		$this->score = 0;
 	}
 }

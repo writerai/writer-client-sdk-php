@@ -42,8 +42,10 @@ class DownloadTheCustomizedModel
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -51,7 +53,7 @@ class DownloadTheCustomizedModel
             $response->headers = $httpResponse->getHeaders();
             
             if (Utils\Utils::matchContentType($contentType, 'application/octet-stream')) {
-                $response->fetchCustomizedModelFile200ApplicationOctetStreamBinaryString = $httpResponse->getBody()->getContents();
+                $response->bytes = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 403 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 500) {

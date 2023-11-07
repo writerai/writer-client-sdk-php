@@ -1,5 +1,5 @@
 # Document
-(*document*)
+
 
 ## Overview
 
@@ -22,19 +22,19 @@ Get document details
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetDocumentDetailsRequest();
+    $request = new Operations\GetDocumentDetailsRequest();
     $request->documentId = 700347;
     $request->teamId = 90065;
 
@@ -72,26 +72,24 @@ List team documents
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest;
-use \WriterAi\SDK\Models\Operations\ListTeamDocumentsSortField;
-use \WriterAi\SDK\Models\Operations\ListTeamDocumentsSortOrder;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListTeamDocumentsRequest();
+    $request = new Operations\ListTeamDocumentsRequest();
     $request->limit = 768578;
     $request->offset = 99895;
     $request->search = 'string';
-    $request->sortField = ListTeamDocumentsSortField::ModificationTime;
-    $request->sortOrder = ListTeamDocumentsSortOrder::Asc;
+    $request->sortField = Operations\ListTeamDocumentsQueryParamSortField::ModificationTime;
+    $request->sortOrder = Operations\ListTeamDocumentsQueryParamSortOrder::Asc;
     $request->teamId = 678317;
 
     $response = $sdk->document->list($request);

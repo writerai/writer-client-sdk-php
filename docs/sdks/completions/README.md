@@ -1,5 +1,5 @@
 # Completions
-(*completions*)
+
 
 ## Overview
 
@@ -22,21 +22,20 @@ Create completion for LLM model
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\CreateCompletionRequest;
-use \WriterAi\SDK\Models\Shared\CompletionRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateCompletionRequest();
-    $request->completionRequest = new CompletionRequest();
+    $request = new Operations\CreateCompletionRequest();
+    $request->completionRequest = new Shared\CompletionRequest();
     $request->completionRequest->bestOf = 1;
     $request->completionRequest->frequencyPenalty = 4865.89;
     $request->completionRequest->logprobs = 489382;
@@ -86,21 +85,20 @@ Create completion for LLM customization model
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\CreateModelCustomizationCompletionRequest;
-use \WriterAi\SDK\Models\Shared\CompletionRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = Writer::builder()
+$sdk = SDK\Writer::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateModelCustomizationCompletionRequest();
-    $request->completionRequest = new CompletionRequest();
+    $request = new Operations\CreateModelCustomizationCompletionRequest();
+    $request->completionRequest = new Shared\CompletionRequest();
     $request->completionRequest->bestOf = 1;
     $request->completionRequest->frequencyPenalty = 9195.03;
     $request->completionRequest->logprobs = 41297;
