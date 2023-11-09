@@ -51,10 +51,10 @@ try {
 
 | Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                              | [\WriterAi\SDK\Models\Operations\DetectContentRequest](../../models/operations/DetectContentRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| `$request`                                                                                              | [\WriterAi\SDK\Models\Operations\DetectContentRequest](../../Models/Operations/DetectContentRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\DetectContentResponse](../../models/operations/DetectContentResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\DetectContentResponse](../../Models/Operations/DetectContentResponse.md)**
 

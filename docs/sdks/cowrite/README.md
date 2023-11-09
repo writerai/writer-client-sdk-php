@@ -56,12 +56,12 @@ try {
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\WriterAi\SDK\Models\Operations\GenerateContentRequest](../../models/operations/GenerateContentRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| `$request`                                                                                                  | [\WriterAi\SDK\Models\Operations\GenerateContentRequest](../../Models/Operations/GenerateContentRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\GenerateContentResponse](../../models/operations/GenerateContentResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\GenerateContentResponse](../../Models/Operations/GenerateContentResponse.md)**
 
 
 ## listTemplates
@@ -106,10 +106,10 @@ try {
 
 | Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                              | [\WriterAi\SDK\Models\Operations\ListTemplatesRequest](../../models/operations/ListTemplatesRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| `$request`                                                                                              | [\WriterAi\SDK\Models\Operations\ListTemplatesRequest](../../Models/Operations/ListTemplatesRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListTemplatesResponse](../../models/operations/ListTemplatesResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListTemplatesResponse](../../Models/Operations/ListTemplatesResponse.md)**
 

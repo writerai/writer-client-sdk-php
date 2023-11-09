@@ -53,12 +53,12 @@ try {
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\DeleteFileRequest](../../models/operations/DeleteFileRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\DeleteFileRequest](../../Models/Operations/DeleteFileRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\DeleteFileResponse](../../models/operations/DeleteFileResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\DeleteFileResponse](../../Models/Operations/DeleteFileResponse.md)**
 
 
 ## get
@@ -102,12 +102,12 @@ try {
 
 | Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `$request`                                                                                  | [\WriterAi\SDK\Models\Operations\GetFileRequest](../../models/operations/GetFileRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| `$request`                                                                                  | [\WriterAi\SDK\Models\Operations\GetFileRequest](../../Models/Operations/GetFileRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\GetFileResponse](../../models/operations/GetFileResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\GetFileResponse](../../Models/Operations/GetFileResponse.md)**
 
 
 ## list
@@ -150,12 +150,12 @@ try {
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListFilesRequest](../../models/operations/ListFilesRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListFilesRequest](../../Models/Operations/ListFilesRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListFilesResponse](../../models/operations/ListFilesResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListFilesResponse](../../Models/Operations/ListFilesResponse.md)**
 
 
 ## upload
@@ -202,10 +202,10 @@ try {
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\UploadFileRequest](../../models/operations/UploadFileRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\UploadFileRequest](../../Models/Operations/UploadFileRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\UploadFileResponse](../../models/operations/UploadFileResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\UploadFileResponse](../../Models/Operations/UploadFileResponse.md)**
 

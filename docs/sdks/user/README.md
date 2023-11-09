@@ -54,10 +54,10 @@ try {
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListUsersRequest](../../models/operations/ListUsersRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListUsersRequest](../../Models/Operations/ListUsersRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListUsersResponse](../../models/operations/ListUsersResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListUsersResponse](../../Models/Operations/ListUsersResponse.md)**
 

@@ -1,9 +1,0 @@
-# UpdateTermsRequest
-
-
-## Fields
-
-| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `failHandling`                                                                                                       | [?\WriterAi\SDK\Models\Shared\UpdateTermsRequestFailHandling](../../models/shared/UpdateTermsRequestFailHandling.md) | :heavy_minus_sign:                                                                                                   | N/A                                                                                                                  |
-| `models`                                                                                                             | array<[\WriterAi\SDK\Models\Shared\TermUpdate](../../models/shared/TermUpdate.md)>                                   | :heavy_minus_sign:                                                                                                   | N/A                                                                                                                  |

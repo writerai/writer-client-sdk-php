@@ -51,10 +51,10 @@ try {
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest](../../models/operations/FetchCustomizedModelFileRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `$request`                                                                                                                    | [\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest](../../Models/Operations/FetchCustomizedModelFileRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse](../../models/operations/FetchCustomizedModelFileResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse](../../Models/Operations/FetchCustomizedModelFileResponse.md)**
 

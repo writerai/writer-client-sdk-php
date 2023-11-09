@@ -45,5 +45,5 @@ try {
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\GetSubscriptionDetailsResponse](../../models/operations/GetSubscriptionDetailsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\GetSubscriptionDetailsResponse](../../Models/Operations/GetSubscriptionDetailsResponse.md)**
 

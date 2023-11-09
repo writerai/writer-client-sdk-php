@@ -51,12 +51,12 @@ try {
 
 | Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\PageDetailsRequest](../../models/operations/PageDetailsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\PageDetailsRequest](../../Models/Operations/PageDetailsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\PageDetailsResponse](../../models/operations/PageDetailsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\PageDetailsResponse](../../Models/Operations/PageDetailsResponse.md)**
 
 
 ## listPages
@@ -102,10 +102,10 @@ try {
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListPagesRequest](../../models/operations/ListPagesRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListPagesRequest](../../Models/Operations/ListPagesRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListPagesResponse](../../models/operations/ListPagesResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListPagesResponse](../../Models/Operations/ListPagesResponse.md)**
 

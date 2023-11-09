@@ -49,10 +49,10 @@ try {
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\ListModelsRequest](../../models/operations/ListModelsRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\ListModelsRequest](../../Models/Operations/ListModelsRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListModelsResponse](../../models/operations/ListModelsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListModelsResponse](../../Models/Operations/ListModelsResponse.md)**
 

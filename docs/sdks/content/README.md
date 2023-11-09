@@ -70,12 +70,12 @@ try {
 
 | Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                            | [\WriterAi\SDK\Models\Operations\ContentCheckRequest](../../models/operations/ContentCheckRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| `$request`                                                                                            | [\WriterAi\SDK\Models\Operations\ContentCheckRequest](../../Models/Operations/ContentCheckRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ContentCheckResponse](../../models/operations/ContentCheckResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ContentCheckResponse](../../Models/Operations/ContentCheckResponse.md)**
 
 
 ## correct
@@ -139,10 +139,10 @@ try {
 
 | Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                | [\WriterAi\SDK\Models\Operations\ContentCorrectRequest](../../models/operations/ContentCorrectRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| `$request`                                                                                                | [\WriterAi\SDK\Models\Operations\ContentCorrectRequest](../../Models/Operations/ContentCorrectRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ContentCorrectResponse](../../models/operations/ContentCorrectResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ContentCorrectResponse](../../Models/Operations/ContentCorrectResponse.md)**
 

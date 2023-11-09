@@ -58,12 +58,12 @@ try {
 
 | Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
 | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `$request`                                                                                    | [\WriterAi\SDK\Models\Operations\AddTermsRequest](../../models/operations/AddTermsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| `$request`                                                                                    | [\WriterAi\SDK\Models\Operations\AddTermsRequest](../../Models/Operations/AddTermsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\AddTermsResponse](../../models/operations/AddTermsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\AddTermsResponse](../../Models/Operations/AddTermsResponse.md)**
 
 
 ## delete
@@ -111,12 +111,12 @@ try {
 
 | Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\DeleteTermsRequest](../../models/operations/DeleteTermsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\DeleteTermsRequest](../../Models/Operations/DeleteTermsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\DeleteTermsResponse](../../models/operations/DeleteTermsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\DeleteTermsResponse](../../Models/Operations/DeleteTermsResponse.md)**
 
 
 ## find
@@ -170,12 +170,12 @@ try {
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\FindTermsRequest](../../models/operations/FindTermsRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\FindTermsRequest](../../Models/Operations/FindTermsRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\FindTermsResponse](../../models/operations/FindTermsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\FindTermsResponse](../../Models/Operations/FindTermsResponse.md)**
 
 
 ## update
@@ -225,10 +225,10 @@ try {
 
 | Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\UpdateTermsRequest](../../models/operations/UpdateTermsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\UpdateTermsRequest](../../Models/Operations/UpdateTermsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\UpdateTermsResponse](../../models/operations/UpdateTermsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\UpdateTermsResponse](../../Models/Operations/UpdateTermsResponse.md)**
 
