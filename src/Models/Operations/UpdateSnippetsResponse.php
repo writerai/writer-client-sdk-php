@@ -11,6 +11,11 @@ namespace WriterAi\SDK\Models\Operations;
 
 class UpdateSnippetsResponse
 {
+    /**
+     * HTTP response content type for this operation
+     * 
+     * @var string $contentType
+     */
 	
     public string $contentType;
     
@@ -31,26 +36,36 @@ class UpdateSnippetsResponse
     public ?array $headers = null;
     
     /**
-     * $snippetWithUsers
+     * HTTP response status code for this operation
      * 
-     * @var ?array<\WriterAi\SDK\Models\Shared\SnippetWithUser> $snippetWithUsers
+     * @var int $statusCode
      */
-	
-    public ?array $snippetWithUsers = null;
-    
 	
     public int $statusCode;
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     * 
+     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
+    
+    /**
+     * $classes
+     * 
+     * @var ?array<\WriterAi\SDK\Models\Shared\SnippetWithUser> $classes
+     */
+	
+    public ?array $classes = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->failResponse = null;
 		$this->headers = null;
-		$this->snippetWithUsers = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->classes = null;
 	}
 }

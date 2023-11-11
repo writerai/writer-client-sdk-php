@@ -1,30 +1,31 @@
 <!-- Start SDK Example Usage -->
+
+
 ```php
 <?php
 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DetectContentRequest;
-use \WriterAi\SDK\Models\Shared\ContentDetectorRequest;
+use WriterAi\SDK;
+use WriterAi\SDK\Models\Shared;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DetectContentRequest();
-    $request->contentDetectorRequest = new ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'corrupti';
+    $response = $sdk->billing->getSubscriptionDetails();
 
-    $response = $sdk->aiContentDetector->detect($request);
-
-    if ($response->contentDetectorResponses !== null) {
+    if ($response->subscriptionPublicResponseApi !== null) {
         // handle response
     }
 } catch (Exception $e) {
     // handle exception
 }
+
 ```
 <!-- End SDK Example Usage -->

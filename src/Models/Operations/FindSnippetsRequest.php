@@ -32,10 +32,10 @@ class FindSnippetsRequest
     public ?array $shortcuts = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sortField')]
-    public ?FindSnippetsSortField $sortField = null;
+    public ?SortField $sortField = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sortOrder')]
-    public ?FindSnippetsSortOrder $sortOrder = null;
+    public ?SortOrder $sortOrder = null;
     
     /**
      * $tags

@@ -26,8 +26,8 @@ class ContentIssue
     public mixed $meta = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('service')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\ContentIssueService>')]
-    public ContentIssueService $service;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\Service>')]
+    public Service $service;
     
     /**
      * $suggestions
@@ -48,7 +48,7 @@ class ContentIssue
 		$this->description = null;
 		$this->from = 0;
 		$this->meta = null;
-		$this->service = \WriterAi\SDK\Models\Shared\ContentIssueService::CommonMistakes;
+		$this->service = \WriterAi\SDK\Models\Shared\Service::CommonMistakes;
 		$this->suggestions = null;
 		$this->until = 0;
 	}

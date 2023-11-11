@@ -1,4 +1,5 @@
-# terminology
+# Terminology
+
 
 ## Overview
 
@@ -23,36 +24,25 @@ Add terms
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\AddTermsRequest;
-use \WriterAi\SDK\Models\Shared\CreateTermsRequest;
-use \WriterAi\SDK\Models\Shared\CreateTermsRequestFailHandling;
-use \WriterAi\SDK\Models\Shared\TermCreate;
-use \WriterAi\SDK\Models\Shared\ApprovedTermExtensionCreate;
-use \WriterAi\SDK\Models\Shared\TermExampleCreate;
-use \WriterAi\SDK\Models\Shared\TermExampleCreateType;
-use \WriterAi\SDK\Models\Shared\LinkedTermCreate;
-use \WriterAi\SDK\Models\Shared\TermMistakeCreate;
-use \WriterAi\SDK\Models\Shared\TermMistakeCreatePos;
-use \WriterAi\SDK\Models\Shared\TermCreatePos;
-use \WriterAi\SDK\Models\Shared\TermTagCreate;
-use \WriterAi\SDK\Models\Shared\TermCreateType;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AddTermsRequest();
-    $request->createTermsRequest = new CreateTermsRequest();
-    $request->createTermsRequest->failHandling = CreateTermsRequestFailHandling::Accumulate;
+    $request = new Operations\AddTermsRequest();
+    $request->createTermsRequest = new Shared\CreateTermsRequest();
+    $request->createTermsRequest->failHandling = Shared\FailHandling::Skip;
     $request->createTermsRequest->models = [
-        new TermCreate(),
-        new TermCreate(),
-        new TermCreate(),
-        new TermCreate(),
+        new Shared\TermCreate(),
     ];
-    $request->teamId = 666767;
+    $request->teamId = 823436;
 
     $response = $sdk->terminology->add($request);
 
@@ -68,12 +58,12 @@ try {
 
 | Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
 | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `$request`                                                                                    | [\WriterAi\SDK\Models\Operations\AddTermsRequest](../../models/operations/AddTermsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| `$request`                                                                                    | [\WriterAi\SDK\Models\Operations\AddTermsRequest](../../Models/Operations/AddTermsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\AddTermsResponse](../../models/operations/AddTermsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\AddTermsResponse](../../Models/Operations/AddTermsResponse.md)**
 
 
 ## delete
@@ -88,22 +78,24 @@ Delete terms
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DeleteTermsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteTermsRequest();
-    $request->xRequestID = 'mollitia';
+    $request = new Operations\DeleteTermsRequest();
+    $request->xRequestID = 'string';
     $request->ids = [
-        170909,
-        210382,
-        358152,
+        545907,
     ];
-    $request->teamId = 128926;
+    $request->teamId = 841399;
 
     $response = $sdk->terminology->delete($request);
 
@@ -119,12 +111,12 @@ try {
 
 | Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\DeleteTermsRequest](../../models/operations/DeleteTermsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\DeleteTermsRequest](../../Models/Operations/DeleteTermsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\DeleteTermsResponse](../../models/operations/DeleteTermsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\DeleteTermsResponse](../../Models/Operations/DeleteTermsResponse.md)**
 
 
 ## find
@@ -139,32 +131,30 @@ Find terms
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\FindTermsRequest;
-use \WriterAi\SDK\Models\Operations\FindTermsPartOfSpeech;
-use \WriterAi\SDK\Models\Operations\FindTermsSortField;
-use \WriterAi\SDK\Models\Operations\FindTermsSortOrder;
-use \WriterAi\SDK\Models\Operations\FindTermsType;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new FindTermsRequest();
-    $request->limit = 750686;
-    $request->offset = 315428;
-    $request->partOfSpeech = FindTermsPartOfSpeech::Adverb;
-    $request->sortField = FindTermsSortField::CreationTime;
-    $request->sortOrder = FindTermsSortOrder::Asc;
+    $request = new Operations\FindTermsRequest();
+    $request->limit = 40141;
+    $request->offset = 326883;
+    $request->partOfSpeech = Operations\PartOfSpeech::Verb;
+    $request->sortField = Operations\QueryParamSortField::Type;
+    $request->sortOrder = Operations\QueryParamSortOrder::Desc;
     $request->tags = [
-        'accusantium',
-        'iure',
-        'culpa',
+        'string',
     ];
-    $request->teamId = 988374;
-    $request->term = 'sapiente';
-    $request->type = FindTermsType::Approved;
+    $request->teamId = 111247;
+    $request->term = 'string';
+    $request->type = Operations\Type::Approved;
 
     $response = $sdk->terminology->find($request);
 
@@ -180,12 +170,12 @@ try {
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\FindTermsRequest](../../models/operations/FindTermsRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\FindTermsRequest](../../Models/Operations/FindTermsRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\FindTermsResponse](../../models/operations/FindTermsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\FindTermsResponse](../../Models/Operations/FindTermsResponse.md)**
 
 
 ## update
@@ -200,34 +190,26 @@ Update terms
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\UpdateTermsRequest;
-use \WriterAi\SDK\Models\Shared\UpdateTermsRequest;
-use \WriterAi\SDK\Models\Shared\UpdateTermsRequestFailHandling;
-use \WriterAi\SDK\Models\Shared\TermUpdate;
-use \WriterAi\SDK\Models\Shared\ApprovedTermExtensionCreate;
-use \WriterAi\SDK\Models\Shared\TermExampleCreate;
-use \WriterAi\SDK\Models\Shared\TermExampleCreateType;
-use \WriterAi\SDK\Models\Shared\LinkedTermCreate;
-use \WriterAi\SDK\Models\Shared\TermMistakeCreate;
-use \WriterAi\SDK\Models\Shared\TermMistakeCreatePos;
-use \WriterAi\SDK\Models\Shared\TermUpdatePos;
-use \WriterAi\SDK\Models\Shared\TermTagCreate;
-use \WriterAi\SDK\Models\Shared\TermUpdateType;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateTermsRequest();
-    $request->updateTermsRequest = new UpdateTermsRequest();
-    $request->updateTermsRequest->failHandling = UpdateTermsRequestFailHandling::Skip;
+    $request = new Operations\UpdateTermsRequest();
+    $request->updateTermsRequest = new Shared\UpdateTermsRequest();
+    $request->updateTermsRequest->failHandling = Shared\UpdateTermsRequestFailHandling::ValidateOnly;
     $request->updateTermsRequest->models = [
-        new TermUpdate(),
+        new Shared\TermUpdate(),
     ];
-    $request->xRequestID = 'culpa';
-    $request->teamId = 161309;
+    $request->xRequestID = 'string';
+    $request->teamId = 24555;
 
     $response = $sdk->terminology->update($request);
 
@@ -243,10 +225,10 @@ try {
 
 | Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\UpdateTermsRequest](../../models/operations/UpdateTermsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\UpdateTermsRequest](../../Models/Operations/UpdateTermsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\UpdateTermsResponse](../../models/operations/UpdateTermsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\UpdateTermsResponse](../../Models/Operations/UpdateTermsResponse.md)**
 

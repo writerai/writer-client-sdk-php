@@ -1,9 +1,0 @@
-# DetectContentRequest
-
-
-## Fields
-
-| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `contentDetectorRequest`                                                                            | [\WriterAi\SDK\Models\Shared\ContentDetectorRequest](../../models/shared/ContentDetectorRequest.md) | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
-| `organizationId`                                                                                    | *?int*                                                                                              | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |

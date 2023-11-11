@@ -1,4 +1,5 @@
-# models
+# Models
+
 
 ## Overview
 
@@ -20,15 +21,19 @@ List available LLM models
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListModelsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListModelsRequest();
+    $request = new Operations\ListModelsRequest();
 
     $response = $sdk->models->list($request);
 
@@ -44,10 +49,10 @@ try {
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\ListModelsRequest](../../models/operations/ListModelsRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\ListModelsRequest](../../Models/Operations/ListModelsRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListModelsResponse](../../models/operations/ListModelsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListModelsResponse](../../Models/Operations/ListModelsResponse.md)**
 

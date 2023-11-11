@@ -1,0 +1,11 @@
+# CreateModelCustomizationCompletionRequest
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `completionRequest`                                                                       | [\WriterAi\SDK\Models\Shared\CompletionRequest](../../Models/Shared/CompletionRequest.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `customizationId`                                                                         | *string*                                                                                  | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `modelId`                                                                                 | *string*                                                                                  | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `organizationId`                                                                          | *?int*                                                                                    | :heavy_minus_sign:                                                                        | N/A                                                                                       |

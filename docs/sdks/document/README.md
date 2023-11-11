@@ -1,4 +1,5 @@
-# document
+# Document
+
 
 ## Overview
 
@@ -21,17 +22,21 @@ Get document details
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetDocumentDetailsRequest();
-    $request->documentId = 466311;
-    $request->teamId = 474697;
+    $request = new Operations\GetDocumentDetailsRequest();
+    $request->documentId = 700347;
+    $request->teamId = 90065;
 
     $response = $sdk->document->get($request);
 
@@ -47,12 +52,12 @@ try {
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest](../../models/operations/GetDocumentDetailsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `$request`                                                                                                        | [\WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest](../../Models/Operations/GetDocumentDetailsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\GetDocumentDetailsResponse](../../models/operations/GetDocumentDetailsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\GetDocumentDetailsResponse](../../Models/Operations/GetDocumentDetailsResponse.md)**
 
 
 ## list
@@ -67,23 +72,25 @@ List team documents
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest;
-use \WriterAi\SDK\Models\Operations\ListTeamDocumentsSortField;
-use \WriterAi\SDK\Models\Operations\ListTeamDocumentsSortOrder;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListTeamDocumentsRequest();
-    $request->limit = 244425;
-    $request->offset = 623510;
-    $request->search = 'quia';
-    $request->sortField = ListTeamDocumentsSortField::CreationTime;
-    $request->sortOrder = ListTeamDocumentsSortOrder::Asc;
-    $request->teamId = 674752;
+    $request = new Operations\ListTeamDocumentsRequest();
+    $request->limit = 768578;
+    $request->offset = 99895;
+    $request->search = 'string';
+    $request->sortField = Operations\ListTeamDocumentsQueryParamSortField::ModificationTime;
+    $request->sortOrder = Operations\ListTeamDocumentsQueryParamSortOrder::Asc;
+    $request->teamId = 678317;
 
     $response = $sdk->document->list($request);
 
@@ -99,10 +106,10 @@ try {
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest](../../models/operations/ListTeamDocumentsRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `$request`                                                                                                      | [\WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest](../../Models/Operations/ListTeamDocumentsRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListTeamDocumentsResponse](../../models/operations/ListTeamDocumentsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListTeamDocumentsResponse](../../Models/Operations/ListTeamDocumentsResponse.md)**
 

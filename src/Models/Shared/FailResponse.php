@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace WriterAi\SDK\Models\Shared;
 
 
-/**
- * FailResponse - Bad Request
- * 
- * @package WriterAi\SDK\Models\Shared
- * @access public
- */
 class FailResponse
 {
     /**

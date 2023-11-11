@@ -28,7 +28,7 @@ class DownloadTheCustomizedModel
      * @return \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse
      */
 	public function fetchFile(
-        \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest $request,
+        ?\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest $request,
     ): \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -36,14 +36,16 @@ class DownloadTheCustomizedModel
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json;q=1, application/octet-stream;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -51,7 +53,7 @@ class DownloadTheCustomizedModel
             $response->headers = $httpResponse->getHeaders();
             
             if (Utils\Utils::matchContentType($contentType, 'application/octet-stream')) {
-                $response->fetchCustomizedModelFile200ApplicationOctetStreamBinaryString = $httpResponse->getBody()->getContents();
+                $response->bytes = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 403 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 500) {

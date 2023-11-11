@@ -11,6 +11,11 @@ namespace WriterAi\SDK\Models\Operations;
 
 class DeleteModelCustomizationResponse
 {
+    /**
+     * HTTP response content type for this operation
+     * 
+     * @var string $contentType
+     */
 	
     public string $contentType;
     
@@ -30,14 +35,24 @@ class DeleteModelCustomizationResponse
 	
     public ?array $headers = null;
     
+    /**
+     * HTTP response status code for this operation
+     * 
+     * @var int $statusCode
+     */
 	
     public int $statusCode;
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     * 
+     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
 	
-    public ?DeleteModelCustomization200ApplicationJSON $deleteModelCustomization200ApplicationJSONObject = null;
+    public ?DeleteModelCustomizationResponseBody $object = null;
     
 	public function __construct()
 	{
@@ -46,6 +61,6 @@ class DeleteModelCustomizationResponse
 		$this->headers = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->deleteModelCustomization200ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

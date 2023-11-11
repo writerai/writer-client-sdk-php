@@ -1,0 +1,12 @@
+# TermExample
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `example`                                                                             | *string*                                                                              | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `id`                                                                                  | *?int*                                                                                | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `termBankId`                                                                          | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `termId`                                                                              | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `type`                                                                                | [\WriterAi\SDK\Models\Shared\TermExampleType](../../Models/Shared/TermExampleType.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |

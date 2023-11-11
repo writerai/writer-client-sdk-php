@@ -1,4 +1,5 @@
-# files
+# Files
+
 
 ## Overview
 
@@ -23,20 +24,24 @@ Delete file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DeleteFileRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteFileRequest();
-    $request->fileId = 'molestiae';
+    $request = new Operations\DeleteFileRequest();
+    $request->fileId = 'string';
 
     $response = $sdk->files->delete($request);
 
-    if ($response->deleteFile200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -48,12 +53,12 @@ try {
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\DeleteFileRequest](../../models/operations/DeleteFileRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\DeleteFileRequest](../../Models/Operations/DeleteFileRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\DeleteFileResponse](../../models/operations/DeleteFileResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\DeleteFileResponse](../../Models/Operations/DeleteFileResponse.md)**
 
 
 ## get
@@ -68,16 +73,20 @@ Get file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\GetFileRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetFileRequest();
-    $request->fileId = 'quod';
+    $request = new Operations\GetFileRequest();
+    $request->fileId = 'string';
 
     $response = $sdk->files->get($request);
 
@@ -93,12 +102,12 @@ try {
 
 | Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `$request`                                                                                  | [\WriterAi\SDK\Models\Operations\GetFileRequest](../../models/operations/GetFileRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| `$request`                                                                                  | [\WriterAi\SDK\Models\Operations\GetFileRequest](../../Models/Operations/GetFileRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\GetFileResponse](../../models/operations/GetFileResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\GetFileResponse](../../Models/Operations/GetFileResponse.md)**
 
 
 ## list
@@ -113,15 +122,19 @@ List files
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListFilesRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListFilesRequest();
+    $request = new Operations\ListFilesRequest();
 
     $response = $sdk->files->list($request);
 
@@ -137,12 +150,12 @@ try {
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListFilesRequest](../../models/operations/ListFilesRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListFilesRequest](../../Models/Operations/ListFilesRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListFilesResponse](../../models/operations/ListFilesResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListFilesResponse](../../Models/Operations/ListFilesResponse.md)**
 
 
 ## upload
@@ -157,21 +170,23 @@ Upload file
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\UploadFileRequest;
-use \WriterAi\SDK\Models\Shared\UploadModelFileRequest;
-use \WriterAi\SDK\Models\Shared\UploadModelFileRequestFile;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UploadFileRequest();
-    $request->uploadModelFileRequest = new UploadModelFileRequest();
-    $request->uploadModelFileRequest->file = new UploadModelFileRequestFile();
-    $request->uploadModelFileRequest->file->content = 'quod';
-    $request->uploadModelFileRequest->file->file = 'esse';
+    $request = new Operations\UploadFileRequest();
+    $request->uploadModelFileRequest = new Shared\UploadModelFileRequest();
+    $request->uploadModelFileRequest->file = new Shared\File();
+    $request->uploadModelFileRequest->file->content = '0x87cbca97eC';
+    $request->uploadModelFileRequest->file->fileName = 'ullam.wav';
 
     $response = $sdk->files->upload($request);
 
@@ -187,10 +202,10 @@ try {
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\UploadFileRequest](../../models/operations/UploadFileRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| `$request`                                                                                        | [\WriterAi\SDK\Models\Operations\UploadFileRequest](../../Models/Operations/UploadFileRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\UploadFileResponse](../../models/operations/UploadFileResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\UploadFileResponse](../../Models/Operations/UploadFileResponse.md)**
 

@@ -24,10 +24,10 @@ class ListTeamDocumentsRequest
     public ?string $search = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sortField')]
-    public ?ListTeamDocumentsSortField $sortField = null;
+    public ?ListTeamDocumentsQueryParamSortField $sortField = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sortOrder')]
-    public ?ListTeamDocumentsSortOrder $sortOrder = null;
+    public ?ListTeamDocumentsQueryParamSortOrder $sortOrder = null;
     
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=teamId')]
     public int $teamId;

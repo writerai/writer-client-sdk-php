@@ -1,4 +1,5 @@
-# downloadTheCustomizedModel
+# DownloadTheCustomizedModel
+
 
 ## Overview
 
@@ -20,21 +21,25 @@ Download your fine-tuned model (available only for Palmyra Base and Palmyra Larg
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new FetchCustomizedModelFileRequest();
-    $request->customizationId = 'at';
-    $request->modelId = 'maiores';
+    $request = new Operations\FetchCustomizedModelFileRequest();
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 
-    if ($response->fetchCustomizedModelFile200ApplicationOctetStreamBinaryString !== null) {
+    if ($response->bytes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -46,10 +51,10 @@ try {
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest](../../models/operations/FetchCustomizedModelFileRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `$request`                                                                                                                    | [\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileRequest](../../Models/Operations/FetchCustomizedModelFileRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse](../../models/operations/FetchCustomizedModelFileResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\FetchCustomizedModelFileResponse](../../Models/Operations/FetchCustomizedModelFileResponse.md)**
 

@@ -1,4 +1,5 @@
-# aiContentDetector
+# AIContentDetector
+
 
 ## Overview
 
@@ -20,22 +21,25 @@ Content detector api
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DetectContentRequest;
-use \WriterAi\SDK\Models\Shared\ContentDetectorRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DetectContentRequest();
-    $request->contentDetectorRequest = new ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'provident';
+    $request = new Operations\DetectContentRequest();
+    $request->contentDetectorRequest = new Shared\ContentDetectorRequest();
+    $request->contentDetectorRequest->input = 'string';
 
     $response = $sdk->aiContentDetector->detect($request);
 
-    if ($response->contentDetectorResponses !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -47,10 +51,10 @@ try {
 
 | Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                              | [\WriterAi\SDK\Models\Operations\DetectContentRequest](../../models/operations/DetectContentRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| `$request`                                                                                              | [\WriterAi\SDK\Models\Operations\DetectContentRequest](../../Models/Operations/DetectContentRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\DetectContentResponse](../../models/operations/DetectContentResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\DetectContentResponse](../../Models/Operations/DetectContentResponse.md)**
 

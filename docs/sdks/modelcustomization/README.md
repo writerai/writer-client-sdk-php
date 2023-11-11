@@ -1,4 +1,5 @@
-# modelCustomization
+# ModelCustomization
+
 
 ## Overview
 
@@ -23,29 +24,31 @@ Create model customization
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\CreateModelCustomizationRequest;
-use \WriterAi\SDK\Models\Shared\CreateCustomizationRequest;
-use \WriterAi\SDK\Models\Shared\HyperParameters;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateModelCustomizationRequest();
-    $request->createCustomizationRequest = new CreateCustomizationRequest();
-    $request->createCustomizationRequest->additionalHyperParameters = new HyperParameters();
-    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 520478;
-    $request->createCustomizationRequest->batchSize = 780529;
-    $request->createCustomizationRequest->description = 'dolorum';
-    $request->createCustomizationRequest->epochs = 118274;
-    $request->createCustomizationRequest->learningRate = 7206.33;
-    $request->createCustomizationRequest->name = 'Seth Conroy';
-    $request->createCustomizationRequest->promptTemplate = 'optio';
-    $request->createCustomizationRequest->trainingDatasetFileId = 'totam';
-    $request->createCustomizationRequest->validationDatasetFileId = 'beatae';
-    $request->modelId = 'commodi';
+    $request = new Operations\CreateModelCustomizationRequest();
+    $request->createCustomizationRequest = new Shared\CreateCustomizationRequest();
+    $request->createCustomizationRequest->additionalHyperParameters = new Shared\HyperParameters();
+    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 486589;
+    $request->createCustomizationRequest->batchSize = 489382;
+    $request->createCustomizationRequest->description = 'Proactive systematic Graphical User Interface';
+    $request->createCustomizationRequest->epochs = 288408;
+    $request->createCustomizationRequest->learningRate = 1343.65;
+    $request->createCustomizationRequest->name = 'string';
+    $request->createCustomizationRequest->promptTemplate = 'string';
+    $request->createCustomizationRequest->trainingDatasetFileId = 'string';
+    $request->createCustomizationRequest->validationDatasetFileId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->create($request);
 
@@ -61,12 +64,12 @@ try {
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\WriterAi\SDK\Models\Operations\CreateModelCustomizationRequest](../../models/operations/CreateModelCustomizationRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `$request`                                                                                                                    | [\WriterAi\SDK\Models\Operations\CreateModelCustomizationRequest](../../Models/Operations/CreateModelCustomizationRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\CreateModelCustomizationResponse](../../models/operations/CreateModelCustomizationResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\CreateModelCustomizationResponse](../../Models/Operations/CreateModelCustomizationResponse.md)**
 
 
 ## delete
@@ -81,21 +84,25 @@ Delete Model customization
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteModelCustomizationRequest();
-    $request->customizationId = 'molestiae';
-    $request->modelId = 'modi';
+    $request = new Operations\DeleteModelCustomizationRequest();
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->delete($request);
 
-    if ($response->deleteModelCustomization200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -107,12 +114,12 @@ try {
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest](../../models/operations/DeleteModelCustomizationRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `$request`                                                                                                                    | [\WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest](../../Models/Operations/DeleteModelCustomizationRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponse](../../models/operations/DeleteModelCustomizationResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponse](../../Models/Operations/DeleteModelCustomizationResponse.md)**
 
 
 ## get
@@ -127,17 +134,21 @@ Get model customization
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\GetModelCustomizationRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetModelCustomizationRequest();
-    $request->customizationId = 'qui';
-    $request->modelId = 'impedit';
+    $request = new Operations\GetModelCustomizationRequest();
+    $request->customizationId = 'string';
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->get($request);
 
@@ -153,12 +164,12 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\WriterAi\SDK\Models\Operations\GetModelCustomizationRequest](../../models/operations/GetModelCustomizationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\WriterAi\SDK\Models\Operations\GetModelCustomizationRequest](../../Models/Operations/GetModelCustomizationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\GetModelCustomizationResponse](../../models/operations/GetModelCustomizationResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\GetModelCustomizationResponse](../../Models/Operations/GetModelCustomizationResponse.md)**
 
 
 ## list
@@ -173,16 +184,20 @@ List model customizations
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListModelCustomizationsRequest();
-    $request->modelId = 'cum';
+    $request = new Operations\ListModelCustomizationsRequest();
+    $request->modelId = 'string';
 
     $response = $sdk->modelCustomization->list($request);
 
@@ -198,10 +213,10 @@ try {
 
 | Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest](../../models/operations/ListModelCustomizationsRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `$request`                                                                                                                  | [\WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest](../../Models/Operations/ListModelCustomizationsRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListModelCustomizationsResponse](../../models/operations/ListModelCustomizationsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListModelCustomizationsResponse](../../Models/Operations/ListModelCustomizationsResponse.md)**
 

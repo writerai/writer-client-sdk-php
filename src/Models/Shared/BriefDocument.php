@@ -12,8 +12,8 @@ namespace WriterAi\SDK\Models\Shared;
 class BriefDocument
 {
 	#[\JMS\Serializer\Annotation\SerializedName('access')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\BriefDocumentAccess>')]
-    public BriefDocumentAccess $access;
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\Access>')]
+    public Access $access;
     
 	#[\JMS\Serializer\Annotation\SerializedName('createdUser')]
     #[\JMS\Serializer\Annotation\Type('WriterAi\SDK\Models\Shared\SimpleUser')]
@@ -55,7 +55,7 @@ class BriefDocument
     
 	public function __construct()
 	{
-		$this->access = \WriterAi\SDK\Models\Shared\BriefDocumentAccess::Private;
+		$this->access = \WriterAi\SDK\Models\Shared\Access::Private;
 		$this->createdUser = null;
 		$this->creationTime = new \DateTime();
 		$this->id = 0;

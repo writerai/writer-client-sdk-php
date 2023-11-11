@@ -1,4 +1,5 @@
-# snippet
+# Snippet
+
 
 ## Overview
 
@@ -22,20 +23,24 @@ Delete snippets
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\DeleteSnippetsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteSnippetsRequest();
-    $request->xRequestID = 'esse';
+    $request = new Operations\DeleteSnippetsRequest();
+    $request->xRequestID = 'string';
     $request->ids = [
-        'excepturi',
+        'string',
     ];
-    $request->teamId = 135218;
+    $request->teamId = 545907;
 
     $response = $sdk->snippet->delete($request);
 
@@ -51,12 +56,12 @@ try {
 
 | Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                | [\WriterAi\SDK\Models\Operations\DeleteSnippetsRequest](../../models/operations/DeleteSnippetsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| `$request`                                                                                                | [\WriterAi\SDK\Models\Operations\DeleteSnippetsRequest](../../Models/Operations/DeleteSnippetsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\DeleteSnippetsResponse](../../models/operations/DeleteSnippetsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\DeleteSnippetsResponse](../../Models/Operations/DeleteSnippetsResponse.md)**
 
 
 ## find
@@ -71,30 +76,31 @@ Find snippets
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\FindSnippetsRequest;
-use \WriterAi\SDK\Models\Operations\FindSnippetsSortField;
-use \WriterAi\SDK\Models\Operations\FindSnippetsSortOrder;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new FindSnippetsRequest();
-    $request->limit = 18789;
-    $request->offset = 324141;
-    $request->search = 'natus';
+    $request = new Operations\FindSnippetsRequest();
+    $request->limit = 40141;
+    $request->offset = 326883;
+    $request->search = 'string';
     $request->shortcuts = [
-        'iste',
+        'string',
     ];
-    $request->sortField = FindSnippetsSortField::Shortcut;
-    $request->sortOrder = FindSnippetsSortOrder::Desc;
+    $request->sortField = Operations\SortField::CreationTime;
+    $request->sortOrder = Operations\SortOrder::Desc;
     $request->tags = [
-        'hic',
-        'saepe',
+        'string',
     ];
-    $request->teamId = 681820;
+    $request->teamId = 939943;
 
     $response = $sdk->snippet->find($request);
 
@@ -110,12 +116,12 @@ try {
 
 | Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                            | [\WriterAi\SDK\Models\Operations\FindSnippetsRequest](../../models/operations/FindSnippetsRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| `$request`                                                                                            | [\WriterAi\SDK\Models\Operations\FindSnippetsRequest](../../Models/Operations/FindSnippetsRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\FindSnippetsResponse](../../models/operations/FindSnippetsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\FindSnippetsResponse](../../Models/Operations/FindSnippetsResponse.md)**
 
 
 ## update
@@ -130,27 +136,28 @@ Update snippets
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\UpdateSnippetsRequest;
-use \WriterAi\SDK\Models\Shared\SnippetUpdate;
-use \WriterAi\SDK\Models\Shared\SnippetTagV2;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateSnippetsRequest();
+    $request = new Operations\UpdateSnippetsRequest();
     $request->requestBody = [
-        new SnippetUpdate(),
-        new SnippetUpdate(),
+        new Shared\SnippetUpdate(),
     ];
-    $request->xRequestID = 'corporis';
-    $request->teamId = 613064;
+    $request->xRequestID = 'string';
+    $request->teamId = 857478;
 
     $response = $sdk->snippet->update($request);
 
-    if ($response->snippetWithUsers !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -162,10 +169,10 @@ try {
 
 | Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                | [\WriterAi\SDK\Models\Operations\UpdateSnippetsRequest](../../models/operations/UpdateSnippetsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| `$request`                                                                                                | [\WriterAi\SDK\Models\Operations\UpdateSnippetsRequest](../../Models/Operations/UpdateSnippetsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\UpdateSnippetsResponse](../../models/operations/UpdateSnippetsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\UpdateSnippetsResponse](../../Models/Operations/UpdateSnippetsResponse.md)**
 

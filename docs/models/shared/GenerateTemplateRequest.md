@@ -1,9 +1,0 @@
-# GenerateTemplateRequest
-
-
-## Fields
-
-| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `inputs`                                                             | array<[MagicRequestInput](../../models/shared/MagicRequestInput.md)> | :heavy_minus_sign:                                                   | N/A                                                                  |
-| `templateId`                                                         | *string*                                                             | :heavy_check_mark:                                                   | N/A                                                                  |

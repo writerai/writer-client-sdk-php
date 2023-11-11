@@ -1,0 +1,10 @@
+# PaginatedResultUserPublicResponse
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `pagination`                                                                                       | [\WriterAi\SDK\Models\Shared\Pagination](../../Models/Shared/Pagination.md)                        | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `result`                                                                                           | array<[\WriterAi\SDK\Models\Shared\UserPublicResponse](../../Models/Shared/UserPublicResponse.md)> | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
+| `totalCount`                                                                                       | *int*                                                                                              | :heavy_check_mark:                                                                                 | N/A                                                                                                |

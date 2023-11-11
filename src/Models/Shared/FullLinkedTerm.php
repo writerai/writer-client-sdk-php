@@ -30,9 +30,9 @@ class FullLinkedTerm
     public int $linkedTermId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('pos')]
-    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\FullLinkedTermPos>')]
+    #[\JMS\Serializer\Annotation\Type('enum<WriterAi\SDK\Models\Shared\Pos>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?FullLinkedTermPos $pos = null;
+    public ?Pos $pos = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('term')]
     #[\JMS\Serializer\Annotation\Type('string')]

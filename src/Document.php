@@ -28,22 +28,24 @@ class Document
      * @return \WriterAi\SDK\Models\Operations\GetDocumentDetailsResponse
      */
 	public function get(
-        \WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest $request,
     ): \WriterAi\SDK\Models\Operations\GetDocumentDetailsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/organization/{organizationId}/team/{teamId}/document/{documentId}', \WriterAi\SDK\Models\Operations\GetDocumentDetailsRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \WriterAi\SDK\Models\Operations\GetDocumentDetailsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -74,7 +76,7 @@ class Document
      * @return \WriterAi\SDK\Models\Operations\ListTeamDocumentsResponse
      */
 	public function list(
-        \WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListTeamDocumentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -82,15 +84,17 @@ class Document
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\WriterAi\SDK\Models\Operations\ListTeamDocumentsRequest::class, $request, $this->sdkConfiguration->globals));
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \WriterAi\SDK\Models\Operations\ListTeamDocumentsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         

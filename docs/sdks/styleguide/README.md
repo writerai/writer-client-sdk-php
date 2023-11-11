@@ -1,4 +1,5 @@
-# styleguide
+# Styleguide
+
 
 ## Overview
 
@@ -21,16 +22,20 @@ Page details
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\PageDetailsRequest;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PageDetailsRequest();
-    $request->pageId = 437032;
+    $request = new Operations\PageDetailsRequest();
+    $request->pageId = 700347;
 
     $response = $sdk->styleguide->get($request);
 
@@ -46,12 +51,12 @@ try {
 
 | Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\PageDetailsRequest](../../models/operations/PageDetailsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| `$request`                                                                                          | [\WriterAi\SDK\Models\Operations\PageDetailsRequest](../../Models/Operations/PageDetailsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\PageDetailsResponse](../../models/operations/PageDetailsResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\PageDetailsResponse](../../Models/Operations/PageDetailsResponse.md)**
 
 
 ## listPages
@@ -66,19 +71,22 @@ List your styleguide pages
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \WriterAi\SDK\Writer;
-use \WriterAi\SDK\Models\Shared\Security;
-use \WriterAi\SDK\Models\Operations\ListPagesRequest;
-use \WriterAi\SDK\Models\Operations\ListPagesStatus;
+use \WriterAi\SDK;
+use \WriterAi\SDK\Models\Shared;
+use \WriterAi\SDK\Models\Operations;
 
-$sdk = Writer::builder()
+$security = new Shared\Security();
+$security->apiKey = '';
+
+$sdk = SDK\Writer::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListPagesRequest();
-    $request->limit = 902349;
-    $request->offset = 697631;
-    $request->status = ListPagesStatus::Live;
+    $request = new Operations\ListPagesRequest();
+    $request->limit = 763372;
+    $request->offset = 760116;
+    $request->status = Operations\Status::Live;
 
     $response = $sdk->styleguide->listPages($request);
 
@@ -94,10 +102,10 @@ try {
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListPagesRequest](../../models/operations/ListPagesRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `$request`                                                                                      | [\WriterAi\SDK\Models\Operations\ListPagesRequest](../../Models/Operations/ListPagesRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 
 ### Response
 
-**[?\WriterAi\SDK\Models\Operations\ListPagesResponse](../../models/operations/ListPagesResponse.md)**
+**[?\WriterAi\SDK\Models\Operations\ListPagesResponse](../../Models/Operations/ListPagesResponse.md)**
 

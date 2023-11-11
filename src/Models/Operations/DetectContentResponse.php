@@ -12,13 +12,10 @@ namespace WriterAi\SDK\Models\Operations;
 class DetectContentResponse
 {
     /**
-     * $contentDetectorResponses
+     * HTTP response content type for this operation
      * 
-     * @var ?array<\WriterAi\SDK\Models\Shared\ContentDetectorResponse> $contentDetectorResponses
+     * @var string $contentType
      */
-	
-    public ?array $contentDetectorResponses = null;
-    
 	
     public string $contentType;
     
@@ -38,19 +35,37 @@ class DetectContentResponse
 	
     public ?array $headers = null;
     
+    /**
+     * HTTP response status code for this operation
+     * 
+     * @var int $statusCode
+     */
 	
     public int $statusCode;
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     * 
+     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
+    /**
+     * $classes
+     * 
+     * @var ?array<\WriterAi\SDK\Models\Shared\ContentDetectorResponse> $classes
+     */
+	
+    public ?array $classes = null;
+    
 	public function __construct()
 	{
-		$this->contentDetectorResponses = null;
 		$this->contentType = "";
 		$this->failResponse = null;
 		$this->headers = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->classes = null;
 	}
 }

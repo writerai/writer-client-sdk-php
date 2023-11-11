@@ -11,6 +11,11 @@ namespace WriterAi\SDK\Models\Operations;
 
 class UploadFileResponse
 {
+    /**
+     * HTTP response content type for this operation
+     * 
+     * @var string $contentType
+     */
 	
     public string $contentType;
     
@@ -33,9 +38,19 @@ class UploadFileResponse
 	
     public ?\WriterAi\SDK\Models\Shared\ModelFile $modelFile = null;
     
+    /**
+     * HTTP response status code for this operation
+     * 
+     * @var int $statusCode
+     */
 	
     public int $statusCode;
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     * 
+     * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
+     */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     

@@ -40,15 +40,17 @@ class ModelCustomization
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \WriterAi\SDK\Models\Operations\CreateModelCustomizationResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -79,22 +81,24 @@ class ModelCustomization
      * @return \WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponse
      */
 	public function delete(
-        \WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest $request,
+        ?\WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest $request,
     ): \WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}', \WriterAi\SDK\Models\Operations\DeleteModelCustomizationRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -103,7 +107,7 @@ class ModelCustomization
             
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->deleteModelCustomization200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'WriterAi\SDK\Models\Operations\DeleteModelCustomization200ApplicationJSON', 'json');
+                $response->object = $serializer->deserialize((string)$httpResponse->getBody(), 'WriterAi\SDK\Models\Operations\DeleteModelCustomizationResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 403 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 500) {
@@ -125,22 +129,24 @@ class ModelCustomization
      * @return \WriterAi\SDK\Models\Operations\GetModelCustomizationResponse
      */
 	public function get(
-        \WriterAi\SDK\Models\Operations\GetModelCustomizationRequest $request,
+        ?\WriterAi\SDK\Models\Operations\GetModelCustomizationRequest $request,
     ): \WriterAi\SDK\Models\Operations\GetModelCustomizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}', \WriterAi\SDK\Models\Operations\GetModelCustomizationRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \WriterAi\SDK\Models\Operations\GetModelCustomizationResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -171,22 +177,24 @@ class ModelCustomization
      * @return \WriterAi\SDK\Models\Operations\ListModelCustomizationsResponse
      */
 	public function list(
-        \WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest $request,
+        ?\WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest $request,
     ): \WriterAi\SDK\Models\Operations\ListModelCustomizationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/llm/organization/{organizationId}/model/{modelId}/customization', \WriterAi\SDK\Models\Operations\ListModelCustomizationsRequest::class, $request, $this->sdkConfiguration->globals);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['Accept'] = 'application/json';
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \WriterAi\SDK\Models\Operations\ListModelCustomizationsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
