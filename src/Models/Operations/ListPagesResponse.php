@@ -30,10 +30,10 @@ class ListPagesResponse
     /**
      * $headers
      * 
-     * @var ?array<string, array<string>> $headers
+     * @var array<string, array<string>> $headers
      */
 	
-    public ?array $headers = null;
+    public array $headers;
     
 	
     public ?\WriterAi\SDK\Models\Shared\PaginatedResultPagePublicApiResponse $paginatedResultPagePublicApiResponse = null;
@@ -52,13 +52,13 @@ class ListPagesResponse
      * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
      */
 	
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
+    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->failResponse = null;
-		$this->headers = null;
+		$this->headers = [];
 		$this->paginatedResultPagePublicApiResponse = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
