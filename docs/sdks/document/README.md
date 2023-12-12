@@ -27,16 +27,16 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(700347)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetDocumentDetailsRequest();
-    $request->documentId = 700347;
-    $request->teamId = 90065;
+        $request = new Operations\GetDocumentDetailsRequest();
+    $request->documentId = 90065;
+    $request->teamId = 558834;;
 
     $response = $sdk->document->get($request);
 
@@ -77,20 +77,20 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(768578)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListTeamDocumentsRequest();
-    $request->limit = 768578;
-    $request->offset = 99895;
+        $request = new Operations\ListTeamDocumentsRequest();
+    $request->limit = 99895;
+    $request->offset = 547272;
     $request->search = 'string';
-    $request->sortField = Operations\ListTeamDocumentsQueryParamSortField::ModificationTime;
-    $request->sortOrder = Operations\ListTeamDocumentsQueryParamSortOrder::Asc;
-    $request->teamId = 678317;
+    $request->sortField = Operations\ListTeamDocumentsQueryParamSortField::CreationTime;
+    $request->sortOrder = Operations\ListTeamDocumentsQueryParamSortOrder::Desc;
+    $request->teamId = 297548;;
 
     $response = $sdk->document->list($request);
 

@@ -29,15 +29,15 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(545907)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteFileRequest();
-    $request->fileId = 'string';
+        $request = new Operations\DeleteFileRequest();
+    $request->fileId = 'string';;
 
     $response = $sdk->files->delete($request);
 
@@ -78,15 +78,15 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(700347)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetFileRequest();
-    $request->fileId = 'string';
+        $request = new Operations\GetFileRequest();
+    $request->fileId = 'string';;
 
     $response = $sdk->files->get($request);
 
@@ -127,14 +127,14 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(768578)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListFilesRequest();
+        $request = new Operations\ListFilesRequest();;
 
     $response = $sdk->files->list($request);
 
@@ -175,18 +175,18 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(403654)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UploadFileRequest();
+        $request = new Operations\UploadFileRequest();
     $request->uploadModelFileRequest = new Shared\UploadModelFileRequest();
     $request->uploadModelFileRequest->file = new Shared\File();
-    $request->uploadModelFileRequest->file->content = '0x87cbca97eC';
-    $request->uploadModelFileRequest->file->fileName = 'ullam.wav';
+    $request->uploadModelFileRequest->file->content = '0x7cbca97eC6';
+    $request->uploadModelFileRequest->file->fileName = 'plastic_cli.gif';;
 
     $response = $sdk->files->upload($request);
 

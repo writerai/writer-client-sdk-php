@@ -28,19 +28,19 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(545907)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteSnippetsRequest();
+        $request = new Operations\DeleteSnippetsRequest();
     $request->xRequestID = 'string';
     $request->ids = [
         'string',
     ];
-    $request->teamId = 545907;
+    $request->teamId = 841399;;
 
     $response = $sdk->snippet->delete($request);
 
@@ -81,26 +81,26 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(40141)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\FindSnippetsRequest();
-    $request->limit = 40141;
-    $request->offset = 326883;
+        $request = new Operations\FindSnippetsRequest();
+    $request->limit = 326883;
+    $request->offset = 488098;
     $request->search = 'string';
     $request->shortcuts = [
         'string',
     ];
-    $request->sortField = Operations\SortField::CreationTime;
+    $request->sortField = Operations\SortField::ModificationTime;
     $request->sortOrder = Operations\SortOrder::Desc;
     $request->tags = [
         'string',
     ];
-    $request->teamId = 939943;
+    $request->teamId = 111247;;
 
     $response = $sdk->snippet->find($request);
 
@@ -141,19 +141,19 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(857478)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateSnippetsRequest();
+        $request = new Operations\UpdateSnippetsRequest();
     $request->requestBody = [
         new Shared\SnippetUpdate(),
     ];
     $request->xRequestID = 'string';
-    $request->teamId = 857478;
+    $request->teamId = 24555;;
 
     $response = $sdk->snippet->update($request);
 

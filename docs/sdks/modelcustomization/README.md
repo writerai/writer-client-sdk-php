@@ -29,26 +29,26 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(486589)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateModelCustomizationRequest();
+        $request = new Operations\CreateModelCustomizationRequest();
     $request->createCustomizationRequest = new Shared\CreateCustomizationRequest();
     $request->createCustomizationRequest->additionalHyperParameters = new Shared\HyperParameters();
-    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 486589;
-    $request->createCustomizationRequest->batchSize = 489382;
-    $request->createCustomizationRequest->description = 'Proactive systematic Graphical User Interface';
-    $request->createCustomizationRequest->epochs = 288408;
-    $request->createCustomizationRequest->learningRate = 1343.65;
+    $request->createCustomizationRequest->additionalHyperParameters->numVirtualTokens = 489382;
+    $request->createCustomizationRequest->batchSize = 638424;
+    $request->createCustomizationRequest->description = 'Synchronised full-range emulation';
+    $request->createCustomizationRequest->epochs = 134365;
+    $request->createCustomizationRequest->learningRate = 7865.46;
     $request->createCustomizationRequest->name = 'string';
     $request->createCustomizationRequest->promptTemplate = 'string';
     $request->createCustomizationRequest->trainingDatasetFileId = 'string';
     $request->createCustomizationRequest->validationDatasetFileId = 'string';
-    $request->modelId = 'string';
+    $request->modelId = 'string';;
 
     $response = $sdk->modelCustomization->create($request);
 
@@ -89,16 +89,16 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(545907)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteModelCustomizationRequest();
+        $request = new Operations\DeleteModelCustomizationRequest();
     $request->customizationId = 'string';
-    $request->modelId = 'string';
+    $request->modelId = 'string';;
 
     $response = $sdk->modelCustomization->delete($request);
 
@@ -139,16 +139,16 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(700347)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetModelCustomizationRequest();
+        $request = new Operations\GetModelCustomizationRequest();
     $request->customizationId = 'string';
-    $request->modelId = 'string';
+    $request->modelId = 'string';;
 
     $response = $sdk->modelCustomization->get($request);
 
@@ -189,15 +189,15 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(768578)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListModelCustomizationsRequest();
-    $request->modelId = 'string';
+        $request = new Operations\ListModelCustomizationsRequest();
+    $request->modelId = 'string';;
 
     $response = $sdk->modelCustomization->list($request);
 

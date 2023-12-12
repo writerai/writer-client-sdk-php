@@ -27,20 +27,20 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(569932)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GenerateContentRequest();
+        $request = new Operations\GenerateContentRequest();
     $request->generateTemplateRequest = new Shared\GenerateTemplateRequest();
     $request->generateTemplateRequest->inputs = [
         new Shared\MagicRequestInput(),
     ];
     $request->generateTemplateRequest->templateId = 'string';
-    $request->teamId = 569932;
+    $request->teamId = 888452;;
 
     $response = $sdk->coWrite->generateContent($request);
 
@@ -81,16 +81,16 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(380445)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListTemplatesRequest();
-    $request->teamId = 380445;
-    $request->templateId = 'string';
+        $request = new Operations\ListTemplatesRequest();
+    $request->teamId = 882866;
+    $request->templateId = 'string';;
 
     $response = $sdk->coWrite->listTemplates($request);
 

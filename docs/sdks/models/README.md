@@ -26,14 +26,14 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(768578)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListModelsRequest();
+        $request = new Operations\ListModelsRequest();;
 
     $response = $sdk->models->list($request);
 
