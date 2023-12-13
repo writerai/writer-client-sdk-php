@@ -25,11 +25,11 @@ use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(850421)
+    ->setSecurity($security)->build();
 
 try {
     $response = $sdk->billing->getSubscriptionDetails();

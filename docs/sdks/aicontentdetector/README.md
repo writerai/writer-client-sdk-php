@@ -26,16 +26,16 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(496531)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DetectContentRequest();
+        $request = new Operations\DetectContentRequest();
     $request->contentDetectorRequest = new Shared\ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'string';
+    $request->contentDetectorRequest->input = 'string';;
 
     $response = $sdk->aiContentDetector->detect($request);
 

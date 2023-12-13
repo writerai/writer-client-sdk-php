@@ -197,7 +197,6 @@ src/Models/Shared/PaginatedResultUserPublicResponse.php
 src/Models/Shared/AccountStatus.php
 src/Models/Shared/UserPublicResponse.php
 src/Models/Shared/Security.php
-USAGE.md
 docs/Models/Operations/GetSubscriptionDetailsResponse.md
 docs/Models/Operations/DetectContentRequest.md
 docs/Models/Operations/DetectContentResponse.md
@@ -377,4 +376,5 @@ docs/sdks/snippet/README.md
 docs/sdks/styleguide/README.md
 docs/sdks/terminology/README.md
 docs/sdks/user/README.md
+USAGE.md
 .gitattributes

@@ -27,14 +27,14 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(935464)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ContentCheckRequest();
+        $request = new Operations\ContentCheckRequest();
     $request->contentRequest = new Shared\ContentRequest();
     $request->contentRequest->content = 'string';
     $request->contentRequest->settings = new Shared\ContentSettings();
@@ -54,7 +54,7 @@ try {
     $request->contentRequest->settings->substanceUseSensitivity = false;
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
-    $request->teamId = 935464;
+    $request->teamId = 38270;;
 
     $response = $sdk->content->check($request);
 
@@ -95,14 +95,14 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(501355)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ContentCorrectRequest();
+        $request = new Operations\ContentCorrectRequest();
     $request->contentRequest = new Shared\ContentRequest();
     $request->contentRequest->content = 'string';
     $request->contentRequest->settings = new Shared\ContentSettings();
@@ -123,7 +123,7 @@ try {
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
     $request->xRequestID = 'string';
-    $request->teamId = 501355;
+    $request->teamId = 31310;;
 
     $response = $sdk->content->correct($request);
 

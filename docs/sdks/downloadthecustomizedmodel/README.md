@@ -26,16 +26,16 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(501762)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\FetchCustomizedModelFileRequest();
+        $request = new Operations\FetchCustomizedModelFileRequest();
     $request->customizationId = 'string';
-    $request->modelId = 'string';
+    $request->modelId = 'string';;
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 

@@ -29,20 +29,20 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(551477)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AddTermsRequest();
+        $request = new Operations\AddTermsRequest();
     $request->createTermsRequest = new Shared\CreateTermsRequest();
-    $request->createTermsRequest->failHandling = Shared\FailHandling::Skip;
+    $request->createTermsRequest->failHandling = Shared\FailHandling::ValidateOnly;
     $request->createTermsRequest->models = [
         new Shared\TermCreate(),
     ];
-    $request->teamId = 823436;
+    $request->teamId = 554561;;
 
     $response = $sdk->terminology->add($request);
 
@@ -83,19 +83,19 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(545907)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteTermsRequest();
+        $request = new Operations\DeleteTermsRequest();
     $request->xRequestID = 'string';
     $request->ids = [
-        545907,
+        841399,
     ];
-    $request->teamId = 841399;
+    $request->teamId = 698486;;
 
     $response = $sdk->terminology->delete($request);
 
@@ -136,25 +136,25 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(40141)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\FindTermsRequest();
-    $request->limit = 40141;
-    $request->offset = 326883;
-    $request->partOfSpeech = Operations\PartOfSpeech::Verb;
+        $request = new Operations\FindTermsRequest();
+    $request->limit = 326883;
+    $request->offset = 488098;
+    $request->partOfSpeech = Operations\PartOfSpeech::Adjective;
     $request->sortField = Operations\QueryParamSortField::Type;
-    $request->sortOrder = Operations\QueryParamSortOrder::Desc;
+    $request->sortOrder = Operations\QueryParamSortOrder::Asc;
     $request->tags = [
         'string',
     ];
-    $request->teamId = 111247;
+    $request->teamId = 16865;
     $request->term = 'string';
-    $request->type = Operations\Type::Approved;
+    $request->type = Operations\Type::Pending;;
 
     $response = $sdk->terminology->find($request);
 
@@ -195,21 +195,21 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(857478)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateTermsRequest();
+        $request = new Operations\UpdateTermsRequest();
     $request->updateTermsRequest = new Shared\UpdateTermsRequest();
-    $request->updateTermsRequest->failHandling = Shared\UpdateTermsRequestFailHandling::ValidateOnly;
+    $request->updateTermsRequest->failHandling = Shared\UpdateTermsRequestFailHandling::Accumulate;
     $request->updateTermsRequest->models = [
         new Shared\TermUpdate(),
     ];
     $request->xRequestID = 'string';
-    $request->teamId = 24555;
+    $request->teamId = 597129;;
 
     $response = $sdk->terminology->update($request);
 

@@ -26,19 +26,19 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(768578)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListUsersRequest();
-    $request->limit = 768578;
-    $request->offset = 99895;
+        $request = new Operations\ListUsersRequest();
+    $request->limit = 99895;
+    $request->offset = 547272;
     $request->search = 'string';
-    $request->sortField = Operations\ListUsersQueryParamSortField::Deleted;
-    $request->sortOrder = Operations\ListUsersQueryParamSortOrder::Asc;
+    $request->sortField = Operations\ListUsersQueryParamSortField::Name;
+    $request->sortOrder = Operations\ListUsersQueryParamSortOrder::Desc;;
 
     $response = $sdk->user->list($request);
 

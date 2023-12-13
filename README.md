@@ -10,7 +10,7 @@
 
 > ⚠️ This SDK is not yet published to a package manager. To use please download and build locally. 
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### Composer
@@ -36,10 +36,13 @@ Then run the following command:
 ```bash
 composer update
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
+### Example
+
 ```php
 <?php
 
@@ -50,9 +53,10 @@ use WriterAi\SDK;
 use WriterAi\SDK\Models\Shared;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
+    ->setOrganizationId(850421)
     ->setSecurity($security)
     ->build();
 
@@ -67,11 +71,10 @@ try {
 }
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [Billing](docs/sdks/billing/README.md)
 
@@ -144,25 +147,21 @@ try {
 ### [User](docs/sdks/user/README.md)
 
 * [list](docs/sdks/user/README.md#list) - List users
-<!-- End SDK Available Operations -->
+<!-- End Available Resources and Operations [operations] -->
 
 
 
-<!-- Start Dev Containers -->
-
-<!-- End Dev Containers -->
 
 
-
-<!-- Start Global Parameters -->
-# Global Parameters
+<!-- Start Global Parameters [global-parameters] -->
+## Global Parameters
 
 A parameter is configured globally. This parameter must be set on the SDK client instance itself during initialization. When configured as an option during SDK initialization, This global value will be used as the default on the operations that use it. When such operations are called, there is a place in each to override the global value, if needed.
 
-For example, you can set `organizationId` to `678317` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
+For example, you can set `organizationId` to `297548` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
 
 
-## Available Globals
+### Available Globals
 
 The following global parameter is available. The required parameter must be set when you initialize the SDK client.
 
@@ -171,8 +170,7 @@ The following global parameter is available. The required parameter must be set 
 | organizationId | int | ✔️ | The organizationId parameter. |
 
 
-
-## Example
+### Example
 
 ```php
 <?php
@@ -185,9 +183,10 @@ use WriterAi\SDK\Models\Shared;
 use WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
+    ->setOrganizationId(496531)
     ->setSecurity($security)
     ->build();
 
@@ -206,7 +205,28 @@ try {
 }
 
 ```
-<!-- End Global Parameters -->
+<!-- End Global Parameters [global-parameters] -->
+
+<!-- Start Server Selection [server] -->
+## Server Selection
+
+## Server Selection
+
+### Select Server by Index
+
+You can override the default server globally by passing a server index to the `server_idx: int` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://enterprise-api.writer.com` | None |
+
+
+
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+<!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

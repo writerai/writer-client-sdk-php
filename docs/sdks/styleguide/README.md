@@ -27,15 +27,15 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(700347)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PageDetailsRequest();
-    $request->pageId = 700347;
+        $request = new Operations\PageDetailsRequest();
+    $request->pageId = 90065;;
 
     $response = $sdk->styleguide->get($request);
 
@@ -76,17 +76,17 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(763372)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListPagesRequest();
-    $request->limit = 763372;
-    $request->offset = 760116;
-    $request->status = Operations\Status::Live;
+        $request = new Operations\ListPagesRequest();
+    $request->limit = 760116;
+    $request->offset = 303332;
+    $request->status = Operations\Status::Live;;
 
     $response = $sdk->styleguide->listPages($request);
 

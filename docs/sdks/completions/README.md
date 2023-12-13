@@ -27,29 +27,29 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(486589)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateCompletionRequest();
+        $request = new Operations\CreateCompletionRequest();
     $request->completionRequest = new Shared\CompletionRequest();
     $request->completionRequest->bestOf = 1;
-    $request->completionRequest->frequencyPenalty = 4865.89;
-    $request->completionRequest->logprobs = 489382;
+    $request->completionRequest->frequencyPenalty = 4893.82;
+    $request->completionRequest->logprobs = 638424;
     $request->completionRequest->maxTokens = 1024;
     $request->completionRequest->minTokens = 1;
-    $request->completionRequest->n = 638424;
-    $request->completionRequest->presencePenalty = 8592.13;
+    $request->completionRequest->n = 859213;
+    $request->completionRequest->presencePenalty = 4174.58;
     $request->completionRequest->prompt = 'string';
     $request->completionRequest->stop = [
         'string',
     ];
     $request->completionRequest->temperature = 0.7;
     $request->completionRequest->topP = 1;
-    $request->modelId = 'string';
+    $request->modelId = 'string';;
 
     $response = $sdk->completions->create($request);
 
@@ -90,22 +90,22 @@ use \WriterAi\SDK\Models\Shared;
 use \WriterAi\SDK\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
 $sdk = SDK\Writer::builder()
-    ->setSecurity($security)
-    ->build();
+    ->setOrganizationId(919503)
+    ->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateModelCustomizationCompletionRequest();
+        $request = new Operations\CreateModelCustomizationCompletionRequest();
     $request->completionRequest = new Shared\CompletionRequest();
     $request->completionRequest->bestOf = 1;
-    $request->completionRequest->frequencyPenalty = 9195.03;
-    $request->completionRequest->logprobs = 41297;
+    $request->completionRequest->frequencyPenalty = 412.97;
+    $request->completionRequest->logprobs = 951257;
     $request->completionRequest->maxTokens = 1024;
     $request->completionRequest->minTokens = 1;
-    $request->completionRequest->n = 951257;
-    $request->completionRequest->presencePenalty = 3149.52;
+    $request->completionRequest->n = 314952;
+    $request->completionRequest->presencePenalty = 657.2;
     $request->completionRequest->prompt = 'string';
     $request->completionRequest->stop = [
         'string',
@@ -113,7 +113,7 @@ try {
     $request->completionRequest->temperature = 0.7;
     $request->completionRequest->topP = 1;
     $request->customizationId = 'string';
-    $request->modelId = 'string';
+    $request->modelId = 'string';;
 
     $response = $sdk->completions->createModelCustomizationCompletion($request);
 
