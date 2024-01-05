@@ -1,22 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 044ba6ea348a6fb8206cacad6926373d
-  docVersion: "1.7"
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: writer
-  repoURL: https://github.com/writerai/writer-client-sdk-php.git
   usageSnippets:
     optionalPropertyRendering: withExample
-features:
-  php:
-    core: 3.2.0
-    globalSecurity: 2.81.2
-    globalServerURLs: 2.82.1
-    globals: 2.81.1
-    nameOverrides: 2.81.1
+  fixes:
+    nameResolutionDec2023: false
 php:
   version: 2.1.0
   imports:
@@ -28,9 +16,7 @@ php:
       shared: Models/Shared
       webhooks: Models/Webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/writerai/writer-client-sdk-php
   maxMethodParams: 0
   namespace: WriterAi\SDK
   outputModelSuffix: output
   packageName: writerai/writer-sdk
-  repoSubDirectory: .
