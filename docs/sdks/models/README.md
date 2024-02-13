@@ -40,7 +40,7 @@ try {
     if ($response->generationModelsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

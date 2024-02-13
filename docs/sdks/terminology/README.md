@@ -49,7 +49,7 @@ try {
     if ($response->createTermsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -102,7 +102,7 @@ try {
     if ($response->deleteResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -161,7 +161,7 @@ try {
     if ($response->paginatedResultFullTermWithUser !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -216,7 +216,7 @@ try {
     if ($response->createTermsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

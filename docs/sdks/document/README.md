@@ -43,7 +43,7 @@ try {
     if ($response->document !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -97,7 +97,7 @@ try {
     if ($response->briefDocuments !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

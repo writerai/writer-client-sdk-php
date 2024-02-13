@@ -42,7 +42,7 @@ try {
     if ($response->bytes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

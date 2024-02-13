@@ -61,7 +61,7 @@ try {
     if ($response->processedContent !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -130,7 +130,7 @@ try {
     if ($response->correctionResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

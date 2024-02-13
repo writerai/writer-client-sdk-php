@@ -42,7 +42,7 @@ try {
     if ($response->pageWithSectionResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -93,7 +93,7 @@ try {
     if ($response->paginatedResultPagePublicApiResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

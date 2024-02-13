@@ -45,7 +45,7 @@ try {
     if ($response->paginatedResultUserPublicResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

@@ -37,7 +37,7 @@ try {
     if ($response->subscriptionPublicResponseApi !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

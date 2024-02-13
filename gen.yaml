@@ -5,8 +5,10 @@ generation:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
 php:
-  version: 2.1.1
+  version: 2.1.2
   imports:
     option: openapi
     paths:
