@@ -34,8 +34,8 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\FetchCustomizedModelFileRequest();
-    $request->customizationId = 'string';
-    $request->modelId = 'string';;
+    $request->customizationId = '<value>';
+    $request->modelId = '<value>';;
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 

@@ -44,11 +44,11 @@ try {
     $request->createCustomizationRequest->description = 'Synchronised full-range emulation';
     $request->createCustomizationRequest->epochs = 134365;
     $request->createCustomizationRequest->learningRate = 7865.46;
-    $request->createCustomizationRequest->name = 'string';
-    $request->createCustomizationRequest->promptTemplate = 'string';
-    $request->createCustomizationRequest->trainingDatasetFileId = 'string';
-    $request->createCustomizationRequest->validationDatasetFileId = 'string';
-    $request->modelId = 'string';;
+    $request->createCustomizationRequest->name = '<value>';
+    $request->createCustomizationRequest->promptTemplate = '<value>';
+    $request->createCustomizationRequest->trainingDatasetFileId = '<value>';
+    $request->createCustomizationRequest->validationDatasetFileId = '<value>';
+    $request->modelId = '<value>';;
 
     $response = $sdk->modelCustomization->create($request);
 
@@ -97,8 +97,8 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\DeleteModelCustomizationRequest();
-    $request->customizationId = 'string';
-    $request->modelId = 'string';;
+    $request->customizationId = '<value>';
+    $request->modelId = '<value>';;
 
     $response = $sdk->modelCustomization->delete($request);
 
@@ -147,8 +147,8 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\GetModelCustomizationRequest();
-    $request->customizationId = 'string';
-    $request->modelId = 'string';;
+    $request->customizationId = '<value>';
+    $request->modelId = '<value>';;
 
     $response = $sdk->modelCustomization->get($request);
 
@@ -197,7 +197,7 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\ListModelCustomizationsRequest();
-    $request->modelId = 'string';;
+    $request->modelId = '<value>';;
 
     $response = $sdk->modelCustomization->list($request);
 

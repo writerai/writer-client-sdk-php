@@ -43,13 +43,13 @@ try {
     $request->completionRequest->minTokens = 1;
     $request->completionRequest->n = 859213;
     $request->completionRequest->presencePenalty = 4174.58;
-    $request->completionRequest->prompt = 'string';
+    $request->completionRequest->prompt = '<value>';
     $request->completionRequest->stop = [
-        'string',
+        '<value>',
     ];
     $request->completionRequest->temperature = 0.7;
     $request->completionRequest->topP = 1;
-    $request->modelId = 'string';;
+    $request->modelId = '<value>';;
 
     $response = $sdk->completions->create($request);
 
@@ -106,14 +106,14 @@ try {
     $request->completionRequest->minTokens = 1;
     $request->completionRequest->n = 314952;
     $request->completionRequest->presencePenalty = 657.2;
-    $request->completionRequest->prompt = 'string';
+    $request->completionRequest->prompt = '<value>';
     $request->completionRequest->stop = [
-        'string',
+        '<value>',
     ];
     $request->completionRequest->temperature = 0.7;
     $request->completionRequest->topP = 1;
-    $request->customizationId = 'string';
-    $request->modelId = 'string';;
+    $request->customizationId = '<value>';
+    $request->modelId = '<value>';;
 
     $response = $sdk->completions->createModelCustomizationCompletion($request);
 

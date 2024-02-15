@@ -91,7 +91,7 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\DeleteTermsRequest();
-    $request->xRequestID = 'string';
+    $request->xRequestID = '<value>';
     $request->ids = [
         841399,
     ];
@@ -150,10 +150,10 @@ try {
     $request->sortField = Operations\QueryParamSortField::Type;
     $request->sortOrder = Operations\QueryParamSortOrder::Asc;
     $request->tags = [
-        'string',
+        '<value>',
     ];
     $request->teamId = 16865;
-    $request->term = 'string';
+    $request->term = '<value>';
     $request->type = Operations\Type::Pending;;
 
     $response = $sdk->terminology->find($request);
@@ -208,7 +208,7 @@ try {
     $request->updateTermsRequest->models = [
         new Shared\TermUpdate(),
     ];
-    $request->xRequestID = 'string';
+    $request->xRequestID = '<value>';
     $request->teamId = 597129;;
 
     $response = $sdk->terminology->update($request);

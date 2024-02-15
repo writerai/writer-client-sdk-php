@@ -37,7 +37,7 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\DeleteFileRequest();
-    $request->fileId = 'string';;
+    $request->fileId = '<value>';;
 
     $response = $sdk->files->delete($request);
 
@@ -86,7 +86,7 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\GetFileRequest();
-    $request->fileId = 'string';;
+    $request->fileId = '<value>';;
 
     $response = $sdk->files->get($request);
 

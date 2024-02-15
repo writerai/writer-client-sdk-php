@@ -193,7 +193,7 @@ $sdk = SDK\Writer::builder()
 try {
     $request = new Operations\DetectContentRequest();
     $request->contentDetectorRequest = new Shared\ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'string';
+    $request->contentDetectorRequest->input = '<value>';
 
     $response = $sdk->aiContentDetector->detect($request);
 

@@ -36,7 +36,7 @@ try {
         $request = new Operations\ListUsersRequest();
     $request->limit = 99895;
     $request->offset = 547272;
-    $request->search = 'string';
+    $request->search = '<value>';
     $request->sortField = Operations\ListUsersQueryParamSortField::Name;
     $request->sortOrder = Operations\ListUsersQueryParamSortOrder::Desc;;
 

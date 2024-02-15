@@ -87,7 +87,7 @@ try {
         $request = new Operations\ListTeamDocumentsRequest();
     $request->limit = 99895;
     $request->offset = 547272;
-    $request->search = 'string';
+    $request->search = '<value>';
     $request->sortField = Operations\ListTeamDocumentsQueryParamSortField::CreationTime;
     $request->sortOrder = Operations\ListTeamDocumentsQueryParamSortOrder::Desc;
     $request->teamId = 297548;;

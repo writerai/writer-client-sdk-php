@@ -36,7 +36,7 @@ $sdk = SDK\Writer::builder()
 try {
         $request = new Operations\ContentCheckRequest();
     $request->contentRequest = new Shared\ContentRequest();
-    $request->contentRequest->content = 'string';
+    $request->contentRequest->content = '<value>';
     $request->contentRequest->settings = new Shared\ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -104,7 +104,7 @@ $sdk = SDK\Writer::builder()
 try {
         $request = new Operations\ContentCorrectRequest();
     $request->contentRequest = new Shared\ContentRequest();
-    $request->contentRequest->content = 'string';
+    $request->contentRequest->content = '<value>';
     $request->contentRequest->settings = new Shared\ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -122,7 +122,7 @@ try {
     $request->contentRequest->settings->substanceUseSensitivity = false;
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
-    $request->xRequestID = 'string';
+    $request->xRequestID = '<value>';
     $request->teamId = 31310;;
 
     $response = $sdk->content->correct($request);

@@ -36,9 +36,9 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\DeleteSnippetsRequest();
-    $request->xRequestID = 'string';
+    $request->xRequestID = '<value>';
     $request->ids = [
-        'string',
+        '<value>',
     ];
     $request->teamId = 841399;;
 
@@ -91,14 +91,14 @@ try {
         $request = new Operations\FindSnippetsRequest();
     $request->limit = 326883;
     $request->offset = 488098;
-    $request->search = 'string';
+    $request->search = '<value>';
     $request->shortcuts = [
-        'string',
+        '<value>',
     ];
     $request->sortField = Operations\SortField::ModificationTime;
     $request->sortOrder = Operations\SortOrder::Desc;
     $request->tags = [
-        'string',
+        '<value>',
     ];
     $request->teamId = 111247;;
 
@@ -152,7 +152,7 @@ try {
     $request->requestBody = [
         new Shared\SnippetUpdate(),
     ];
-    $request->xRequestID = 'string';
+    $request->xRequestID = '<value>';
     $request->teamId = 24555;;
 
     $response = $sdk->snippet->update($request);
