@@ -36,7 +36,7 @@ class Snippet
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\WriterAi\SDK\Models\Operations\DeleteSnippetsRequest::class, $request, $this->sdkConfiguration->globals));
-        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request, $this->sdkConfiguration->globals));
         if (!array_key_exists('headers', $options)) {
             $options['headers'] = [];
         }
@@ -141,7 +141,7 @@ class Snippet
         if ($body !== null) {
             $options = array_merge_recursive($options, $body);
         }
-        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request, $this->sdkConfiguration->globals));
         if (!array_key_exists('headers', $options)) {
             $options['headers'] = [];
         }

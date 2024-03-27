@@ -3,19 +3,19 @@ id: c70a7120-98ee-4c64-9a75-77469da3dbe3
 management:
   docChecksum: 044ba6ea348a6fb8206cacad6926373d
   docVersion: "1.7"
-  speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 2.1.4
-  configChecksum: f62199ff82b4b7bc254bb50211197106
+  speakeasyVersion: 1.227.0
+  generationVersion: 2.291.0
+  releaseVersion: 2.2.0
+  configChecksum: 547e6914896a46cb82bf6104cee1ecda
   repoURL: https://github.com/writerai/writer-client-sdk-php.git
   repoSubDirectory: .
   installationURL: https://github.com/writerai/writer-client-sdk-php
 features:
   php:
     core: 3.3.3
-    globalSecurity: 2.81.4
+    globalSecurity: 2.81.6
     globalServerURLs: 2.82.1
-    globals: 2.81.1
+    globals: 2.82.0
     nameOverrides: 2.81.1
 generatedFiles:
   - src/SDKConfiguration.php
