@@ -19,7 +19,8 @@ Download your fine-tuned model (available only for Palmyra Base and Palmyra Larg
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -34,15 +35,15 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\FetchCustomizedModelFileRequest();
-    $request->customizationId = 'string';
-    $request->modelId = 'string';;
+    $request->customizationId = '<value>';
+    $request->modelId = '<value>';;
 
     $response = $sdk->downloadTheCustomizedModel->fetchFile($request);
 
     if ($response->bytes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

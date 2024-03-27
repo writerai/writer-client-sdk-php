@@ -22,7 +22,8 @@ Create model customization
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -44,18 +45,18 @@ try {
     $request->createCustomizationRequest->description = 'Synchronised full-range emulation';
     $request->createCustomizationRequest->epochs = 134365;
     $request->createCustomizationRequest->learningRate = 7865.46;
-    $request->createCustomizationRequest->name = 'string';
-    $request->createCustomizationRequest->promptTemplate = 'string';
-    $request->createCustomizationRequest->trainingDatasetFileId = 'string';
-    $request->createCustomizationRequest->validationDatasetFileId = 'string';
-    $request->modelId = 'string';;
+    $request->createCustomizationRequest->name = '<value>';
+    $request->createCustomizationRequest->promptTemplate = '<value>';
+    $request->createCustomizationRequest->trainingDatasetFileId = '<value>';
+    $request->createCustomizationRequest->validationDatasetFileId = '<value>';
+    $request->modelId = '<value>';;
 
     $response = $sdk->modelCustomization->create($request);
 
     if ($response->modelCustomization !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -82,7 +83,8 @@ Delete Model customization
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -97,15 +99,15 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\DeleteModelCustomizationRequest();
-    $request->customizationId = 'string';
-    $request->modelId = 'string';;
+    $request->customizationId = '<value>';
+    $request->modelId = '<value>';;
 
     $response = $sdk->modelCustomization->delete($request);
 
     if ($response->object !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -132,7 +134,8 @@ Get model customization
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -147,15 +150,15 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\GetModelCustomizationRequest();
-    $request->customizationId = 'string';
-    $request->modelId = 'string';;
+    $request->customizationId = '<value>';
+    $request->modelId = '<value>';;
 
     $response = $sdk->modelCustomization->get($request);
 
     if ($response->modelCustomization !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -182,7 +185,8 @@ List model customizations
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -197,14 +201,14 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\ListModelCustomizationsRequest();
-    $request->modelId = 'string';;
+    $request->modelId = '<value>';;
 
     $response = $sdk->modelCustomization->list($request);
 
     if ($response->customizationsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

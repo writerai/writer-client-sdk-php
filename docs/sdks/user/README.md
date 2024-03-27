@@ -19,7 +19,8 @@ List users
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -36,7 +37,7 @@ try {
         $request = new Operations\ListUsersRequest();
     $request->limit = 99895;
     $request->offset = 547272;
-    $request->search = 'string';
+    $request->search = '<value>';
     $request->sortField = Operations\ListUsersQueryParamSortField::Name;
     $request->sortOrder = Operations\ListUsersQueryParamSortOrder::Desc;;
 
@@ -45,7 +46,7 @@ try {
     if ($response->paginatedResultUserPublicResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

@@ -20,7 +20,8 @@ Get document details
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -43,7 +44,7 @@ try {
     if ($response->document !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -70,7 +71,8 @@ List team documents
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -87,7 +89,7 @@ try {
         $request = new Operations\ListTeamDocumentsRequest();
     $request->limit = 99895;
     $request->offset = 547272;
-    $request->search = 'string';
+    $request->search = '<value>';
     $request->sortField = Operations\ListTeamDocumentsQueryParamSortField::CreationTime;
     $request->sortOrder = Operations\ListTeamDocumentsQueryParamSortOrder::Desc;
     $request->teamId = 297548;;
@@ -97,7 +99,7 @@ try {
     if ($response->briefDocuments !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

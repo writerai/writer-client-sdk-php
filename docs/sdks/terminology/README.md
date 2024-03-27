@@ -22,7 +22,8 @@ Add terms
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -49,7 +50,7 @@ try {
     if ($response->createTermsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -76,7 +77,8 @@ Delete terms
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -91,7 +93,7 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\DeleteTermsRequest();
-    $request->xRequestID = 'string';
+    $request->xRequestID = '<value>';
     $request->ids = [
         841399,
     ];
@@ -102,7 +104,7 @@ try {
     if ($response->deleteResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -129,7 +131,8 @@ Find terms
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -150,10 +153,10 @@ try {
     $request->sortField = Operations\QueryParamSortField::Type;
     $request->sortOrder = Operations\QueryParamSortOrder::Asc;
     $request->tags = [
-        'string',
+        '<value>',
     ];
     $request->teamId = 16865;
-    $request->term = 'string';
+    $request->term = '<value>';
     $request->type = Operations\Type::Pending;;
 
     $response = $sdk->terminology->find($request);
@@ -161,7 +164,7 @@ try {
     if ($response->paginatedResultFullTermWithUser !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -188,7 +191,8 @@ Update terms
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -208,7 +212,7 @@ try {
     $request->updateTermsRequest->models = [
         new Shared\TermUpdate(),
     ];
-    $request->xRequestID = 'string';
+    $request->xRequestID = '<value>';
     $request->teamId = 597129;;
 
     $response = $sdk->terminology->update($request);
@@ -216,7 +220,7 @@ try {
     if ($response->createTermsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

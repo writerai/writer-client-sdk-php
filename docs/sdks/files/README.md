@@ -22,7 +22,8 @@ Delete file
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -37,14 +38,14 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\DeleteFileRequest();
-    $request->fileId = 'string';;
+    $request->fileId = '<value>';;
 
     $response = $sdk->files->delete($request);
 
     if ($response->object !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -71,7 +72,8 @@ Get file
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -86,14 +88,14 @@ $sdk = SDK\Writer::builder()
 
 try {
         $request = new Operations\GetFileRequest();
-    $request->fileId = 'string';;
+    $request->fileId = '<value>';;
 
     $response = $sdk->files->get($request);
 
     if ($response->modelFile !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -120,7 +122,8 @@ List files
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -141,7 +144,7 @@ try {
     if ($response->modelFilesResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -168,7 +171,8 @@ Upload file
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -193,7 +197,7 @@ try {
     if ($response->modelFile !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

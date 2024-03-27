@@ -20,7 +20,8 @@ Check your content against your preset styleguide.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -36,7 +37,7 @@ $sdk = SDK\Writer::builder()
 try {
         $request = new Operations\ContentCheckRequest();
     $request->contentRequest = new Shared\ContentRequest();
-    $request->contentRequest->content = 'string';
+    $request->contentRequest->content = '<value>';
     $request->contentRequest->settings = new Shared\ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -61,7 +62,7 @@ try {
     if ($response->processedContent !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -88,7 +89,8 @@ Apply the style guide suggestions directly to your content.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -104,7 +106,7 @@ $sdk = SDK\Writer::builder()
 try {
         $request = new Operations\ContentCorrectRequest();
     $request->contentRequest = new Shared\ContentRequest();
-    $request->contentRequest->content = 'string';
+    $request->contentRequest->content = '<value>';
     $request->contentRequest->settings = new Shared\ContentSettings();
     $request->contentRequest->settings->ageAndFamilyStatus = false;
     $request->contentRequest->settings->confidence = false;
@@ -122,7 +124,7 @@ try {
     $request->contentRequest->settings->substanceUseSensitivity = false;
     $request->contentRequest->settings->unclearReference = false;
     $request->contentRequest->settings->wordiness = false;
-    $request->xRequestID = 'string';
+    $request->xRequestID = '<value>';
     $request->teamId = 31310;;
 
     $response = $sdk->content->correct($request);
@@ -130,7 +132,7 @@ try {
     if ($response->correctionResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

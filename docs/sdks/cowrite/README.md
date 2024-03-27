@@ -20,7 +20,8 @@ Generate content using predefined templates
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -39,7 +40,7 @@ try {
     $request->generateTemplateRequest->inputs = [
         new Shared\MagicRequestInput(),
     ];
-    $request->generateTemplateRequest->templateId = 'string';
+    $request->generateTemplateRequest->templateId = '<value>';
     $request->teamId = 888452;;
 
     $response = $sdk->coWrite->generateContent($request);
@@ -47,7 +48,7 @@ try {
     if ($response->draft !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -74,7 +75,8 @@ Get a list of your existing CoWrite templates
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -90,14 +92,14 @@ $sdk = SDK\Writer::builder()
 try {
         $request = new Operations\ListTemplatesRequest();
     $request->teamId = 882866;
-    $request->templateId = 'string';;
+    $request->templateId = '<value>';;
 
     $response = $sdk->coWrite->listTemplates($request);
 
     if ($response->templateDetailsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

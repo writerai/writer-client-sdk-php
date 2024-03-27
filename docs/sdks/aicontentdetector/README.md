@@ -19,7 +19,8 @@ Content detector api
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \WriterAi\SDK;
 use \WriterAi\SDK\Models\Shared;
@@ -35,14 +36,14 @@ $sdk = SDK\Writer::builder()
 try {
         $request = new Operations\DetectContentRequest();
     $request->contentDetectorRequest = new Shared\ContentDetectorRequest();
-    $request->contentDetectorRequest->input = 'string';;
+    $request->contentDetectorRequest->input = '<value>';;
 
     $response = $sdk->aiContentDetector->detect($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
